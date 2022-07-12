@@ -1,22 +1,24 @@
 <script setup>
-useHead({
-  script: ['https://identity.netlify.com/v1/netlify-identity-widget.js']
+onMounted(() => {
+  if (window.netlifyIdentity) {
+    window.netlifyIdentity.on("init", user => {
+      if (!user) {
+        window.netlifyIdentity.on("login", () => {
+          document.location.href = "/admin/";
+        });
+      }
+    });
+  }
 })
-
-
-if (window.netlifyIdentity) {
-  window.netlifyIdentity.on("init", user => {
-    if (!user) {
-      window.netlifyIdentity.on("login", () => {
-        document.location.href = "/admin/";
-      });
-    }
-  });
-}
 
 </script>
 
 <template>
+
+  <Head>
+    <Script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></Script>
+  </Head>
+
   <div>
     <NuxtPage />
   </div>
