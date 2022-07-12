@@ -1,9 +1,22 @@
 <script setup lang="ts">
+import { Category } from '@/models';
+
 useHead({
   title: 'Endoc - Business and home envelopes'
 })
 
-const { data } = await useAsyncData('products', () => queryContent('products').find());
+const { data } = await useAsyncData('categories', () => queryContent('categories').find());
+
+const categories = ref<Category[]>([])
+
+const visibleCategories = computed(() => categories.value.slice(0, 5))
+
+onMounted(() => {
+  categories.value = data.value
+
+
+  console.log(data.value)
+})
 </script>
 
 
@@ -47,67 +60,12 @@ const { data } = await useAsyncData('products', () => queryContent('products').f
         </div>
 
         <ul class="our-products__list grid">
-          <li class="our-products__item col-12 md:col-6 xl:col-4">
-            <a href="#">
-              <img class="card-bg" src="@/assets/imgs/bg/card-bg-1.png" />
-              <img class="product-img" src="@/assets/imgs/sample-data/regular-envelopes-icon.png" />
+          <li v-for="(category, index) in visibleCategories" class="our-products__item col-12 md:col-6 xl:col-4">
+            <a :href="category._path">
+              <img class="card-bg" :src="`/imgs/bg/card-bg-${index + 1}.png`" />
+              <img class="product-img" :src="category.icon" />
 
-              <span class="product-name">Regular Envelopes</span>
-
-              <i class="icon-arrow-right"></i>
-            </a>
-          </li>
-
-          <li class="our-products__item col-12 md:col-6 xl:col-4">
-            <a href="#">
-              <img class="card-bg" src="@/assets/imgs/bg/card-bg-2.png" />
-              <img class="product-img" src="@/assets/imgs/sample-data/window-envelopes-icon.png" />
-
-              <span class="product-name">Window Envelopes</span>
-
-              <i class="icon-arrow-right"></i>
-            </a>
-          </li>
-
-          <li class="our-products__item col-12 md:col-6 xl:col-4">
-            <a href="#">
-              <img class="card-bg" src="@/assets/imgs/bg/card-bg-3.png" />
-              <img class="product-img" src="@/assets/imgs/sample-data/check-envelopes-icon.png" />
-
-              <span class="product-name">Check Envelopes</span>
-
-              <i class="icon-arrow-right"></i>
-            </a>
-          </li>
-
-          <li class="our-products__item col-12 md:col-6 xl:col-4">
-            <a href="#">
-              <img class="card-bg" src="@/assets/imgs/bg/card-bg-4.png" />
-              <img class="product-img" src="@/assets/imgs/sample-data/tyvek-envelopes-icon.png" />
-
-              <span class="product-name">Tyvek Envelopes</span>
-
-              <i class="icon-arrow-right"></i>
-            </a>
-          </li>
-
-          <li class="our-products__item col-12 md:col-6 xl:col-4">
-            <a href="#">
-              <img class="card-bg" src="@/assets/imgs/bg/card-bg-5.png" />
-              <img class="product-img" src="@/assets/imgs/sample-data/clasp-envelopes-icon.png" />
-
-              <span class="product-name">Clasp Envelopes</span>
-
-              <i class="icon-arrow-right"></i>
-            </a>
-          </li>
-
-          <li class="our-products__item col-12 md:col-6 xl:col-4">
-            <a href="#">
-              <img class="card-bg" src="@/assets/imgs/bg/card-bg-6.png" />
-              <img class="product-img" src="@/assets/imgs/sample-data/tinted-envelopes-icon.png" />
-
-              <span class="product-name">Security Tinted Envelopes</span>
+              <span class="product-name">{{ category.title }}</span>
 
               <i class="icon-arrow-right"></i>
             </a>

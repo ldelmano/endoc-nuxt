@@ -7,7 +7,10 @@ collections:
   - name: "categories"
     label: "Categories"
     folder: "content/categories"
+    slug: "{{slug}}"
+    editor:
+      preview: false
     create: true
     fields:
-      - { label: "Name", name: "name", widget: "string" }
+      - { label: "Title", name: "title", widget: "string" }
       - { label: "Icon image", name: "icon", widget: "image" }
