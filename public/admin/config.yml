@@ -1,0 +1,13 @@
+backend:
+  name: git-gateway
+  branch: main
+publish_mode: editorial_workflow
+media_folder: "imgs/uploads"
+collections:
+  - name: "categories"
+    label: "Categories"
+    folder: "content/categories"
+    create: true
+    fields:
+      - { label: "Name", name: "name", widget: "string" }
+      - { label: "Icon image", name: "icon", widget: "image" }
