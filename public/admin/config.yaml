@@ -1,7 +1,6 @@
 backend:
   name: git-gateway
   branch: main
-publish_mode: editorial_workflow
 media_folder: "imgs/uploads"
 collections:
   - name: "categories"
@@ -14,3 +13,9 @@ collections:
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Icon image", name: "icon", widget: "image" }
+      - {
+          label: "Show on home page",
+          name: "showOnHome",
+          widget: "boolean",
+          default: false,
+        }

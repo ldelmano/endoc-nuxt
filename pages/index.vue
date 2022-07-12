@@ -9,11 +9,10 @@ const { data } = await useAsyncData('categories', () => queryContent('categories
 
 const categories = ref<Category[]>([])
 
-const visibleCategories = computed(() => categories.value.slice(0, 5))
+const visibleCategories = computed(() => categories.value.filter(category => category.showOnHome).slice(0, 6))
 
 onMounted(() => {
   categories.value = data.value
-
 
   console.log(data.value)
 })
@@ -56,7 +55,7 @@ onMounted(() => {
         <div class="flex flex-column md:flex-row justify-content-between align-items-center">
           <h2 class="text-h2">Our Products</h2>
 
-          <BaseButton label="explore all products" to="#" variant="secondary"></BaseButton>
+          <BaseButton label="explore all products" to="/categories" variant="secondary"></BaseButton>
         </div>
 
         <ul class="our-products__list grid">
