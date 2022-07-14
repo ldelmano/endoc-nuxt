@@ -34,7 +34,7 @@ collections:
     editor:
       preview: false
     create: true
-    format: "json"
+    format: "frontmatter"
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Product ID", name: "id", widget: "string" }
