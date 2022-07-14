@@ -7,7 +7,7 @@ collections:
   - name: "categories"
     label: "Categories"
     folder: "content/categories"
-    slug: "{{slug}}"
+    slug: "{{fields.categoryId}}"
     editor:
       preview: false
     create: true
