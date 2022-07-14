@@ -2,5 +2,5 @@
 title: Window Envelopes
 icon: /imgs/uploads/window-envelopes-icon.png
 showOnHome: true
-categoryId: "window-envelopes"
+slug: "window-envelopes"
 ---

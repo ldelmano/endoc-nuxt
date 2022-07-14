@@ -10,5 +10,27 @@
   <body>
     <!-- Include the script that builds the page and powers Netlify CMS -->
     <script src="https://unpkg.com/netlify-cms@^2.0.0/dist/netlify-cms.js"></script>
+
+    <script>
+      CMS.registerEventListener({
+        name: "preSave",
+        handler: ({ entry }) => {
+          if (entry.get("collection") !== "categories") return;
+
+          if (entry.getIn(["data", "slug"], "")) {
+            return;
+          } else {
+            // you can use any relevant field/logic for generating the initial slug
+            const slug = entry
+              .getIn(["data", "title"], "")
+              .toLowerCase()
+              .replace(/[']/g, "")
+              .replace(/[.]/g, "-")
+              .replace(/[\s]/g, "-");
+            return entry.get("data").set("slug", slug);
+          }
+        },
+      });
+    </script>
   </body>
 </html>

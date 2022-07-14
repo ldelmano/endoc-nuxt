@@ -7,17 +7,17 @@ collections:
   - name: "categories"
     label: "Categories"
     folder: "content/categories"
-    identifier_field: categoryId
+    slug: "{{fields.slug}}"
     editor:
       preview: false
     create: true
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - {
-          label: "Category ID",
-          name: "categoryId",
+          label: "Slug",
+          name: "slug",
           widget: "string",
-          hint: "Please set an unique id for this category. Do not input blank spaces.",
+          hint: "Please set an unique value for this field. Do not input blank spaces. Leave it empty to get an auto-generated value.",
         }
       - { label: "Icon image", name: "icon", widget: "image" }
       - {
@@ -43,8 +43,8 @@ collections:
           name: "category",
           widget: "relation",
           collection: "categories",
-          search_fields: ["title", "categoryId"],
-          value_field: "categoryId",
+          search_fields: ["title", "slug"],
+          value_field: "slug",
           display_fields: ["title"],
         }
       - label: "Attributes"
