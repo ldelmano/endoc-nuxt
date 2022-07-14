@@ -12,7 +12,7 @@ const getData = async () => {
 
   const { data } = await useAsyncData('products', () => queryContent('products').find());
 
-  console.log(data.value)
+  console.log(route)
 }
 
 onMounted(() => {
