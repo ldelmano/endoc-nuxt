@@ -4,7 +4,6 @@ import path from "path";
 
 export const routeMap = {
   "/categories": "categories/*.md",
-  "/products": "products/*.md",
 };
 
 export const otherRoutes = [];

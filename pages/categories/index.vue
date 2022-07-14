@@ -9,10 +9,11 @@ const categories = ref<Category[]>([]);
 
 const getData = async () => {
   const { data } = await useAsyncData('categories', () => queryContent('categories').find());
+  const products = await useAsyncData('products', () => queryContent('products').find());
 
   categories.value = data.value
 
-  console.log(data.value)
+  console.log(products.data.value)
 }
 
 onMounted(() => {

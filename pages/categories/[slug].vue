@@ -8,11 +8,9 @@ useHead({
 const getData = async () => {
   const route = useRoute();
 
-  if (!route.params.slug) return;
+  const { data } = await useAsyncData('products', () => queryContent('/products').find());
 
-  const { data } = await useAsyncData('products', () => queryContent('products').find());
-
-  console.log(route)
+  console.log(data.value)
 }
 
 onMounted(() => {

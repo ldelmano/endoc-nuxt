@@ -30,7 +30,6 @@ collections:
   - name: "products"
     label: "Products"
     folder: "content/products"
-    slug: "{{slug}}"
     editor:
       preview: false
     create: true
