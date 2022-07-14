@@ -46,7 +46,7 @@ collections:
           collection: "categories",
           search_fields: ["title", "categoryId"],
           value_field: "categoryId",
-          display_fields: ["title", "categoryId"],
+          display_fields: ["title"],
         }
       - label: "Attributes"
         name: "attributes"
