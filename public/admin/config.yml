@@ -16,9 +16,8 @@ collections:
       - {
           label: "Category ID",
           name: "categoryId",
-          widget: "string",
-          default: "{{slug}}",
-          hint: "Leave empty to generate an automatic ID",
+          widget: "hidden",
+          default: "{{fields.slug}}",
         }
       - { label: "Icon image", name: "icon", widget: "image" }
       - {
