@@ -5,6 +5,7 @@ const props = defineProps<{
   to?: string;
   variant?: string;
   icon?: string;
+  iconOnLeft?: boolean;
 }>()
 
 defineEmits<{
@@ -16,15 +17,16 @@ const variantState = computed(() => props.variant ? `btn--${props.variant}` : `b
 </script>
 
 <template>
-  <NuxtLink v-if="to" :class="['btn', variantState, link && 'btn--link']" :to="to">
+  <NuxtLink v-if="to" :class="['btn', variantState, link && 'btn--link', iconOnLeft && 'btn--icon-left']" :to="to">
     {{ label }}
 
-    <i v-if="icon" :class="`icon-${icon} ml-2`"></i>
+    <i v-if="icon" :class="`icon-${icon} ${iconOnLeft ? 'mr-2' : 'ml-2'}`"></i>
   </NuxtLink>
-  <button v-else @click="$emit('click')" :class="['btn', variantState]">
+  <button v-else @click="$emit('click')"
+    :class="['btn', link && 'btn--link', variantState, iconOnLeft && 'btn--icon-left']">
     {{ label }}
 
-    <i v-if="icon" :class="`icon-${icon} ml-2`"></i>
+    <i v-if="icon" :class="`icon-${icon} ${iconOnLeft ? 'mr-2' : 'ml-2'}`"></i>
   </button>
 </template>
 
@@ -59,6 +61,10 @@ const variantState = computed(() => props.variant ? `btn--${props.variant}` : `b
 
     border: 1px solid #323747;
     color: #323747;
+  }
+
+  &.btn--icon-left {
+    flex-direction: row-reverse;
   }
 
   &.btn--link {
