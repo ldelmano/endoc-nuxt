@@ -11,6 +11,8 @@ const getData = async () => {
   const { data } = await useAsyncData('categories', () => queryContent('categories').find());
 
   categories.value = data.value
+
+  console.log(data.value)
 }
 
 onMounted(() => {
