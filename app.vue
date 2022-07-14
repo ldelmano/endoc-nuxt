@@ -14,17 +14,28 @@ onMounted(() => {
 </script>
 
 <template>
-
-  <Head>
-    <Script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></Script>
-  </Head>
-
   <div>
+
+    <Head>
+      <Script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></Script>
+    </Head>
     <NuxtPage />
   </div>
 </template>
 
 <style lang="scss">
+.page-enter-active,
+.page-leave-active {
+  transition-property: opacity;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.5s;
+}
+
+.page-enter-from,
+.page-leave-to {
+  opacity: 0;
+}
+
 * {
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
