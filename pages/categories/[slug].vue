@@ -5,16 +5,13 @@ useHead({
   title: 'Endoc - Category'
 })
 
-const getData = async () => {
-  const route = useRoute();
+const route = useRoute();
 
-  const { data } = await useAsyncData('products', () => queryContent('/products').find());
-
-  console.log(data.value)
-}
+const { data } = await useAsyncData('products', () => queryContent('/products').where({ category: route.params.slug }).find());
 
 onMounted(() => {
-  getData();
+  console.log(data.value)
+  console.log(route.params.slug)
 })
 </script>
 
