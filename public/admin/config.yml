@@ -16,8 +16,8 @@ collections:
       - {
           label: "Category ID",
           name: "categoryId",
-          widget: "hidden",
-          default: "{{slug}}",
+          widget: "string",
+          hint: "Please set an unique id for this category. Do not input blank spaces.",
         }
       - { label: "Icon image", name: "icon", widget: "image" }
       - {
