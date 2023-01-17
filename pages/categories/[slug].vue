@@ -10,6 +10,19 @@ const products = ref<Product[]>([]);
 
 const category = computed(() => currentCategory.data.value as Category);
 
+const showModal = ref(false);
+const modalContent = ref<Product | null>(null);
+const handleProductDetails = (item: Product) => {
+  modalContent.value = item;
+
+  showModal.value = true;
+}
+
+const handleCloseModal = () => {
+  showModal.value = false;
+  modalContent.value = null;
+}
+
 useHead({
   title: `Endoc - ${category.value.title}`
 })
@@ -44,10 +57,63 @@ onMounted(() => {
               <p v-if="product.description">{{ product.description }}</p>
             </div>
 
-            <BaseButton label="details" icon="arrow-right" link variant="secondary" />
+            <BaseButton label="details" icon="arrow-right" link variant="secondary"
+              @click="() => handleProductDetails(product)" />
           </div>
         </article>
       </section>
+
+      <BaseModal v-show="showModal" @close-modal="handleCloseModal">
+        <template #content>
+          <div class="modal-content" v-if="modalContent">
+            <img :src="modalContent.thumbnail" />
+
+            <div class="product-info">
+              <h3 class="product-info__name">{{ modalContent.title }}</h3>
+              <p class="product-info__id">Item #: {{ modalContent.id }}</p>
+
+              <ul class="product-info__attributes">
+                <li>
+                  <span class="product-info__attr-name">Envelope Size</span>
+                  <span class="product-info__attr-value">{{ modalContent.attributes.envelopeSize }}</span>
+                </li>
+
+                <li>
+                  <span class="product-info__attr-name">Adhesion Type</span>
+                  <span class="product-info__attr-value">{{ modalContent.attributes.adhesionType }}</span>
+                </li>
+
+                <li>
+                  <span class="product-info__attr-name">Window Style</span>
+                  <span class="product-info__attr-value">{{ modalContent.attributes.windowStyle }}</span>
+                </li>
+
+                <li>
+                  <span class="product-info__attr-name">Compatibility</span>
+                  <span class="product-info__attr-value">{{ modalContent.attributes.compatibility }}</span>
+                </li>
+
+                <li>
+                  <span class="product-info__attr-name">Security Tint</span>
+                  <span class="product-info__attr-value">{{
+                    modalContent.attributes.hasSecurityTint ? 'Yes' : 'No'
+                  }}</span>
+                </li>
+
+                <li>
+                  <span class="product-info__attr-name">Features</span>
+                  <span class="product-info__attr-value">{{ modalContent.attributes.features }}</span>
+                </li>
+
+                <li>
+                  <span class="product-info__attr-name">Additional</span>
+                  <span class="product-info__attr-value">{{ modalContent.attributes.additional }}</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </template>
+      </BaseModal>
 
     </div>
   </NuxtLayout>
@@ -117,6 +183,105 @@ h1 {
       text-align: center;
 
       color: #8C8E96;
+    }
+  }
+}
+
+.modal-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2.5em;
+
+  @media screen and (min-width: 768px) {
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 5em;
+  }
+
+  img {
+    width: 100%;
+    max-width: 23em;
+
+    @media screen and (max-width: 767px) {
+      margin-bottom: 1em;
+    }
+  }
+
+  .product-info {
+    @media screen and (min-width: 768px) {
+      margin-left: 5em;
+      flex: 1;
+    }
+
+    &__name {
+      margin: 0 0 0.875em;
+      font-weight: 500;
+      font-size: 1.625;
+      line-height: 134%;
+      color: #323747;
+    }
+
+    &__id {
+      margin: 0;
+      font-weight: 400;
+      font-size: 0.8125em;
+      line-height: 134%;
+      color: #8C8E96;
+    }
+
+    &__attributes {
+      margin: 1.875em 0;
+      list-style: none;
+      padding: 1em;
+      background: #F6F6F6;
+      border-radius: 1.875em;
+
+      @media screen and (min-width: 768px) {
+        padding: 2.5em;
+      }
+
+      li {
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+
+        &:not(:last-child) {
+          margin-bottom: 2em;
+        }
+      }
+
+      li+li::before {
+        content: '';
+        position: absolute;
+        display: flex;
+        width: 100%;
+        height: 1px;
+        background: #E0E2EB;
+        transform: translateY(-1em);
+      }
+    }
+
+    &__attr-name {
+      font-weight: 400;
+      font-size: 1em;
+      line-height: 182%;
+
+      color: #323747;
+
+      opacity: 0.5;
+    }
+
+    &__attr-value {
+      margin-left: 1.5em;
+      font-weight: 400;
+      font-size: 1em;
+      line-height: 182%;
+      text-align: right;
+
+
+      color: #323747;
+
     }
   }
 }

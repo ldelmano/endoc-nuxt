@@ -25,6 +25,9 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-times:before {
+  content: "\e90d";
+}
 .icon-products-dropdown:before {
   content: "\e900";
 }

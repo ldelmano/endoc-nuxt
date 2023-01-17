@@ -8,11 +8,12 @@ const props = defineProps<{
   iconOnLeft?: boolean;
 }>()
 
-defineEmits<{
-  click: (event: Event) => void;
+const emit = defineEmits<{
+  (e: 'click'): void;
 }>();
 
 const variantState = computed(() => props.variant ? `btn--${props.variant}` : `btn--primary`);
+
 
 </script>
 
@@ -22,7 +23,7 @@ const variantState = computed(() => props.variant ? `btn--${props.variant}` : `b
 
     <i v-if="icon" :class="`icon-${icon} ${iconOnLeft ? 'mr-2' : 'ml-2'}`"></i>
   </NuxtLink>
-  <button v-else @click="$emit('click')"
+  <button v-else @click.stop="$emit('click')"
     :class="['btn', link && 'btn--link', variantState, iconOnLeft && 'btn--icon-left']">
     {{ label }}
 
