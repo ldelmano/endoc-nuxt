@@ -71,6 +71,7 @@ collections:
     fields:
       - label: "Section 1"
         name: "section1"
+        slug: "section-1"
         widget: "object"
         fields:
           - { label: "Title", name: "title", widget: "string" }
