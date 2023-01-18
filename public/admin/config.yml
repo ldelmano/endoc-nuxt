@@ -34,6 +34,7 @@ collections:
       preview: false
     create: true
     format: "frontmatter"
+    summary: "{{fields.thumbnail}}"
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Product ID", name: "id", widget: "string" }
@@ -63,3 +64,20 @@ collections:
             }
           - { label: "Features", name: "features", widget: "string" }
           - { label: "Additional", name: "additional", widget: "string" }
+  - name: "home-content"
+    label: "Home Page - Content"
+    folder: "content/home"
+    create: true
+    fields:
+      - label: "Section 1"
+        name: "section1"
+        widget: "object"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Body", name: "body", widget: "markdown" }
+          - label: "Numbered list"
+            name: "list"
+            widget: "list"
+            fields:
+              - { label: "Label", name: "label", widget: "string" }
+              - { label: "Description", name: "description", widget: "string" }
