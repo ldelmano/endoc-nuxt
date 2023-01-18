@@ -1,4 +1,3 @@
----
 section1:
   list:
     - label: Over 100MM Envelopes Supplied
@@ -9,7 +8,8 @@ section1:
     - label: Competitive pricing
       description: Highest quality at the most affordable pricing!
     - label: High quality stock
-      description: Our envelopes are made with premium quality raw materials to ensure
+      description:
+        Our envelopes are made with premium quality raw materials to ensure
         that your documents remain safe and clean during sorting and transit.
   title: Exclusive EnDoc™ retailer
   body: >-
@@ -19,4 +19,3 @@ section1:
     \
 
     Our catalog is full of quality products, highlighted by an overwhelming majority of EnDoc™ envelopes, a brand celebrated for beautiful, durable paper goods.
----
