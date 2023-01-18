@@ -11,29 +11,29 @@ onMounted(() => {
   }
 })
 
+
 </script>
 
 <template>
-  <div>
+  <NuxtLayout>
 
     <Head>
-      <Script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></Script>
+      <NoScript src="https://identity.netlify.com/v1/netlify-identity-widget.js"></NoScript>
     </Head>
     <NuxtPage />
-  </div>
+  </NuxtLayout>
 </template>
 
 <style lang="scss">
 .page-enter-active,
 .page-leave-active {
-  transition-property: opacity;
-  transition-timing-function: ease-in-out;
-  transition-duration: 0.5s;
+  transition: all 0.3s;
 }
 
 .page-enter-from,
 .page-leave-to {
   opacity: 0;
+  filter: blur(1rem);
 }
 
 * {

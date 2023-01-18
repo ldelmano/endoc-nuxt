@@ -5,20 +5,18 @@ useHead({
 </script>
 
 <template>
-  <NuxtLayout>
-    <div class="container">
+  <div class="container">
 
-      <section class="flex flex-column justify-content-center align-items-center">
-        <img src="@/assets/imgs/404-illustration.svg" />
+    <section class="flex flex-column justify-content-center align-items-center">
+      <img src="@/assets/imgs/404-illustration.svg" />
 
 
-        <h3>No content was found for this page</h3>
+      <h3>No content was found for this page</h3>
 
-        <BaseButton label="go to home" to="/" />
-      </section>
+      <BaseButton label="go to home" to="/" />
+    </section>
 
-    </div>
-  </NuxtLayout>
+  </div>
 </template>
 
 <style scoped>

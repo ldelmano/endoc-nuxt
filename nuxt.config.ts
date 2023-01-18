@@ -1,4 +1,3 @@
-import { defineNuxtConfig } from "nuxt";
 import glob from "glob";
 import path from "path";
 
@@ -10,6 +9,7 @@ export const otherRoutes = [];
 
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
 export default defineNuxtConfig({
+  app: { pageTransition: { name: "page", mode: "out-in" } },
   target: "static",
   generate: {
     routes: [].concat(getDynamicPaths(routeMap)),
@@ -26,16 +26,17 @@ export default defineNuxtConfig({
 
 /**
  * Create an array of URLs from a list of files
- * @param {*} urlFilepathTable
+ * @param {Array} urlFilepathTable
  */
-function getDynamicPaths(urlFilepathTable) {
+function getDynamicPaths(urlFilepathTable: any) {
   return [].concat(
     ...Object.keys(urlFilepathTable).map((url) => {
       const filepathGlob = urlFilepathTable[url];
-      return glob.sync(filepathGlob, { cwd: "content" }).map((filepath) => {
-        return `${url}/${path.basename(filepath, ".md")}`;
-      });
+      return glob
+        .sync(filepathGlob, { cwd: "content" })
+        .map((filepath: any) => {
+          return `${url}/${path.basename(filepath, ".md")}`;
+        });
     })
   );
 }
-

@@ -18,62 +18,60 @@ onMounted(() => {
 
 
 <template>
-  <NuxtLayout>
-    <div class="absolute-content">
-      <section class="home-top-banner">
-        <div class="flex md:justify-content-between container mb-5">
-          <div class="home-top-banner__cta md:flex-1">
-            <span class="endoc-title"><strong>Endoc</strong><small>TM</small></span>
-            <span class="endoc-subtitle mt-2 mb-4">business & home envelopes</span>
+  <div class="absolute-content">
+    <section class="home-top-banner">
+      <div class="flex md:justify-content-between container mb-5">
+        <div class="home-top-banner__cta md:flex-1">
+          <span class="endoc-title"><strong>Endoc</strong><small>TM</small></span>
+          <span class="endoc-subtitle mt-2 mb-4">business & home envelopes</span>
 
-            <BaseButton label="become a seller" />
-          </div>
-
-          <div class="home-top-banner__envelopes md:flex-1">
-            <img src="@/assets/imgs/home-top-banner-envelope-1.png" />
-            <img src="@/assets/imgs/home-top-banner-envelope-2.png" />
-            <img src="@/assets/imgs/home-top-banner-envelope-3.png" />
-          </div>
+          <BaseButton label="become a seller" />
         </div>
 
-        <div class="container">
-          <BaseMessage>
-            <template #content>
-              At Endoc, we source and supply high quality, USA made envelopes for all your business needs.
-            </template>
-
-            <template #action>
-              <BaseButton label="explore more" link to="#" icon="arrow-down" />
-            </template>
-          </BaseMessage>
+        <div class="home-top-banner__envelopes md:flex-1">
+          <img src="@/assets/imgs/home-top-banner-envelope-1.png" />
+          <img src="@/assets/imgs/home-top-banner-envelope-2.png" />
+          <img src="@/assets/imgs/home-top-banner-envelope-3.png" />
         </div>
-      </section>
+      </div>
 
-      <section class="our-products">
-        <div class="container">
-          <div class="flex flex-column md:flex-row justify-content-between align-items-center">
-            <h2 class="text-h2">Our Products</h2>
+      <div class="container">
+        <BaseMessage>
+          <template #content>
+            At Endoc, we source and supply high quality, USA made envelopes for all your business needs.
+          </template>
 
-            <BaseButton label="explore all products" to="/categories" variant="secondary"></BaseButton>
-          </div>
+          <template #action>
+            <BaseButton label="explore more" link to="#" icon="arrow-down" />
+          </template>
+        </BaseMessage>
+      </div>
+    </section>
 
-          <ul class="our-products__list grid">
-            <li v-for="(category, index) in visibleCategories" class="our-products__item col-12 md:col-6 xl:col-4">
-              <NuxtLink :to="category._path">
-                <img class="card-bg" :src="`/imgs/bg/card-bg-${index + 1}.png`" />
-                <img class="product-img" :src="category.icon" />
+    <section class="our-products">
+      <div class="container">
+        <div class="flex flex-column md:flex-row justify-content-between align-items-center">
+          <h2 class="text-h2">Our Products</h2>
 
-                <span class="product-name">{{ category.title }}</span>
-
-                <i class="icon-arrow-right"></i>
-              </NuxtLink>
-            </li>
-          </ul>
+          <BaseButton label="explore all products" to="/categories" variant="secondary"></BaseButton>
         </div>
 
-      </section>
-    </div>
-  </NuxtLayout>
+        <ul class="our-products__list grid">
+          <li v-for="(category, index) in visibleCategories" class="our-products__item col-12 md:col-6 xl:col-4">
+            <NuxtLink :to="category._path">
+              <img class="card-bg" :src="`/imgs/bg/card-bg-${index + 1}.png`" />
+              <img class="product-img" :src="category.icon" />
+
+              <span class="product-name">{{ category.title }}</span>
+
+              <i class="icon-arrow-right"></i>
+            </NuxtLink>
+          </li>
+        </ul>
+      </div>
+
+    </section>
+  </div>
 </template>
 
 <style lang="scss">

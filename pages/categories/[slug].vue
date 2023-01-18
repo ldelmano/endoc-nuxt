@@ -33,90 +33,88 @@ onMounted(() => {
 </script>
 
 <template>
-  <NuxtLayout>
-    <div class="container px-3">
-      <BaseBreadcrumb
-        :items="[{ label: 'our products', to: '/categories' }, { label: category.title, to: category._path }]" />
+  <div class="container px-3">
+    <BaseBreadcrumb
+      :items="[{ label: 'our products', to: '/categories' }, { label: category.title || 'Category', to: category._path || '/' }]" />
 
-      <section class="grid category-page my-5">
-        <article class="col-12 md:col-6 xl:col-4">
-          <h1 class="mb-3 md:mb-5">{{ category.title }}</h1>
+    <section class="grid category-page my-5">
+      <article class="col-12 md:col-6 xl:col-4">
+        <h1 class="mb-3 md:mb-5">{{ category.title }}</h1>
 
-          <BaseButton label="back to all categories" icon="arrow-left" icon-on-left variant="secondary"
-            to="/categories" />
-        </article>
-        <article class="col-12 md:col-6 xl:col-4 product" v-for="product in products">
-          <div class="product__card">
-            <div class="product__img">
-              <img :src="product.thumbnail" />
-            </div>
-
-            <div class="product__info">
-              <h4>{{ product.title }}</h4>
-
-              <p v-if="product.description">{{ product.description }}</p>
-            </div>
-
-            <BaseButton label="details" icon="arrow-right" link variant="secondary"
-              @click="() => handleProductDetails(product)" />
+        <BaseButton label="back to all categories" icon="arrow-left" icon-on-left variant="secondary"
+          to="/categories" />
+      </article>
+      <article class="col-12 md:col-6 xl:col-4 product" v-for="product in products">
+        <div class="product__card">
+          <div class="product__img">
+            <img :src="product.thumbnail" />
           </div>
-        </article>
-      </section>
 
-      <BaseModal v-show="showModal" @close-modal="handleCloseModal">
-        <template #content>
-          <div class="modal-content" v-if="modalContent">
-            <img :src="modalContent.thumbnail" />
+          <div class="product__info">
+            <h4>{{ product.title }}</h4>
 
-            <div class="product-info">
-              <h3 class="product-info__name">{{ modalContent.title }}</h3>
-              <p class="product-info__id">Item #: {{ modalContent.id }}</p>
-
-              <ul class="product-info__attributes">
-                <li>
-                  <span class="product-info__attr-name">Envelope Size</span>
-                  <span class="product-info__attr-value">{{ modalContent.attributes.envelopeSize }}</span>
-                </li>
-
-                <li>
-                  <span class="product-info__attr-name">Adhesion Type</span>
-                  <span class="product-info__attr-value">{{ modalContent.attributes.adhesionType }}</span>
-                </li>
-
-                <li>
-                  <span class="product-info__attr-name">Window Style</span>
-                  <span class="product-info__attr-value">{{ modalContent.attributes.windowStyle }}</span>
-                </li>
-
-                <li>
-                  <span class="product-info__attr-name">Compatibility</span>
-                  <span class="product-info__attr-value">{{ modalContent.attributes.compatibility }}</span>
-                </li>
-
-                <li>
-                  <span class="product-info__attr-name">Security Tint</span>
-                  <span class="product-info__attr-value">{{
-                    modalContent.attributes.hasSecurityTint ? 'Yes' : 'No'
-                  }}</span>
-                </li>
-
-                <li>
-                  <span class="product-info__attr-name">Features</span>
-                  <span class="product-info__attr-value">{{ modalContent.attributes.features }}</span>
-                </li>
-
-                <li>
-                  <span class="product-info__attr-name">Additional</span>
-                  <span class="product-info__attr-value">{{ modalContent.attributes.additional }}</span>
-                </li>
-              </ul>
-            </div>
+            <p v-if="product.description">{{ product.description }}</p>
           </div>
-        </template>
-      </BaseModal>
 
-    </div>
-  </NuxtLayout>
+          <BaseButton label="details" icon="arrow-right" link variant="secondary"
+            @click="() => handleProductDetails(product)" />
+        </div>
+      </article>
+    </section>
+
+    <BaseModal v-show="showModal" @close-modal="handleCloseModal">
+      <template #content>
+        <div class="modal-content" v-if="modalContent">
+          <img :src="modalContent.thumbnail" />
+
+          <div class="product-info">
+            <h3 class="product-info__name">{{ modalContent.title }}</h3>
+            <p class="product-info__id">Item #: {{ modalContent.id }}</p>
+
+            <ul class="product-info__attributes">
+              <li>
+                <span class="product-info__attr-name">Envelope Size</span>
+                <span class="product-info__attr-value">{{ modalContent.attributes?.envelopeSize }}</span>
+              </li>
+
+              <li>
+                <span class="product-info__attr-name">Adhesion Type</span>
+                <span class="product-info__attr-value">{{ modalContent.attributes?.adhesionType }}</span>
+              </li>
+
+              <li>
+                <span class="product-info__attr-name">Window Style</span>
+                <span class="product-info__attr-value">{{ modalContent.attributes?.windowStyle }}</span>
+              </li>
+
+              <li>
+                <span class="product-info__attr-name">Compatibility</span>
+                <span class="product-info__attr-value">{{ modalContent.attributes?.compatibility }}</span>
+              </li>
+
+              <li>
+                <span class="product-info__attr-name">Security Tint</span>
+                <span class="product-info__attr-value">{{
+                  modalContent.attributes?.hasSecurityTint ? 'Yes' : 'No'
+                }}</span>
+              </li>
+
+              <li>
+                <span class="product-info__attr-name">Features</span>
+                <span class="product-info__attr-value">{{ modalContent.attributes?.features }}</span>
+              </li>
+
+              <li>
+                <span class="product-info__attr-name">Additional</span>
+                <span class="product-info__attr-value">{{ modalContent.attributes?.additional }}</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </template>
+    </BaseModal>
+
+  </div>
 </template>
 
 <style scoped lang="scss">

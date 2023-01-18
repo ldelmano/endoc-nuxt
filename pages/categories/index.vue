@@ -16,28 +16,26 @@ onMounted(() => {
 </script>
 
 <template>
-  <NuxtLayout>
-    <div class="container px-3">
+  <div class="container px-3">
 
-      <BaseBreadcrumb :items="[{ label: 'our products', to: '/categories' }]" />
+    <BaseBreadcrumb :items="[{ label: 'our products', to: '/categories' }]" />
 
-      <section class="grid category my-5">
-        <article class="col-12 md:col-6 xl:col-4" v-for="category in categories">
-          <NuxtLink :to="category._path" class="category__card">
-            <div class="p-4 flex-1">
-              <img class="category__icon" :src="category.icon" />
+    <section class="grid category my-5">
+      <article class="col-12 md:col-6 xl:col-4" v-for="category in categories">
+        <NuxtLink :to="category._path" class="category__card">
+          <div class="p-4 flex-1">
+            <img class="category__icon" :src="category.icon" />
 
-              <h4 class="category__title">{{ category.title }}</h4>
-            </div>
+            <h4 class="category__title">{{ category.title }}</h4>
+          </div>
 
-            <div class="category__button">
-              <i class="icon-arrow-right"></i>
-            </div>
-          </NuxtLink>
-        </article>
-      </section>
-    </div>
-  </NuxtLayout>
+          <div class="category__button">
+            <i class="icon-arrow-right"></i>
+          </div>
+        </NuxtLink>
+      </article>
+    </section>
+  </div>
 </template>
 
 <style lang="scss">
