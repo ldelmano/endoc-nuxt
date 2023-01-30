@@ -25,3 +25,16 @@ interface ProductAttributes {
   features?: string;
   additional?: string;
 }
+
+export interface BaseFileContent {
+  _dir: string;
+  _draft: boolean;
+  _extension: string;
+  _file: string;
+  _id: string;
+  _locale: string;
+  _partial: boolean;
+  _path: string;
+  _source: string;
+  _type: string;
+}

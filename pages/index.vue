@@ -12,6 +12,7 @@ const categories = ref<Category[]>([])
 const visibleCategories = computed(() => categories.value.filter(category => category.showOnHome).slice(0, 6))
 
 onMounted(() => {
+  if (!data.value) return;
   categories.value = data.value
 })
 </script>
@@ -71,6 +72,8 @@ onMounted(() => {
       </div>
 
     </section>
+
+    <PagesHomeBusinessDifferentials />
   </div>
 </template>
 

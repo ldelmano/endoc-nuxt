@@ -68,7 +68,7 @@ collections:
     files:
       - name: "home-section-1"
         label: "Home Page - Section 1"
-        file: "content/home/section1.yml"
+        file: "content/home/section1.md"
         fields:
           - { label: "Title", name: "title", widget: "string" }
           - { label: "Body", name: "body", widget: "markdown" }

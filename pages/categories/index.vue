@@ -6,10 +6,11 @@ useHead({
 })
 
 const categories = ref<Category[]>([]);
-const { data } = await useAsyncData('categories', () => queryContent('categories').find());
+const { data } = await useAsyncData('categories', () => queryContent<Category>('categories').find());
 
 
 onMounted(() => {
+  if (!data.value) return;
   categories.value = data.value
 })
 
