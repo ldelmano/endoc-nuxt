@@ -3,7 +3,7 @@ import { BaseFileContent } from '@/models';
 
 interface BecomeSellerContent extends BaseFileContent {
   title: string;
-  image: string;
+  coverImage: string;
 }
 
 const { data } = await useAsyncData("home-become-seller", () =>
@@ -20,7 +20,7 @@ onMounted(() => {
     <div class="container">
       <div class="flex flex-column md:flex-row become-seller__wrapper">
         <div class="become-seller__picture">
-          <img :src="data.image" />
+          <img :src="data.coverImage" />
         </div>
         <div class="become-seller__text">
           <h2 class="become-seller__title">{{ data?.title }}</h2>
