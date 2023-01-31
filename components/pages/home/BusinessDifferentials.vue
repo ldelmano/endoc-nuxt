@@ -16,9 +16,9 @@ const { data } = await useAsyncData("home:section1", () =>
   queryContent<Section>("home").where({ _id: sectionId }).findOne()
 );
 
-onMounted(() => {
-  console.log(data.value);
-});
+// onMounted(() => {
+//   console.log(data.value);
+// });
 </script>
 
 <template>
@@ -122,7 +122,7 @@ $label-font-size-redo: $default-size * 3;
 .business-diff {
   &__section-title {
     font-weight: 600;
-    font-size: 2.25rem;
+    font-size: 2.25em;
     line-height: 130%;
     /* identical to box height, or 47px */
 
@@ -132,7 +132,7 @@ $label-font-size-redo: $default-size * 3;
 
   &__md-content {
     font-weight: 500;
-    font-size: 1.25rem;
+    font-size: 1.25em;
     line-height: 186%;
     /* or 37px */
 
@@ -154,21 +154,21 @@ $label-font-size-redo: $default-size * 3;
     &__header {
       display: flex;
       align-items: center;
-      margin-bottom: 1rem;
+      margin-bottom: 1em;
 
       h4 {
-        margin: 0 0 0 2rem;
+        margin: 0 0 0 1em;
         font-weight: 500;
-        font-size: 1.625rem;
+        font-size: 1.625em;
         line-height: 160%;
         color: #323747;
       }
     }
 
     &__body {
-      padding-left: 6rem;
+      padding-left: 6em;
       font-weight: 400;
-      font-size: 1rem;
+      font-size: 1em;
       line-height: 182%;
       /* or 29px */
 
@@ -177,12 +177,12 @@ $label-font-size-redo: $default-size * 3;
     }
 
     +.diff-item {
-      margin-top: 3rem;
+      margin-top: 3em;
     }
   }
 
   .diff-item__chart {
-    font-size: 4rem;
+    font-size: 4em;
   }
 }
 

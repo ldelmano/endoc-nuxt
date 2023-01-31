@@ -54,9 +54,11 @@ body {
 .container {
   width: 100%;
   margin: 0 auto;
+  padding: 1rem;
 
   @media (min-width: 992px) {
     max-width: 80%;
+    padding: 0;
   }
 
   @media (min-width: 1200px) {

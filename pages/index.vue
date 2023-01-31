@@ -74,6 +74,8 @@ onMounted(() => {
     </section>
 
     <PagesHomeBusinessDifferentials />
+
+    <PagesHomeBecomeSeller />
   </div>
 </template>
 
@@ -178,7 +180,7 @@ onMounted(() => {
       display: flex;
       font-weight: 700;
 
-      letter-spacing: 0.11rem;
+      letter-spacing: 0.11em;
       text-transform: uppercase;
 
       color: #006A6E;
@@ -260,7 +262,7 @@ onMounted(() => {
 
   &__item {
     box-sizing: content-box;
-    padding: 1rem 2em;
+    padding: 1em 2em;
 
     a {
       position: relative;
