@@ -12,6 +12,56 @@
     <script src="https://unpkg.com/netlify-cms@^2.0.0/dist/netlify-cms.js"></script>
 
     <script>
+      function random() {
+        return Math.random();
+      }
+
+      function generateId() {
+        var ret = "",
+          value;
+        for (var i = 0; i < 32; i++) {
+          value = (random() * 16) | 0;
+          // Insert the hypens
+          if (i > 4 && i < 21 && !(i % 4)) {
+            ret += "-";
+          }
+          // Add the next random character
+          ret += (i === 12 ? 4 : i === 16 ? (value & 3) | 8 : value).toString(
+            16
+          );
+        }
+        return ret;
+      }
+
+      const IdControl = createClass({
+        componentDidMount: function () {
+          const value = this.props.value ? this.props.value : generateId();
+          this.props.onChange(value);
+        },
+
+        handleChange: function (e) {
+          this.props.onChange(e.target.value.trim());
+        },
+
+        render: function () {
+          return h("input", {
+            type: "text",
+            disabled: "disabled",
+            value: this.props.value,
+            onChange: this.handleChange,
+            className: this.props.classNameWrapper,
+          });
+        },
+      });
+
+      const IdPreview = createClass({
+        render: function () {
+          return h("p", {}, this.props.value);
+        },
+      });
+
+      CMS.registerWidget("id", IdControl, IdPreview);
+
       CMS.registerEventListener({
         name: "preSave",
         handler: ({ entry }) => {

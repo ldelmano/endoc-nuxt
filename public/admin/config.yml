@@ -67,7 +67,9 @@ collections:
     label: "Reviews"
     folder: "content/reviews"
     create: true
+    slug: "{{fields.id}}"
     fields:
+      - { label: "Review ID", name: "id", widget: "id" }
       - { label: "Body", name: "body", widget: "markdown" }
       - { label: "Author", name: "authorName", widget: "string" }
       - { label: "Author - Subtitle", name: "authorSub", widget: "string" }
