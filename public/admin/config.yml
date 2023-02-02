@@ -68,6 +68,12 @@ collections:
     folder: "content/reviews"
     create: true
     fields:
+      - {
+          label: "Title",
+          name: "title",
+          widget: "hidden",
+          default: "{{ fields.authorName + fields.authorSub }}",
+        }
       - { label: "Body", name: "body", widget: "markdown" }
       - { label: "Author", name: "authorName", widget: "string" }
       - { label: "Author - Subtitle", name: "authorSub", widget: "string" }
