@@ -1,4 +1,10 @@
 <script setup>
+useHead({
+  script: [{
+    src: "https://identity.netlify.com/v1/netlify-identity-widget.js"
+  }]
+})
+
 onMounted(() => {
   if (window.netlifyIdentity) {
     window.netlifyIdentity.on("init", user => {
@@ -16,10 +22,6 @@ onMounted(() => {
 
 <template>
   <NuxtLayout>
-
-    <Head>
-      <NoScript src="https://identity.netlify.com/v1/netlify-identity-widget.js"></NoScript>
-    </Head>
     <NuxtPage />
   </NuxtLayout>
 </template>

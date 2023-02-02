@@ -1,5 +1,6 @@
 <script setup lang="ts">
 const props = defineProps<{
+  class?: string;
   label: string;
   link?: boolean;
   to?: string;
@@ -23,9 +24,9 @@ const variantState = computed(() => props.variant ? `btn--${props.variant}` : `b
 
     <i v-if="icon" :class="`icon-${icon} ${iconOnLeft ? 'mr-2' : 'ml-2'}`"></i>
   </NuxtLink>
-  <button v-else @click.stop="$emit('click')"
-    :class="['btn', link && 'btn--link', variantState, iconOnLeft && 'btn--icon-left']">
-    {{ label }}
+  <button v-else @click.stop="emit('click')"
+    :class="['btn', link && 'btn--link', variantState, iconOnLeft && 'btn--icon-left', props.class]">
+    <span>{{ label }}</span>
 
     <i v-if="icon" :class="`icon-${icon} ${iconOnLeft ? 'mr-2' : 'ml-2'}`"></i>
   </button>

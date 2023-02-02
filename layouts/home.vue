@@ -4,7 +4,6 @@
 
     <slot></slot>
   </main>
-  <TheFooter />
 </template>
 
 <style lang="scss">

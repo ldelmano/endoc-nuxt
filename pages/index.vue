@@ -5,6 +5,8 @@ import { register } from 'swiper/element/bundle';
 
 register();
 
+definePageMeta({ layout: "home", });
+
 useHead({
   title: 'Endoc - Business and home envelopes'
 })
@@ -86,6 +88,8 @@ onMounted(() => {
         <BaseCarousel />
       </div>
     </section>
+
+    <TheFooter />
   </div>
 </template>
 
