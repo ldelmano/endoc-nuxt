@@ -1,32 +1,56 @@
 <script setup lang="ts">
+import { MarkdownParsedContent } from '@nuxt/content/dist/runtime/types';
+
 const spaceBetween = 10;
 
-
-const onSlideChange = (e: any) => {
-  console.log('slide changed')
+interface Review {
+  body: MarkdownParsedContent;
+  authorName: string;
+  authorSubtitle: string;
 }
+
+const { data } = await useAsyncData('reviews', () => queryContent<Review>('reviews').find())
+
+const getInitials = (name: string) => {
+  const words = name.split(' ');
+
+  let initials = [];
+
+  for (let word of words) {
+    initials.push(word.charAt(0).toUpperCase())
+  }
+
+  return initials.join('');
+}
+
+const pagination = ref({
+  clickable: true
+})
+
+onMounted(() => {
+  pagination.value = {
+    clickable: true
+  }
+})
 
 </script>
   
 <template>
-  <swiper-container :slides-per-view="1" :space-between="spaceBetween" :pagination="{
-    clickable: true
-  }" @slidechange="onSlideChange">
-    <swiper-slide v-for="(item, index) in [0, 1, 2, 3, 4, 5]">
+  <swiper-container :slides-per-view="1" :space-between="spaceBetween" :pagination="pagination">
+    <swiper-slide v-for="(item, index) in data">
       <div class="slider">
         <div class="slider__content">
-          EnDoc envelopes are the best!
-          The combination of quality and low prices cannot be met elsewhere.
+          <LazyContentRenderer :value="item || {}" />
         </div>
 
         <div class="slider__author">
           <div class="slider__author-initials">
-            <span>RS</span>
+            <span>{{ getInitials(item.authorName) }}</span>
           </div>
 
           <div class="slider__author-info">
-            <span class="author-name">Rose Green</span>
-            <span class="author-location">New York</span>
+            <span class="author-name">{{ item.authorName }}</span>
+            <span class="author-location">{{ item.authorSubtitle }}</span>
           </div>
         </div>
       </div>
@@ -64,7 +88,7 @@ swiper-container {
     color: var(--main-black-color);
 
     @media (min-width: 768px) {
-      padding: 2.5em 6em 2.5em 2em;
+      padding: 1.5em 7em 1.5em 1.5em;
     }
 
     @media (min-width: 992px) {
