@@ -1,3 +1,12 @@
+:root {
+  --swiper-theme-color: #006A6E;
+  --swiper-pagination-top: calc(100% - 1.2em);
+  --lime-color: #C8DF3C;
+  --main-black-color: #323747;
+  --dark-green-color: #006A6E;
+  --text-grey: #8C8E96;
+}
+
 .text-h2 {
   margin: 0;
   font-weight: 600;

@@ -63,6 +63,14 @@ collections:
             }
           - { label: "Features", name: "features", widget: "string" }
           - { label: "Additional", name: "additional", widget: "string" }
+  - name: "reviews"
+    label: "Reviews"
+    folder: "content/reviews"
+    create: true
+    fields:
+      - { label: "Body", name: "body", widget: "markdown" }
+      - { label: "Author", name: "authorName", widget: "string" }
+      - { label: "Author - Subtitle", name: "authorSub", widget: "string" }
   - label: "Home page - Content"
     name: "home-content"
     files:

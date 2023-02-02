@@ -20,7 +20,7 @@ onMounted(() => {
     <div class="container">
       <div class="flex flex-column md:flex-row become-seller__wrapper">
         <div class="become-seller__picture">
-          <img :src="data.coverImage" />
+          <img :src="data?.coverImage" />
         </div>
         <div class="become-seller__text">
           <h2 class="become-seller__title">{{ data?.title }}</h2>
@@ -34,7 +34,7 @@ onMounted(() => {
         </div>
       </div>
 
-      <ul class="become-seller__benefits flex">
+      <ul class="become-seller__benefits grid">
         <li class="col-12 md:col-4">
           <div class="become-seller__benefits-item">
             <i class="icon-shipping"></i>
@@ -68,7 +68,7 @@ onMounted(() => {
   background-repeat: no-repeat;
 
   &__wrapper {
-    transform: translateY(-10em);
+    // transform: translateY(-10em);
   }
 
   &__picture {
@@ -76,6 +76,7 @@ onMounted(() => {
     align-items: center;
     justify-content: center;
     flex: 1;
+    margin-top: -10em;
     border-radius: 1.875em;
     overflow: hidden;
     background-color: #f5f5f5;
@@ -88,6 +89,7 @@ onMounted(() => {
   }
 
   &__text {
+    margin-top: -10em;
     flex: 1;
     padding: 1.5em;
     border-radius: 1.875em;
@@ -118,7 +120,7 @@ onMounted(() => {
   }
 
   &__benefits {
-    margin: -7em 0;
+    margin: 3em 0 0;
     list-style: none;
     padding: 0;
 

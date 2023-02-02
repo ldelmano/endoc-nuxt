@@ -22,6 +22,12 @@ export default defineNuxtConfig({
     "~/assets/base.css",
     "~/node_modules/primeflex/primeflex.css",
   ],
+  vue: {
+    compilerOptions: {
+      isCustomElement: (tag) =>
+        ["swiper-container", "swiper-slide"].includes(tag),
+    },
+  },
 });
 
 /**

@@ -1,6 +1,10 @@
 <script setup lang="ts">
 import { Category } from '@/models';
 
+import { register } from 'swiper/element/bundle';
+
+register();
+
 useHead({
   title: 'Endoc - Business and home envelopes'
 })
@@ -76,6 +80,12 @@ onMounted(() => {
     <PagesHomeBusinessDifferentials />
 
     <PagesHomeBecomeSeller />
+
+    <section class="home-page-reviews">
+      <div class="container">
+        <BaseCarousel />
+      </div>
+    </section>
   </div>
 </template>
 
@@ -309,5 +319,11 @@ onMounted(() => {
       }
     }
   }
+}
+
+.home-page-reviews {
+  position: relative;
+  margin-top: 10em;
+  margin-bottom: 5em;
 }
 </style>
