@@ -1,6 +1,6 @@
 ---
 title: Become a seller
-coverImage: /imgs/uploads/become-seller-cover.png
+coverImage: /imgs/uploads/index.png
 ---
 
 Selling Wholesale or Resale? Our wide supply of sizes and styles have made us the #1 source for envelope needs. View our catalog to familiarize with our Endoc branded stock that is ready to ship.
