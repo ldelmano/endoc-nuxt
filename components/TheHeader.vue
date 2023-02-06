@@ -46,6 +46,8 @@ const closeMenu = () => {
       </OnClickOutside>
     </div>
     <div class="header__right hidden md:flex">
+      <TheCategoryMenu />
+
       <BaseButton to="/" variant="secondary" label="contact us" />
     </div>
   </header>
