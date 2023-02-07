@@ -1,10 +1,6 @@
 <script setup lang="ts">
 import { Category } from '@/models';
 
-import { register } from 'swiper/element/bundle';
-
-register();
-
 definePageMeta({ layout: "home", });
 
 useHead({

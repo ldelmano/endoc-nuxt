@@ -95,3 +95,34 @@ collections:
           - { label: "Title", name: "title", widget: "string" }
           - { label: "Body", name: "body", widget: "markdown" }
           - { label: "Cover Image", name: "coverImage", widget: "image" }
+  - name: "about-us"
+    label: "About us"
+    files:
+      - name: "about-content"
+        label: "Content"
+        file: "content/about-us.md"
+        fields:
+          - label: "Top banner"
+            name: "topBanner"
+            widget: "object"
+            fields:
+              - { label: "Image", name: "image", widget: "image" }
+              - { label: "Body", name: "body", widget: "markdown" }
+          - label: "Content Section 1"
+            name: "section1"
+            widget: "object"
+            fields:
+              - { label: "Image", name: "image", widget: "image" }
+              - { label: "Body", name: "body", widget: "markdown" }
+          - label: "Content Section 2"
+            name: "section2"
+            widget: "object"
+            fields:
+              - { label: "Image", name: "image", widget: "image" }
+              - label: "Differentials"
+                name: "differentials"
+                widget: "list"
+                fields:
+                  - { label: "Label", name: "label", widget: "string" }
+                  - { label: "Description", name: "description", widget: "string" } 
+              

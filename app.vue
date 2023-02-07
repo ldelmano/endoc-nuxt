@@ -1,4 +1,8 @@
 <script setup>
+import { register } from 'swiper/element/bundle';
+
+register();
+
 useHead({
   script: [{
     src: "https://identity.netlify.com/v1/netlify-identity-widget.js"
