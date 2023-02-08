@@ -102,12 +102,8 @@ collections:
         label: "Content"
         file: "content/about-us/topbanner.md"
         fields:
-          - label: "Top banner"
-            name: "topBanner"
-            widget: "object"
-            fields:
-              - { label: "Image", name: "image", widget: "image" }
-              - { label: "Body", name: "body", widget: "markdown" }
+          - { label: "Image", name: "image", widget: "image" }
+          - { label: "Body", name: "body", widget: "markdown" }
       - name: "about-section-1"
         label: "Content Section 1"
         file: "content/about-us/section1.md"
