@@ -98,9 +98,9 @@ collections:
   - name: "about-us"
     label: "About us"
     files:
-      - name: "about-content"
+      - name: "about-top-banner"
         label: "Content"
-        file: "content/about-us.md"
+        file: "content/about-us/topbanner.md"
         fields:
           - label: "Top banner"
             name: "topBanner"
@@ -108,21 +108,20 @@ collections:
             fields:
               - { label: "Image", name: "image", widget: "image" }
               - { label: "Body", name: "body", widget: "markdown" }
-          - label: "Content Section 1"
-            name: "section1"
-            widget: "object"
+      - name: "about-section-1"
+        label: "Content Section 1"
+        file: "content/about-us/section1.md"
+        fields:
+          - { label: "Image", name: "image", widget: "image" }
+          - { label: "Body", name: "body", widget: "markdown" }
+      - name: "about-section-2"
+        label: "Content Section 2"
+        file: "content/about-us/section2.md"
+        fields:
+          - { label: "Image", name: "image", widget: "image" }
+          - label: "Differentials"
+            name: "differentials"
+            widget: "list"
             fields:
-              - { label: "Image", name: "image", widget: "image" }
-              - { label: "Body", name: "body", widget: "markdown" }
-          - label: "Content Section 2"
-            name: "section2"
-            widget: "object"
-            fields:
-              - { label: "Image", name: "image", widget: "image" }
-              - label: "Differentials"
-                name: "differentials"
-                widget: "list"
-                fields:
-                  - { label: "Label", name: "label", widget: "string" }
-                  - { label: "Description", name: "description", widget: "string" } 
-              
+              - { label: "Label", name: "label", widget: "string" }
+              - { label: "Description", name: "description", widget: "string" }
