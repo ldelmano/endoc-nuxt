@@ -40,7 +40,12 @@ onMounted(() => {
     <swiper-slide v-for="(item, index) in data">
       <div class="slider">
         <div class="slider__content">
-          <LazyContentRenderer :value="item || {}" />
+          <img src="imgs/bg/review-card-bg.svg" />
+
+
+          <div>
+            <ContentRenderer :value="item || {}" />
+          </div>
         </div>
 
         <div class="slider__author">
@@ -73,12 +78,13 @@ swiper-container {
   }
 
   &__content {
+    position: relative;
     flex: 1;
     margin-bottom: 1em;
     padding: 1em;
-    background-image: url('/imgs/bg/review-card-bg.svg');
-    background-size: cover;
-    background-repeat: no-repeat;
+    // background-image: url('/imgs/bg/review-card-bg.svg');
+    // background-size: cover;
+    // background-repeat: no-repeat;
     border-radius: 1em;
 
 
@@ -94,6 +100,20 @@ swiper-container {
     @media (min-width: 992px) {
       margin-bottom: 0;
       border-radius: 0;
+    }
+
+    img {
+      position: absolute;
+      z-index: 0;
+      width: 100%;
+      top: 0;
+      left: 0;
+      height: 100%;
+    }
+
+    >div {
+      position: inherit;
+      z-index: 1;
     }
   }
 

@@ -15,6 +15,8 @@ interface Section2 extends MarkdownParsedContent {
   differentials: Differential[];
 }
 
+const icons = ['icon-usa-flag', 'icon-price', 'icon-premium']
+
 const { data } = await useAsyncData('aboutus', () => queryContent('about-us').find());
 
 
@@ -46,9 +48,18 @@ onMounted(() => {
         </div>
 
         <div class="top-banner__body">
-          <LazyContentRenderer :value="topBanner" />
+          <div class="top-banner__endoc">
+            <h4>EnDoc™</h4>
+            <p>business & home envelopes</p>
+          </div>
+
+          <div class="top-banner__markdown">
+            <ContentRenderer :value="topBanner" />
+          </div>
         </div>
       </div>
+
+      <PagesAboutNumbers />
 
       <div class="grid section-1" v-if="section1">
         <div class="col-12 lg:col-6">
@@ -69,9 +80,17 @@ onMounted(() => {
           </div>
         </div>
         <div class="col-12 lg:col-6">
-          <ul>
-            <li v-for="(item, index) in section2.differentials">
-              {{ item.label }}
+          <ul class="differentials-list">
+            <li v-for="(item, index) in section2.differentials" class="differentials-item">
+              <div class="differentials-item__icon">
+                <i :class="icons[index]"></i>
+              </div>
+
+              <div class="differentials-item__content">
+                <h6>{{ item.label }}</h6>
+
+                <p>{{ item.description }}</p>
+              </div>
             </li>
           </ul>
         </div>
@@ -85,6 +104,50 @@ onMounted(() => {
 </template>
 
 <style lang="scss" scoped>
+.differentials-list {
+  list-style: none;
+
+  li+li {
+    margin-top: 4em;
+  }
+}
+
+.differentials-item {
+  display: flex;
+}
+
+.differentials-item__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 6.5em;
+  height: 6.5em;
+  background-color: #ffffff;
+  border-radius: 1.875rem;
+
+  i {
+    font-size: 2rem;
+  }
+}
+
+.differentials-item__content {
+  flex: 1;
+  margin-left: 1.875rem;
+
+  h6 {
+    margin: 0 0 1rem;
+    font-weight: 500;
+    font-size: 1.625em;
+  }
+
+  p {
+    margin: 0;
+    font-weight: 400;
+    font-size: 1em;
+    color: #8C8E96;
+  }
+}
+
 .top-banner {
   display: flex;
   flex-direction: column;
@@ -108,8 +171,7 @@ onMounted(() => {
       align-items: center;
       justify-content: center;
       width: 65%;
-      height: auto;
-      max-height: 20em;
+      height: 100%;
     }
   }
 
@@ -118,6 +180,7 @@ onMounted(() => {
     border-radius: 1.875em;
     background-image: url("~/assets/imgs/bg-square.png");
     overflow: hidden;
+
 
     @media (min-width: 768px) {
       flex: 1;
@@ -130,6 +193,30 @@ onMounted(() => {
       padding: 5em;
     }
 
+  }
+
+  &__endoc {
+    margin-bottom: 3em;
+    color: var(--dark-green-color);
+
+    h4 {
+      margin: 0;
+      font-weight: 600;
+      font-size: 2.25em;
+
+    }
+
+    p {
+      margin: 0;
+      font-weight: 500;
+      font-size: 1.25em;
+    }
+  }
+
+  &__markdown {
+    font-weight: 500;
+    font-size: 1.625em;
+    color: var(--main-black-color);
   }
 }
 
