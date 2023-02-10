@@ -39,7 +39,6 @@
 .numbers__item {
   display: flex;
   align-items: center;
-  justify-content: space-between;
   background: #D5F0F1;
   border-radius: 1.875em;
   padding: 0.625em;

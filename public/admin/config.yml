@@ -99,7 +99,7 @@ collections:
     label: "About us"
     files:
       - name: "about-top-banner"
-        label: "Content"
+        label: "Top banner content"
         file: "content/about-us/topbanner.md"
         fields:
           - { label: "Image", name: "image", widget: "image" }
@@ -121,3 +121,11 @@ collections:
             fields:
               - { label: "Label", name: "label", widget: "string" }
               - { label: "Description", name: "description", widget: "string" }
+  - name: "pages"
+    label: "Additional Pages"
+    files:
+      - label: "Privacy Policy"
+        name: "privacy"
+        file: "content/privacy.md"
+        fields:
+          - { label: "Body", name: "body", widget: "markdown" }

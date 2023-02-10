@@ -1,6 +1,8 @@
 <script setup lang="ts">
 import { OnClickOutside } from '@vueuse/components'
 
+const route = useRoute();
+
 const isMobileMenuOpened = ref(false);
 
 const toggleMenu = () => {
@@ -15,7 +17,7 @@ const closeMenu = () => {
 </script>
 
 <template>
-  <header class="header">
+  <header :class="['header', !route.meta.layout && 'header--internal']">
     <div class="header__left">
       <div class="header__left-mobile">
         <NuxtLink to="/">
@@ -65,6 +67,10 @@ const closeMenu = () => {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+  }
+
+  &--internal {
+    border-bottom: 1px solid #E0E2EB;
   }
 
   &__logo {

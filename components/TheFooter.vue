@@ -85,7 +85,7 @@ const values = reactive({
       <div class="bottom-footer__divider"></div>
 
       <div class="flex flex-column md:flex-row md:justify-content-between py-3">
-        <NuxtLink to="#">Privacy Policy</NuxtLink>
+        <NuxtLink to="/privacy">Privacy Policy</NuxtLink>
 
         <span>EnDoc 2022 © All Rights reserved.</span>
       </div>
