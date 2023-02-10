@@ -31,6 +31,7 @@ onMounted(() => {
   pagination.value = {
     clickable: true
   }
+
 })
 
 </script>
@@ -40,7 +41,7 @@ onMounted(() => {
     <swiper-slide v-for="(item, index) in data">
       <div class="slider">
         <div class="slider__content">
-          <img src="imgs/bg/review-card-bg.svg" />
+          <img src="/imgs/bg/review-card-bg.svg" />
 
 
           <div>
