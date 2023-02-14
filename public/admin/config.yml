@@ -100,19 +100,19 @@ collections:
     files:
       - name: "about-top-banner"
         label: "Top banner content"
-        file: "content/about-us/topbanner.md"
+        file: "content/aboutus/topbanner.md"
         fields:
           - { label: "Image", name: "image", widget: "image" }
           - { label: "Body", name: "body", widget: "markdown" }
       - name: "about-section-1"
         label: "Content Section 1"
-        file: "content/about-us/section1.md"
+        file: "content/aboutus/section1.md"
         fields:
           - { label: "Image", name: "image", widget: "image" }
           - { label: "Body", name: "body", widget: "markdown" }
       - name: "about-section-2"
         label: "Content Section 2"
-        file: "content/about-us/section2.md"
+        file: "content/aboutus/section2.md"
         fields:
           - { label: "Image", name: "image", widget: "image" }
           - label: "Differentials"

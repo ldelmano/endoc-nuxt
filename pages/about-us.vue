@@ -17,7 +17,7 @@ interface Section2 extends MarkdownParsedContent {
 
 const icons = ['icon-usa-flag', 'icon-price', 'icon-premium']
 
-const { data } = await useAsyncData('aboutus', () => queryContent('about-us').find());
+const { data } = await useAsyncData('about-us', () => queryContent('aboutus').find());
 
 
 useHead({
@@ -31,6 +31,8 @@ const section2 = ref<Section2>()
 onMounted(() => {
   if (!data.value) return;
 
+  console.log(data.value)
+
   topBanner.value = data.value.find(item => item.title === 'Topbanner') as WithImage;
   section1.value = data.value.find(item => item.title === 'Section1') as WithImage;
   section2.value = data.value.find(item => item.title === 'Section2') as Section2;
@@ -39,7 +41,7 @@ onMounted(() => {
 
 <template>
   <div class="container px-3">
-    <BaseBreadcrumb :items="[{ label: 'about us', to: '/about' }]" />
+    <BaseBreadcrumb :items="[{ label: 'about us', to: '/about-us' }]" />
 
     <section class="my-5">
       <div class="top-banner" v-if="topBanner">
@@ -80,7 +82,7 @@ onMounted(() => {
           </div>
         </div>
         <div class="col-12 lg:col-6">
-          <ul class="differentials-list">
+          <ul class="differentials-list lg:ml-5">
             <li v-for="(item, index) in section2.differentials" class="differentials-item">
               <div class="differentials-item__icon">
                 <i :class="icons[index]"></i>
@@ -106,6 +108,7 @@ onMounted(() => {
 <style lang="scss" scoped>
 .differentials-list {
   list-style: none;
+  padding-left: 0;
 
   li+li {
     margin-top: 4em;

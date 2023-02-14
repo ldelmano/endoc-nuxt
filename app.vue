@@ -75,4 +75,17 @@ body {
     max-width: 1450px;
   }
 }
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 500;
+
+  a {
+    text-decoration: none;
+    color: var(--main-black-color);
+  }
+}
 </style>

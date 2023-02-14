@@ -4,15 +4,24 @@ import { OnClickOutside } from '@vueuse/components'
 const route = useRoute();
 
 const isMobileMenuOpened = ref(false);
+const showOverlay = ref(false);
 
 const toggleMenu = () => {
-  isMobileMenuOpened.value = !isMobileMenuOpened.value
+  isMobileMenuOpened.value = !isMobileMenuOpened.value;
+  showOverlay.value = !showOverlay.value;
 }
 
 const closeMenu = () => {
   if (!isMobileMenuOpened.value) return;
 
   isMobileMenuOpened.value = false;
+  showOverlay.value = false;
+}
+
+const showContactForm = ref(false);
+const toggleContactForm = () => {
+  showOverlay.value = !showOverlay.value;
+  showContactForm.value = !showContactForm.value;
 }
 </script>
 
@@ -29,7 +38,7 @@ const closeMenu = () => {
         </button>
       </div>
 
-      <div :class="['header__menu-overlay', isMobileMenuOpened ? 'fade-in' : 'fade-out']"></div>
+      <div :class="['header__menu-overlay', showOverlay ? 'fade-in' : 'fade-out']"></div>
 
       <OnClickOutside @trigger="closeMenu">
         <nav :class="['header__menu', isMobileMenuOpened && 'header__menu--open']">
@@ -38,7 +47,7 @@ const closeMenu = () => {
               <NuxtLink to="/">home</NuxtLink>
             </li>
             <li>
-              <NuxtLink to="/about">about</NuxtLink>
+              <NuxtLink to="/about-us">about</NuxtLink>
             </li>
             <li>
               <NuxtLink to="/become-a-seller">become a seller</NuxtLink>
@@ -50,7 +59,9 @@ const closeMenu = () => {
     <div class="header__right hidden md:flex">
       <TheCategoryMenu />
 
-      <BaseButton to="/" variant="secondary" label="contact us" />
+      <BaseButton @click="toggleContactForm" variant="secondary" label="contact us" />
+
+      <TheContactForm :visible="showContactForm" @update:visible="toggleContactForm" />
     </div>
   </header>
 </template>
