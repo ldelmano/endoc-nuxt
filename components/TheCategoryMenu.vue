@@ -86,7 +86,7 @@ onMounted(() => {
       display: flex;
       flex-direction: column;
       list-style: none;
-      padding: 0 0 0 2.875em;
+      padding: 0 2.5em 2em;
       margin: 0;
     }
 

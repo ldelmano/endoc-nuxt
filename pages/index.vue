@@ -41,11 +41,11 @@ onMounted(() => {
       <div class="container">
         <BaseMessage>
           <template #content>
-            At Endoc, we source and supply high quality, USA made envelopes for all your business needs.
+            Envelop your brand in quality and style because envelopes are the window to your brand's soul.
           </template>
 
           <template #action>
-            <BaseButton label="explore more" link to="#" icon="arrow-down" />
+            <BaseButton label="explore more" link to="/categories" icon="arrow-down" />
           </template>
         </BaseMessage>
       </div>

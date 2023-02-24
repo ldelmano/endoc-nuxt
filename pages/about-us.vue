@@ -15,7 +15,7 @@ interface Section2 extends MarkdownParsedContent {
   differentials: Differential[];
 }
 
-const icons = ['icon-usa-flag', 'icon-price', 'icon-premium']
+const icons = ['icon-service', 'icon-price', 'icon-premium']
 
 const { data } = await useAsyncData('about-us', () => queryContent('aboutus').find());
 

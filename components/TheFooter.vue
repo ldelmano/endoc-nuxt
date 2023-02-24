@@ -11,7 +11,7 @@ const values = reactive({
 <template>
   <footer>
     <div class="container flex flex-column xl:flex-row footer-content">
-      <div class="contact-form">
+      <div id="contact-form" class="contact-form">
         <h2 class="contact-form__title">Contact us</h2>
 
         <p class="contact-form__description">Drop us a line and we'll get back to you with a quote!</p>
@@ -23,7 +23,7 @@ const values = reactive({
 
               <BaseTextField class="mb-3" v-model="values.email" required placeholder="Email" type="email" />
 
-              <BaseTextField v-model="values.phone" placeholder="Phone" />
+              <BaseTextField v-model="values.phone" required placeholder="Phone" />
             </div>
 
             <div class="col-12 md:col-6 flex flex-column">

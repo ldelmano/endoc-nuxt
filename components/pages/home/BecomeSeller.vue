@@ -30,7 +30,7 @@ onMounted(() => {
           </div>
 
 
-          <BaseButton label="contact us" />
+          <BaseButton label="contact us" to="#contact-form" />
         </div>
       </div>
 

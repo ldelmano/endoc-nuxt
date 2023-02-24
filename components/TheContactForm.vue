@@ -23,7 +23,7 @@
 
             <BaseTextField outlined class="mb-3" v-model="values.email" required placeholder="Email" type="email" />
 
-            <BaseTextField outlined v-model="values.phone" placeholder="Phone" />
+            <BaseTextField outlined required v-model="values.phone" placeholder="Phone" />
           </div>
 
           <div class="col-12 md:col-6 flex flex-column">
