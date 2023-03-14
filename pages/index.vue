@@ -26,9 +26,9 @@ onMounted(() => {
       <div class="flex md:justify-content-between container mb-5">
         <div class="home-top-banner__cta md:flex-1">
           <span class="endoc-title"><strong>Endoc</strong><small>TM</small></span>
-          <span class="endoc-subtitle mt-2 mb-4">business & home envelopes</span>
+          <span class="endoc-subtitle mt-2 mb-4">Your #1 supplier for home home & business envelopes.</span>
 
-          <BaseButton label="become a seller" />
+          <BaseButton variant="secondary" label="become a seller" />
         </div>
 
         <div class="home-top-banner__envelopes md:flex-1">
@@ -41,11 +41,14 @@ onMounted(() => {
       <div class="container">
         <BaseMessage>
           <template #content>
-            At Endoc, we source and supply high quality, USA made envelopes for all your business needs.
-          </template>
-
-          <template #action>
-            <BaseButton label="explore more" link to="#" icon="arrow-down" />
+           <div>
+            <strong>How</strong> you send is just as important as <strong>what</strong> you send. Reach out to us today to make the right impression.
+           </div>
+          
+           <div class="mt-5 flex">
+            <BaseButton label="Buy Endoc" />
+            <BaseButton class="ml-3" label="Sell Endoc" />
+           </div>
           </template>
         </BaseMessage>
       </div>
