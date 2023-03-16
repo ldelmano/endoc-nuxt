@@ -27,8 +27,6 @@ onMounted(() => {
         <div class="home-top-banner__cta md:flex-1">
           <span class="endoc-title"><strong>Endoc</strong><small>TM</small></span>
           <span class="endoc-subtitle mt-2 mb-4">Your #1 supplier for home home & business envelopes.</span>
-
-          <BaseButton variant="secondary" label="become a seller" />
         </div>
 
         <div class="home-top-banner__envelopes md:flex-1">
