@@ -34,9 +34,9 @@ const variantState = computed(() => props.variant ? `btn--${props.variant}` : `b
 
 <style lang="scss" scoped>
 %containerBtn {
-  padding: 0.75em 2em;
-  border-radius: 1.25em;
-  font-size: 1.25em;
+  padding: 0.75rem 2rem;
+  border-radius: 1.25rem;
+  font-size: 1.25rem;
   font-weight: 600;
 }
 
@@ -73,7 +73,7 @@ const variantState = computed(() => props.variant ? `btn--${props.variant}` : `b
     padding: 0;
     margin: 0;
     letter-spacing: 2%;
-    font-size: 1.25em;
+    font-size: 1.25rem;
     font-weight: 600;
 
 
