@@ -4,7 +4,7 @@ import { Category, Product } from '@/models';
 const route = useRoute();
 
 const currentCategory = await useAsyncData(`category-${route.params.slug}`, () => queryContent('categories').where({ slug: route.params.slug }).findOne())
-const productsQuery = await useAsyncData<Product[]>(`products-${route.params.slug}`, () => queryContent('products').where({ category: route.params.slug }).find());
+const productsQuery = await useAsyncData<Product[]>(`products-${route.params.slug}`, () => queryContent('products').where({ categorySlug: route.params.slug }).find());
 
 const products = ref<Product[]>([]);
 
@@ -47,7 +47,7 @@ onMounted(() => {
       <article class="col-12 md:col-6 xl:col-4 product" v-for="product in products">
         <div class="product__card">
           <div class="product__img">
-            <img :src="product.thumbnail" />
+            <img :src="product.thumbnail || (product.pictures ? product.pictures[0].url : '')" />
           </div>
 
           <div class="product__info">
@@ -65,7 +65,7 @@ onMounted(() => {
     <BaseModal v-show="showModal" @close-modal="handleCloseModal">
       <template #content>
         <div class="modal-content" v-if="modalContent">
-          <img :src="modalContent.thumbnail" />
+          <img :src="modalContent.thumbnail || (modalContent.pictures ? modalContent.pictures[0].url : '')" />
 
           <div class="product-info">
             <h3 class="product-info__name">{{ modalContent.title }}</h3>
@@ -158,6 +158,8 @@ h1 {
   flex-direction: column;
   align-items: center;
   padding: 2.5em;
+  overflow: scroll;
+  height: 100%;
 
   @media screen and (min-width: 768px) {
     flex-direction: row;
