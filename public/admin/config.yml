@@ -33,14 +33,14 @@ collections:
     editor:
       preview: false
     create: true
-    format: "frontmatter"
+    format: "json"
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Product ID", name: "id", widget: "string" }
       - { label: "Product image", name: "thumbnail", widget: "image" }
       - {
           label: "Category",
-          name: "category",
+          name: "categorySlug",
           widget: "relation",
           collection: "categories",
           search_fields: ["title", "slug"],
@@ -49,20 +49,10 @@ collections:
         }
       - label: "Attributes"
         name: "attributes"
-        widget: "object"
+        widget: "list"
         fields:
-          - { label: "Envelope Size", name: "envelopeSize", widget: "string" }
-          - { label: "Adhesion Type", name: "adhesionType", widget: "string" }
-          - { label: "Window Style", name: "windowStyle", widget: "string" }
-          - { label: "Compatibility", name: "compatibility", widget: "string" }
-          - {
-              label: "Security Tint",
-              name: "hasSecurityTint",
-              widget: "boolean",
-              default: false,
-            }
-          - { label: "Features", name: "features", widget: "string" }
-          - { label: "Additional", name: "additional", widget: "string" }
+          - { label: "Label", name: "label", widget: "string" }
+          - { label: "Value", name: "value", widget: "string" }
   - name: "reviews"
     label: "Reviews"
     folder: "content/reviews"

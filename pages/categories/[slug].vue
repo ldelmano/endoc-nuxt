@@ -4,7 +4,7 @@ import { Category, Product } from '@/models';
 const route = useRoute();
 
 const currentCategory = await useAsyncData(`category-${route.params.slug}`, () => queryContent('categories').where({ slug: route.params.slug }).findOne())
-const productsQuery = await useAsyncData(`products-${route.params.slug}`, () => queryContent('products').where({ category: route.params.slug }).find());
+const productsQuery = await useAsyncData<Product[]>(`products-${route.params.slug}`, () => queryContent('products').where({ category: route.params.slug }).find());
 
 const products = ref<Product[]>([]);
 
@@ -28,7 +28,7 @@ useHead({
 })
 
 onMounted(() => {
-  products.value = productsQuery.data.value;
+  products.value = productsQuery.data.value || [];
 })
 </script>
 
@@ -72,41 +72,9 @@ onMounted(() => {
             <p class="product-info__id">Item #: {{ modalContent.id }}</p>
 
             <ul class="product-info__attributes">
-              <li>
-                <span class="product-info__attr-name">Envelope Size</span>
-                <span class="product-info__attr-value">{{ modalContent.attributes?.envelopeSize }}</span>
-              </li>
-
-              <li>
-                <span class="product-info__attr-name">Adhesion Type</span>
-                <span class="product-info__attr-value">{{ modalContent.attributes?.adhesionType }}</span>
-              </li>
-
-              <li>
-                <span class="product-info__attr-name">Window Style</span>
-                <span class="product-info__attr-value">{{ modalContent.attributes?.windowStyle }}</span>
-              </li>
-
-              <li>
-                <span class="product-info__attr-name">Compatibility</span>
-                <span class="product-info__attr-value">{{ modalContent.attributes?.compatibility }}</span>
-              </li>
-
-              <li>
-                <span class="product-info__attr-name">Security Tint</span>
-                <span class="product-info__attr-value">{{
-                  modalContent.attributes?.hasSecurityTint ? 'Yes' : 'No'
-                }}</span>
-              </li>
-
-              <li>
-                <span class="product-info__attr-name">Features</span>
-                <span class="product-info__attr-value">{{ modalContent.attributes?.features }}</span>
-              </li>
-
-              <li>
-                <span class="product-info__attr-name">Additional</span>
-                <span class="product-info__attr-value">{{ modalContent.attributes?.additional }}</span>
+              <li v-for="(item, index) in modalContent?.attributes">
+                <span class="product-info__attr-name">{{ item.label }}</span>
+                <span class="product-info__attr-value">{{ item.value }}</span>
               </li>
             </ul>
           </div>

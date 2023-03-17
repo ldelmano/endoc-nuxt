@@ -8,22 +8,23 @@ export interface Category extends ParsedContent {
 }
 
 export interface Product extends ParsedContent {
+  id?: number;
   title?: string;
+  productSlug?: string;
+  categorySlug?: string;
   description?: string;
-  id?: string;
   thumbnail?: string;
-  category?: string;
-  attributes?: ProductAttributes;
+  pictures?: ProductPicture[];
+  attributes?: ProductAttribute[];
 }
 
-interface ProductAttributes {
-  hasSecurityTint?: boolean;
-  envelopeSize?: string;
-  windowStyle?: string;
-  adhesionType?: string;
-  compatibility?: string;
-  features?: string;
-  additional?: string;
+interface ProductPicture {
+  url: string;
+}
+
+interface ProductAttribute {
+  label: string;
+  value: string;
 }
 
 export interface BaseFileContent {

@@ -17,6 +17,13 @@ onMounted(() => {
   if (!data.value) return;
   categories.value = data.value
 })
+
+const goToContactSection = () => {
+  document.getElementById('contact-form')?.scrollIntoView({
+    behavior: 'smooth',
+    block: "start"
+  })
+}
 </script>
 
 
@@ -45,8 +52,8 @@ onMounted(() => {
             </div>
 
             <div class="mt-5 flex">
-              <BaseButton label="Buy Endoc" />
-              <BaseButton class="ml-3" label="Sell Endoc" />
+              <BaseButton label="Buy Endoc"  @click="goToContactSection" />
+              <BaseButton class="ml-3" label="Sell Endoc" @click="goToContactSection" />
             </div>
           </template>
         </BaseMessage>

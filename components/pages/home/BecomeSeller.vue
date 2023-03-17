@@ -10,9 +10,16 @@ const { data } = await useAsyncData("home-become-seller", () =>
   queryContent<BecomeSellerContent>('home').where({ _id: { $contains: 'become-seller' } }).findOne()
 );
 
-onMounted(() => {
-  console.log(data.value)
-})
+// onMounted(() => {
+//   console.log(data.value)
+// })
+
+const goToContactSection = () => {
+  document.getElementById('contact-form')?.scrollIntoView({
+    behavior: 'smooth',
+    block: "start"
+  })
+}
 </script>
 
 <template>
@@ -30,7 +37,7 @@ onMounted(() => {
           </div>
 
 
-          <BaseButton label="contact us" to="#contact-form" />
+          <BaseButton label="contact us" @click="goToContactSection" />
         </div>
       </div>
 
