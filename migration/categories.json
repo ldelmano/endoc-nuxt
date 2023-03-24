@@ -73,5 +73,10 @@
     "window-envelopes-2": {
       "replaceBy": "window-envelopes"
     }
+  },
+  {
+    "bubble-mailers": {
+      "replaceBy": "bubble-mailers"
+    }
   }
 ]

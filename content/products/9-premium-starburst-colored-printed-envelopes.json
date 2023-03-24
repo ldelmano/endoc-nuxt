@@ -1,0 +1,60 @@
+{
+  "id": 433,
+  "title": "#9  Starburst Endoc Envelopes",
+  "productSlug": "9-premium-starburst-colored-printed-envelopes",
+  "categorySlug": "regular-envelope-2",
+  "categorySlugs": [
+    "regular-envelopes"
+  ],
+  "attributes": [
+    {
+      "label": "Sealing Type",
+      "value": "Moistenable Glue"
+    },
+    {
+      "label": "Size",
+      "value": "#9"
+    },
+    {
+      "label": "Type",
+      "value": "Regular"
+    },
+    {
+      "label": "Color",
+      "value": "Starburst colors"
+    },
+    {
+      "label": "Printed/Blank",
+      "value": "Custom printed"
+    },
+    {
+      "label": "SKU",
+      "value": "9008-17"
+    },
+    {
+      "label": "Height",
+      "value": "3 7/8"
+    },
+    {
+      "label": "Width",
+      "value": "8 7/8"
+    }
+  ],
+  "pictures": [
+    {
+      "url": "https://www.businessenvelopes.com/images/thumbs/0000578_9-starburst-endoc-envelopes_500.png"
+    },
+    {
+      "url": "https://www.businessenvelopes.com/images/thumbs/0000580_9-starburst-endoc-envelopes_500.png"
+    },
+    {
+      "url": "https://www.businessenvelopes.com/images/thumbs/0001729_9-starburst-endoc-envelopes_500.jpeg"
+    },
+    {
+      "url": "https://www.businessenvelopes.com/images/thumbs/0001731_9-starburst-endoc-envelopes_500.jpeg"
+    },
+    {
+      "url": "https://www.businessenvelopes.com/images/thumbs/0001732_9-starburst-endoc-envelopes_500.jpeg"
+    }
+  ]
+}
