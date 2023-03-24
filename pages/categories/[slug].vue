@@ -3,8 +3,9 @@ import { Category, Product } from '@/models';
 
 const route = useRoute();
 
-const currentCategory = await useAsyncData(`category-${route.params.slug}`, () => queryContent('categories').where({ slug: route.params.slug }).findOne())
-const productsQuery = await useAsyncData<Product[]>(`products-${route.params.slug}`, () => queryContent('products').where({ categorySlug: route.params.slug }).find());
+const currentCategory = await useAsyncData(`category-${route.params.slug}`, () => queryContent('categories').where({ slug: route.params.slug }).findOne());
+
+const productsQuery = await useAsyncData<Product[]>(`products`, () => queryContent('products').where({ categorySlugs: { $contains: route.params.slug } }).find());
 
 const products = ref<Product[]>([]);
 
@@ -41,8 +42,7 @@ onMounted(() => {
       <article class="col-12 md:col-6 xl:col-4">
         <h1 class="mb-3 md:mb-5">{{ category.title }}</h1>
 
-        <BaseButton label="back to all categories" icon="arrow-left" icon-on-left variant="secondary"
-          to="/categories" />
+        <BaseButton label="back to all categories" icon="arrow-left" icon-on-left variant="secondary" to="/categories" />
       </article>
       <article class="col-12 md:col-6 xl:col-4 product" v-for="product in products">
         <div class="product__card">

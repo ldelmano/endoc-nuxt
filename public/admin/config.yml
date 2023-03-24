@@ -40,12 +40,13 @@ collections:
       - { label: "Product image", name: "thumbnail", widget: "image" }
       - {
           label: "Category",
-          name: "categorySlug",
+          name: "categorySlugs",
           widget: "relation",
           collection: "categories",
           search_fields: ["title", "slug"],
           value_field: "slug",
           display_fields: ["title"],
+          multiple: true,
         }
       - label: "Attributes"
         name: "attributes"

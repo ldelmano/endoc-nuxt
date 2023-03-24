@@ -1,0 +1,65 @@
+{
+  "id": 266,
+  "title": "#6 3/4 White Tinted Peel & Seal Endoc Envelopes",
+  "productSlug": "6-34-white-tinted-peel-seal-printed-envelopes",
+  "categorySlug": "self-seal-2",
+  "categorySlugs": [
+    "self-seal-envelopes",
+    "regular-envelopes",
+    "security-tinted-envelopes"
+  ],
+  "attributes": [
+    {
+      "label": "Color",
+      "value": "White"
+    },
+    {
+      "label": "Printed/Blank",
+      "value": "Custom printed"
+    },
+    {
+      "label": "Size",
+      "value": "#6 3/4"
+    },
+    {
+      "label": "Sealing Type",
+      "value": "Self Seal"
+    },
+    {
+      "label": "Paper Weight",
+      "value": "24lb"
+    },
+    {
+      "label": "SKU",
+      "value": "6003"
+    },
+    {
+      "label": "Width",
+      "value": "6 1/2"
+    },
+    {
+      "label": "Height",
+      "value": "3 5/8"
+    }
+  ],
+  "pictures": [
+    {
+      "url": "https://www.businessenvelopes.com/images/thumbs/0001483_6-34-white-tinted-peel-seal-endoc-envelopes_500.jpeg"
+    },
+    {
+      "url": "https://www.businessenvelopes.com/images/thumbs/0001484_6-34-white-tinted-peel-seal-endoc-envelopes_500.jpeg"
+    },
+    {
+      "url": "https://www.businessenvelopes.com/images/thumbs/0001480_6-34-white-tinted-peel-seal-endoc-envelopes_500.jpeg"
+    },
+    {
+      "url": "https://www.businessenvelopes.com/images/thumbs/0001481_6-34-white-tinted-peel-seal-endoc-envelopes_500.jpeg"
+    },
+    {
+      "url": "https://www.businessenvelopes.com/images/thumbs/0001482_6-34-white-tinted-peel-seal-endoc-envelopes_500.jpeg"
+    },
+    {
+      "url": "https://www.businessenvelopes.com/images/thumbs/0001485_6-34-white-tinted-peel-seal-endoc-envelopes_500.jpeg"
+    }
+  ]
+}

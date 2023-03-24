@@ -1,0 +1,77 @@
+[
+  {
+    "clasp-envelopes": {
+      "replaceBy": "clasp-envelopes"
+    }
+  },
+  {
+    "clasp-envelopes-2": {
+      "replaceBy": "clasp-envelopes"
+    }
+  },
+  {
+    "regular-envelopes": {
+      "replaceBy": "regular-envelopes"
+    }
+  },
+  {
+    "regular-envelopes-1": {
+      "replaceBy": "regular-envelopes"
+    }
+  },
+  {
+    "regular-envelope": {
+      "replaceBy": "regular-envelopes"
+    }
+  },
+  {
+    "tyvek-envelopes": {
+      "replaceBy": "tyvek-envelopes"
+    }
+  },
+  {
+    "tyvek-envelopes-2": {
+      "replaceBy": "tyvek-envelopes"
+    }
+  },
+  {
+    "double-window-envelopes": {
+      "replaceBy": "double-window-envelopes"
+    }
+  },
+  {
+    "double-window-envelopes-1": {
+      "replaceBy": "double-window-envelopes"
+    }
+  },
+  {
+    "security-tinted": {
+      "replaceBy": "security-tinted-envelopes"
+    }
+  },
+  {
+    "security-tinted-2": {
+      "replaceBy": "security-tinted-envelopes"
+    }
+  },
+  {
+    "self-seal": {
+      "replaceBy": "self-seal-envelopes"
+    }
+  },
+  {
+    "self-seal-2": {
+      "replaceBy": "self-seal-envelopes"
+    }
+  },
+  {
+    "window-envelopes": {
+      "replaceBy": "window-envelopes"
+    }
+  },
+  {
+    "window-envelopes-2": {
+      "replaceBy": "window-envelopes"
+    }
+  }
+]
