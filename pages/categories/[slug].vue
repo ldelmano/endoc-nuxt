@@ -5,7 +5,7 @@ const route = useRoute();
 
 const currentCategory = await useAsyncData(`category-${route.params.slug}`, () => queryContent('categories').where({ slug: route.params.slug }).findOne());
 
-const productsQuery = await useAsyncData<Product[]>(`products`, () => queryContent('products').where({ categorySlugs: { $contains: route.params.slug } }).find());
+const productsQuery = await useAsyncData<Product[]>(`products-${route.params.slug}`, () => queryContent('products').where({ categorySlugs: { $contains: route.params.slug } }).find());
 
 const products = ref<Product[]>([]);
 
