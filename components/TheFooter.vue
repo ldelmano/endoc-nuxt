@@ -6,45 +6,90 @@ const values = reactive({
   company: '',
   message: ''
 })
+
+const loading = ref(false);
+const formSent = ref(false);
+
+const submit = async () => {
+  loading.value = true;
+
+  const form = {
+    Secret: import.meta.env.VITE_API_SECRET,
+    Name: values.name,
+    Email: values.email,
+    Phone: values.phone,
+    CompanyName: values.company,
+    Message: values.message
+  }
+
+  try {
+    const response = await fetch(`${import.meta.env.VITE_API_BASE_URL}/contact-us`, {
+      method: 'POST',
+      body: JSON.stringify(form)
+    })
+
+    const data = await response.json();
+
+    if (data) {
+      formSent.value = true;
+
+      console.log(data);
+    } else {
+      alert('Something went wrong. Please try again later.')
+    }
+  } catch (error) {
+    alert('Something went wrong. Please try again later.')
+  } finally {
+    loading.value = false;
+  }
+}
 </script>
     
 <template>
   <footer>
     <div class="container flex flex-column xl:flex-row footer-content">
       <div id="contact-form" class="contact-form">
-        <h2 class="contact-form__title">Contact us</h2>
+        <template v-if="!formSent">
+          <h2 class="contact-form__title">Contact us</h2>
 
-        <p class="contact-form__description">Drop us a line and we'll get back to you with a quote!</p>
+          <p class="contact-form__description">Drop us a line and we'll get back to you with a quote!</p>
 
-        <form>
-          <div class="grid">
-            <div class="col-12 md:col-6">
-              <BaseTextField class="mb-3" v-model="values.name" required placeholder="Name" />
+          <form>
+            <div class="grid">
+              <div class="col-12 md:col-6">
+                <BaseTextField class="mb-3" v-model="values.name" required placeholder="Name" />
 
-              <BaseTextField class="mb-3" v-model="values.email" required placeholder="Email" type="email" />
+                <BaseTextField class="mb-3" v-model="values.email" required placeholder="Email" type="email" />
 
-              <BaseTextField v-model="values.phone" required placeholder="Phone" />
-            </div>
-
-            <div class="col-12 md:col-6 flex flex-column">
-              <BaseTextField class="mb-3" v-model="values.company" required placeholder="Company Name" />
-
-              <BaseTextField class="flex-1" textarea v-model="values.message" required placeholder="Message" />
-            </div>
-          </div>
-
-          <div class="grid mt-5">
-            <div class="col-12 md:col-6">
-              <BaseButton class="w-full justify-content-center" label="send message" />
-            </div>
-            <div class="col-12 md:col-6 flex align-items-center justify-content-center">
-              <div class="legend">
-                <span class="legend__dot"></span>
+                <BaseTextField v-model="values.phone" required placeholder="Phone" />
               </div>
-              <span class="legend-value"> - this field is required</span>
+
+              <div class="col-12 md:col-6 flex flex-column">
+                <BaseTextField class="mb-3" v-model="values.company" required placeholder="Company Name" />
+
+                <BaseTextField class="flex-1" textarea v-model="values.message" required placeholder="Message" />
+              </div>
             </div>
-          </div>
-        </form>
+
+            <div class="grid mt-5">
+              <div class="col-12 md:col-6">
+                <BaseButton class="w-full justify-content-center" label="send message" @click="submit"
+                  :loading="loading" />
+              </div>
+              <div class="col-12 md:col-6 flex align-items-center justify-content-center">
+                <div class="legend">
+                  <span class="legend__dot"></span>
+                </div>
+                <span class="legend-value"> - this field is required</span>
+              </div>
+            </div>
+          </form>
+        </template>
+
+        <div v-else>
+          <h2 class="contact-form__title">Thank you!</h2>
+          <p>Our top-notch customer service staff will respond within the next 24 hours.</p>
+        </div>
       </div>
 
       <div class="endoc-info">

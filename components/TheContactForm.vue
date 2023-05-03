@@ -10,13 +10,18 @@
     </div>
 
     <div class="contact-form__container">
-      <div class="form-title">
+      <div class="form-title" v-if="!formSent">
         <h2>Contact Us</h2>
 
         <p>Drop us a line and we'll get back to you with a quote!</p>
       </div>
+      <div class="form-title" v-else>
+        <h2>Thank you!</h2>
 
-      <form>
+        <p>Our top-notch customer service staff will respond within the next 24 hours.</p>
+      </div>
+
+      <form v-if="!formSent">
         <div class="grid">
           <div class="col-12 md:col-6">
             <BaseTextField outlined class="mb-3" v-model="values.name" required placeholder="Name" />
@@ -41,7 +46,7 @@
             <span class="legend-value"> - this field is required</span>
           </div>
 
-          <BaseButton class="justify-content-center mt-5" label="send message" />
+          <BaseButton class="justify-content-center mt-5" label="send message" @click="submit" :loading="loading" />
         </div>
       </form>
 
@@ -78,6 +83,43 @@ const values = reactive({
   company: '',
   message: ''
 })
+
+const loading = ref(false);
+const formSent = ref(false);
+
+const submit = async () => {
+  loading.value = true;
+
+  const form = {
+    Secret: import.meta.env.VITE_API_SECRET,
+    Name: values.name,
+    Email: values.email,
+    Phone: values.phone,
+    CompanyName: values.company,
+    Message: values.message
+  }
+
+  try {
+    const response = await fetch(`${import.meta.env.VITE_API_BASE_URL}/contact-us`, {
+      method: 'POST',
+      body: JSON.stringify(form)
+    })
+
+    const data = await response.json();
+
+    if (data) {
+      formSent.value = true;
+
+      console.log(data);
+    } else {
+      alert('Something went wrong. Please try again later.')
+    }
+  } catch (error) {
+    alert('Something went wrong. Please try again later.')
+  } finally {
+    loading.value = false;
+  }
+}
 </script>
 
 <style scoped lang="scss">

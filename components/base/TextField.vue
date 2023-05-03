@@ -28,7 +28,8 @@ const emit = defineEmits<{
       :modelValue="props.modelValue" :placeholder="props.placeholder"
       @input="(e: any) => emit('update:modelValue', e.target.value)" />
 
-    <textarea :class="['text-field__textarea']" :placeholder="props.placeholder" v-else></textarea>
+    <textarea :class="['text-field__textarea']" :placeholder="props.placeholder" :modelValue="props.modelValue"
+      @input="(e: any) => emit('update:modelValue', e.target.value)" v-else></textarea>
 
     <span v-if="props.required" class="text-field__required-sign"></span>
   </div>
