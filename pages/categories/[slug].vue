@@ -44,7 +44,8 @@ onMounted(() => {
 
         <BaseButton label="back to all categories" icon="arrow-left" icon-on-left variant="secondary" to="/categories" />
       </article>
-      <article class="col-12 md:col-6 xl:col-4 product" v-for="product in products">
+      <article class="col-12 md:col-6 xl:col-4 product cursor-pointer" @click="() => handleProductDetails(product)"
+        v-for="product in products">
         <div class="product__card">
           <div class="product__img">
             <img :src="product.thumbnail || (product.pictures ? product.pictures[0].url : '')" />
