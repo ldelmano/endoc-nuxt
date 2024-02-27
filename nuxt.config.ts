@@ -1,5 +1,5 @@
-import glob from "glob";
-import path from "path";
+import { glob } from "glob";
+import * as path from "path";
 
 export const routeMap = {
   "/categories": "categories/*.md",
@@ -7,12 +7,11 @@ export const routeMap = {
 
 export const otherRoutes = [];
 
-// https://v3.nuxtjs.org/api/configuration/nuxt.config
 export default defineNuxtConfig({
   app: { pageTransition: { name: "page", mode: "out-in" } },
   target: "static",
   generate: {
-    routes: [].concat(getDynamicPaths(routeMap)),
+    routes: ([] as string[]).concat(getDynamicPaths(routeMap)),
   },
   shim: false,
   modules: ["@vueuse/nuxt", "@nuxt/content"],
@@ -30,12 +29,8 @@ export default defineNuxtConfig({
   },
 });
 
-/**
- * Create an array of URLs from a list of files
- * @param {Array} urlFilepathTable
- */
-function getDynamicPaths(urlFilepathTable: any) {
-  return [].concat(
+function getDynamicPaths(urlFilepathTable: any): string[] {
+  return ([] as string[]).concat(
     ...Object.keys(urlFilepathTable).map((url) => {
       const filepathGlob = urlFilepathTable[url];
       return glob
