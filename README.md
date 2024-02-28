@@ -1,3 +1,24 @@
+# Endoc website project
+
+Open terminal and:
+
+```bash
+
+# yarn
+yarn install
+
+# npm
+npx nuxi build --preset=azure
+
+npx @azure/static-web-apps-cli start .output/public --api-location .output/server
+
+
+```
+
+To reconfigure the azure devops back end repository, follow these steps:
+
+https://decapcms.org/docs/azure-backend/
+
 # Nuxt 3 Minimal Starter
 
 Look at the [nuxt 3 documentation](https://v3.nuxtjs.org) to learn more.
