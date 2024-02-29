@@ -13,6 +13,12 @@ export default defineNuxtConfig({
   generate: {
     routes: ([] as string[]).concat(getDynamicPaths(routeMap)),
   },
+  iis: {
+    // merges in a pre-exisiting web.config file to the nitro default file
+    mergeConfig: true,
+    // overrides the default nitro web.config file all together
+    overrideConfig: false,
+  },
   shim: false,
   modules: ["@vueuse/nuxt", "@nuxt/content"],
   css: [
