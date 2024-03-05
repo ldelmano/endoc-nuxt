@@ -1,0 +1,33 @@
+trigger:
+- main
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+steps:
+- task: NodeTool@0
+  inputs:
+    versionSpec: '18.x'
+  displayName: 'Install Node.js'
+
+- script: |
+    yarn install
+  displayName: 'Install dependencies'
+
+- script: |
+    npx nuxi build --preset=iis
+  displayName: 'Build Nuxt project'
+
+- task: CopyFiles@2
+  inputs:
+    SourceFolder: '$(Build.SourcesDirectory)'
+    Contents: '.output/**'
+    TargetFolder: '$(Build.ArtifactStagingDirectory)'
+  displayName: 'Copy build output to artifact staging directory'
+
+- task: PublishBuildArtifacts@1
+  inputs:
+    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+    ArtifactName: 'nuxt-build'
+    publishLocation: 'Container'
+  displayName: 'Publish Artifact'
