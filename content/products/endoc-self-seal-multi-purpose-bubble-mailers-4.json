@@ -1,1 +1,48 @@
-{"id":468,"title":"8 1/2\" x 12\" #2 Padded Bubble Mailer Self Seal Envelopes","productSlug":"endoc-self-seal-multi-purpose-bubble-mailers-4","categorySlug":"bubble-mailers","categorySlugs":["bubble-mailers"],"attributes":[{"label":"Color","value":"Brown Kraft"},{"label":"Printed/Blank","value":"Blank"},{"label":"Outside W x L","value":"8 1/2 x 12\""},{"label":"Inside W x L","value":"8 1/2 x 11 1/2\""},{"label":"Size","value":"8 1/2 x 12"},{"label":"SKU","value":"VG_CR_025"},{"label":"Sealing Type","value":"Self Seal"},{"label":"Booklet Type","value":"Open End"}],"pictures":[{"url":"https://www.businessenvelopes.com/images/thumbs/0002698_8-12-x-12-2-padded-bubble-mailer-self-seal-envelopes_500.jpeg"},{"url":"https://www.businessenvelopes.com/images/thumbs/0002690_8-12-x-12-2-padded-bubble-mailer-self-seal-envelopes_500.jpeg"},{"url":"https://www.businessenvelopes.com/images/thumbs/0002697_8-12-x-12-2-padded-bubble-mailer-self-seal-envelopes_500.jpeg"},{"url":"https://www.businessenvelopes.com/images/thumbs/0002692_8-12-x-12-2-padded-bubble-mailer-self-seal-envelopes_500.jpeg"},{"url":"https://www.businessenvelopes.com/images/thumbs/0002781_8-12-x-12-2-padded-bubble-mailer-self-seal-envelopes_500.jpeg"}]}
+{
+  "id": 468,
+  "title": "8 1/2\" x 12\" #2 Padded Bubble Mailer Self Seal Envelopes",
+  "productSlug": "endoc-self-seal-multi-purpose-bubble-mailers-4",
+  "categorySlug": "bubble-mailers",
+  "categorySlugs": [
+    "bubble-mailers"
+  ],
+  "attributes": [
+    {
+      "label": "Color",
+      "value": "Brown Kraft"
+    },
+    {
+      "label": "Printed/Blank",
+      "value": "Blank"
+    },
+    {
+      "label": "Outside W x L",
+      "value": "8 1/2 x 12\""
+    },
+    {
+      "label": "Inside W x L",
+      "value": "8 1/2 x 11 1/2\""
+    },
+    {
+      "label": "Size",
+      "value": "8 1/2 x 12"
+    },
+    {
+      "label": "SKU",
+      "value": "VG_CR_025"
+    },
+    {
+      "label": "Sealing Type",
+      "value": "Self Seal"
+    },
+    {
+      "label": "Booklet Type",
+      "value": "Open End"
+    }
+  ],
+  "pictures": [
+    {
+      "url": "/imgs/products/bubble-mailers/468.png"
+    }
+  ]
+}

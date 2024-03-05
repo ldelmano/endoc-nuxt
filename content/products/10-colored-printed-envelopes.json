@@ -1,1 +1,48 @@
-{"id":428,"title":"#10 Wove  Endoc Envelopes","productSlug":"10-colored-printed-envelopes","categorySlug":"regular-envelope-2","categorySlugs":["regular-envelopes"],"attributes":[{"label":"Sealing Type","value":"Moistenable Glue"},{"label":"Size","value":"#10"},{"label":"Type","value":"Regular"},{"label":"Color","value":"Wove colors"},{"label":"Printed/Blank","value":"Custom printed"},{"label":"SKU","value":"1004-7"},{"label":"Height","value":"4 1/8"},{"label":"Width","value":"9 1/2"}],"pictures":[{"url":"https://www.businessenvelopes.com/images/thumbs/0001236_10-wove-endoc-envelopes_500.jpeg"},{"url":"https://www.businessenvelopes.com/images/thumbs/0002520_10-wove-endoc-envelopes_500.jpeg"},{"url":"https://www.businessenvelopes.com/images/thumbs/0002522_10-wove-endoc-envelopes_500.jpeg"},{"url":"https://www.businessenvelopes.com/images/thumbs/0002591_10-wove-endoc-envelopes_500.jpeg"}]}
+{
+  "id": 428,
+  "title": "#10 Wove  Endoc Envelopes",
+  "productSlug": "10-colored-printed-envelopes",
+  "categorySlug": "regular-envelope-2",
+  "categorySlugs": [
+    "regular-envelopes"
+  ],
+  "attributes": [
+    {
+      "label": "Sealing Type",
+      "value": "Moistenable Glue"
+    },
+    {
+      "label": "Size",
+      "value": "#10"
+    },
+    {
+      "label": "Type",
+      "value": "Regular"
+    },
+    {
+      "label": "Color",
+      "value": "Wove colors"
+    },
+    {
+      "label": "Printed/Blank",
+      "value": "Custom printed"
+    },
+    {
+      "label": "SKU",
+      "value": "1004-7"
+    },
+    {
+      "label": "Height",
+      "value": "4 1/8"
+    },
+    {
+      "label": "Width",
+      "value": "9 1/2"
+    }
+  ],
+  "pictures": [
+    {
+      "url": "/imgs/products/regular-envelopes/428.png"
+    }
+  ]
+}

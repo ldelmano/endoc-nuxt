@@ -1,1 +1,52 @@
-{"id":301,"title":"6 x 9 Brown Open End Endoc Envelopes","productSlug":"6x9-brown-open-end-printed-envelopes","categorySlug":"regular-envelope-2","categorySlugs":["regular-envelopes"],"attributes":[{"label":"Color","value":"Brown Kraft"},{"label":"Printed/Blank","value":"Custom printed"},{"label":"Size","value":"6 x 9"},{"label":"Sealing Type","value":"Moistenable Glue"},{"label":"Booklet Type","value":"Open End"},{"label":"Paper Weight","value":"24lb"},{"label":"SKU","value":"6939"},{"label":"Height","value":"6"},{"label":"Width","value":"9"}],"pictures":[{"url":"https://www.businessenvelopes.com/images/thumbs/0001607_6-x-9-brown-open-end-endoc-envelopes_500.jpeg"},{"url":"https://www.businessenvelopes.com/images/thumbs/0001608_6-x-9-brown-open-end-endoc-envelopes_500.jpeg"},{"url":"https://www.businessenvelopes.com/images/thumbs/0001605_6-x-9-brown-open-end-endoc-envelopes_500.jpeg"},{"url":"https://www.businessenvelopes.com/images/thumbs/0001606_6-x-9-brown-open-end-endoc-envelopes_500.jpeg"},{"url":"https://www.businessenvelopes.com/images/thumbs/0001609_6-x-9-brown-open-end-endoc-envelopes_500.jpeg"},{"url":"https://www.businessenvelopes.com/images/thumbs/0001604_6-x-9-brown-open-end-endoc-envelopes_500.jpeg"}]}
+{
+  "id": 301,
+  "title": "6 x 9 Brown Open End Endoc Envelopes",
+  "productSlug": "6x9-brown-open-end-printed-envelopes",
+  "categorySlug": "regular-envelope-2",
+  "categorySlugs": [
+    "regular-envelopes"
+  ],
+  "attributes": [
+    {
+      "label": "Color",
+      "value": "Brown Kraft"
+    },
+    {
+      "label": "Printed/Blank",
+      "value": "Custom printed"
+    },
+    {
+      "label": "Size",
+      "value": "6 x 9"
+    },
+    {
+      "label": "Sealing Type",
+      "value": "Moistenable Glue"
+    },
+    {
+      "label": "Booklet Type",
+      "value": "Open End"
+    },
+    {
+      "label": "Paper Weight",
+      "value": "24lb"
+    },
+    {
+      "label": "SKU",
+      "value": "6939"
+    },
+    {
+      "label": "Height",
+      "value": "6"
+    },
+    {
+      "label": "Width",
+      "value": "9"
+    }
+  ],
+  "pictures": [
+    {
+      "url": "/imgs/products/regular-envelopes/301.png"
+    }
+  ]
+}

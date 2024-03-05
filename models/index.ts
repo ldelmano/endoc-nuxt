@@ -1,4 +1,4 @@
-import { ParsedContent } from "@nuxt/content/dist/runtime/types";
+import type { ParsedContent } from "@nuxt/content/types";
 
 export interface Category extends ParsedContent {
   title?: string;

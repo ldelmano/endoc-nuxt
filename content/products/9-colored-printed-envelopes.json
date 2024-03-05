@@ -1,1 +1,48 @@
-{"id":431,"title":"#9 Wove Endoc Envelopes","productSlug":"9-colored-printed-envelopes","categorySlug":"regular-envelope-2","categorySlugs":["regular-envelopes"],"attributes":[{"label":"Sealing Type","value":"Moistenable Glue"},{"label":"Size","value":"#9"},{"label":"Type","value":"Regular"},{"label":"Color","value":"Wove colors"},{"label":"Printed/Blank","value":"Custom printed"},{"label":"SKU","value":"9004-7"},{"label":"Height","value":"3 7/8"},{"label":"Width","value":"8 7/8"}],"pictures":[{"url":"https://www.businessenvelopes.com/images/thumbs/0002550_9-wove-endoc-envelopes_500.jpeg"},{"url":"https://www.businessenvelopes.com/images/thumbs/0002551_9-wove-endoc-envelopes_500.jpeg"},{"url":"https://www.businessenvelopes.com/images/thumbs/0002552_9-wove-endoc-envelopes_500.jpeg"},{"url":"https://www.businessenvelopes.com/images/thumbs/0002553_9-wove-endoc-envelopes_500.jpeg"},{"url":"https://www.businessenvelopes.com/images/thumbs/0002554_9-wove-endoc-envelopes_500.jpeg"},{"url":"https://www.businessenvelopes.com/images/thumbs/0002555_9-wove-endoc-envelopes_500.jpeg"},{"url":"https://www.businessenvelopes.com/images/thumbs/0002556_9-wove-endoc-envelopes_500.jpeg"},{"url":"https://www.businessenvelopes.com/images/thumbs/0002557_9-wove-endoc-envelopes_500.jpeg"}]}
+{
+  "id": 431,
+  "title": "#9 Wove Endoc Envelopes",
+  "productSlug": "9-colored-printed-envelopes",
+  "categorySlug": "regular-envelope-2",
+  "categorySlugs": [
+    "regular-envelopes"
+  ],
+  "attributes": [
+    {
+      "label": "Sealing Type",
+      "value": "Moistenable Glue"
+    },
+    {
+      "label": "Size",
+      "value": "#9"
+    },
+    {
+      "label": "Type",
+      "value": "Regular"
+    },
+    {
+      "label": "Color",
+      "value": "Wove colors"
+    },
+    {
+      "label": "Printed/Blank",
+      "value": "Custom printed"
+    },
+    {
+      "label": "SKU",
+      "value": "9004-7"
+    },
+    {
+      "label": "Height",
+      "value": "3 7/8"
+    },
+    {
+      "label": "Width",
+      "value": "8 7/8"
+    }
+  ],
+  "pictures": [
+    {
+      "url": "/imgs/products/regular-envelopes/431.png"
+    }
+  ]
+}

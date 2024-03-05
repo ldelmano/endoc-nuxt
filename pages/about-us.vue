@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { MarkdownParsedContent } from '@nuxt/content/dist/runtime/types';
+import type { MarkdownParsedContent } from "@nuxt/content/types";
 
 interface WithImage extends MarkdownParsedContent {
   image: string;
@@ -15,28 +15,35 @@ interface Section2 extends MarkdownParsedContent {
   differentials: Differential[];
 }
 
-const icons = ['icon-service', 'icon-price', 'icon-premium']
+const icons = ["icon-service", "icon-price", "icon-premium"];
 
-const { data } = await useAsyncData('about-us', () => queryContent('aboutus').find());
-
+const { data } = await useAsyncData("about-us", () =>
+  queryContent("aboutus").find()
+);
 
 useHead({
-  title: 'Endoc | About Us'
-})
+  title: "Endoc | About Us",
+});
 
-const topBanner = ref<WithImage>()
-const section1 = ref<WithImage>()
-const section2 = ref<Section2>()
+const topBanner = ref<WithImage>();
+const section1 = ref<WithImage>();
+const section2 = ref<Section2>();
 
 onMounted(() => {
   if (!data.value) return;
 
-  console.log(data.value)
+  console.log(data.value);
 
-  topBanner.value = data.value.find(item => item.title === 'Topbanner') as WithImage;
-  section1.value = data.value.find(item => item.title === 'Section1') as WithImage;
-  section2.value = data.value.find(item => item.title === 'Section2') as Section2;
-})
+  topBanner.value = data.value.find(
+    (item) => item.title === "Topbanner"
+  ) as WithImage;
+  section1.value = data.value.find(
+    (item) => item.title === "Section1"
+  ) as WithImage;
+  section2.value = data.value.find(
+    (item) => item.title === "Section2"
+  ) as Section2;
+});
 </script>
 
 <template>
@@ -83,7 +90,10 @@ onMounted(() => {
         </div>
         <div class="col-12 lg:col-6">
           <ul class="differentials-list lg:ml-5">
-            <li v-for="(item, index) in section2.differentials" class="differentials-item">
+            <li
+              v-for="(item, index) in section2.differentials"
+              class="differentials-item"
+            >
               <div class="differentials-item__icon">
                 <i :class="icons[index]"></i>
               </div>
@@ -96,11 +106,9 @@ onMounted(() => {
             </li>
           </ul>
         </div>
-
       </div>
 
       <BaseCarousel />
-
     </section>
   </div>
 </template>
@@ -110,7 +118,7 @@ onMounted(() => {
   list-style: none;
   padding-left: 0;
 
-  li+li {
+  li + li {
     margin-top: 4em;
   }
 }
@@ -147,7 +155,7 @@ onMounted(() => {
     margin: 0;
     font-weight: 400;
     font-size: 1em;
-    color: #8C8E96;
+    color: #8c8e96;
   }
 }
 
@@ -169,7 +177,6 @@ onMounted(() => {
       flex: 1;
     }
 
-
     @media (min-width: 1200px) {
       align-items: center;
       justify-content: center;
@@ -184,7 +191,6 @@ onMounted(() => {
     background-image: url("~/assets/imgs/bg-square.png");
     overflow: hidden;
 
-
     @media (min-width: 768px) {
       flex: 1;
       background-size: cover;
@@ -195,7 +201,6 @@ onMounted(() => {
       max-width: 500px;
       padding: 5em;
     }
-
   }
 
   &__endoc {
@@ -206,7 +211,6 @@ onMounted(() => {
       margin: 0;
       font-weight: 600;
       font-size: 2.25em;
-
     }
 
     p {

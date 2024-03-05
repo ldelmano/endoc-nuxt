@@ -1,1 +1,52 @@
-{"id":182,"title":"9 x 12 Brown Clasp Blank Endoc Envelopes","productSlug":"9x12-brown-open-end-clasp-blank-envelopes","categorySlug":"clasp-envelopes-2","categorySlugs":["clasp-envelopes"],"attributes":[{"label":"Color","value":"Brown Kraft"},{"label":"Printed/Blank","value":"Blank"},{"label":"Size","value":"9 x 12"},{"label":"Sealing Type","value":"Moistenable Glue"},{"label":"Booklet Type","value":"Open End"},{"label":"Paper Weight","value":"24lb"},{"label":"SKU","value":"9114"},{"label":"Height","value":"9"},{"label":"Width","value":"12"}],"pictures":[{"url":"https://www.businessenvelopes.com/images/thumbs/0001016_9-x-12-brown-clasp-blank-endoc-envelopes_500.jpeg"},{"url":"https://www.businessenvelopes.com/images/thumbs/0001017_9-x-12-brown-clasp-blank-endoc-envelopes_500.jpeg"},{"url":"https://www.businessenvelopes.com/images/thumbs/0001019_9-x-12-brown-clasp-blank-endoc-envelopes_500.jpeg"}]}
+{
+  "id": 182,
+  "title": "9 x 12 Brown Clasp Blank Endoc Envelopes",
+  "productSlug": "9x12-brown-open-end-clasp-blank-envelopes",
+  "categorySlug": "clasp-envelopes-2",
+  "categorySlugs": [
+    "clasp-envelopes"
+  ],
+  "attributes": [
+    {
+      "label": "Color",
+      "value": "Brown Kraft"
+    },
+    {
+      "label": "Printed/Blank",
+      "value": "Blank"
+    },
+    {
+      "label": "Size",
+      "value": "9 x 12"
+    },
+    {
+      "label": "Sealing Type",
+      "value": "Moistenable Glue"
+    },
+    {
+      "label": "Booklet Type",
+      "value": "Open End"
+    },
+    {
+      "label": "Paper Weight",
+      "value": "24lb"
+    },
+    {
+      "label": "SKU",
+      "value": "9114"
+    },
+    {
+      "label": "Height",
+      "value": "9"
+    },
+    {
+      "label": "Width",
+      "value": "12"
+    }
+  ],
+  "pictures": [
+    {
+      "url": "/imgs/products/clasp-envelopes/182.png"
+    }
+  ]
+}

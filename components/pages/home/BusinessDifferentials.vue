@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { BaseFileContent } from "@/models";
+import type { BaseFileContent } from "@/models";
 
 interface ListItem {
   description: string;
@@ -34,7 +34,11 @@ const { data } = await useAsyncData("home:section1", () =>
         </div>
 
         <ul class="business-diff__list">
-          <li class="diff-item" v-for="(item, index) in data?.list" :key="`diff-item-${index}`">
+          <li
+            class="diff-item"
+            v-for="(item, index) in data?.list"
+            :key="`diff-item-${index}`"
+          >
             <div class="diff-item__header">
               <div class="diff-item__chart">
                 <div :class="`pie-wrapper progress-${(index + 1) * 25}`">
@@ -48,7 +52,6 @@ const { data } = await useAsyncData("home:section1", () =>
               </div>
 
               <h4>{{ item.label }}</h4>
-
             </div>
 
             <div class="diff-item__body">
@@ -66,7 +69,7 @@ const { data } = await useAsyncData("home:section1", () =>
 
 // -- vars
 $bg-color: #eeeded;
-$progress-color: #006A6E;
+$progress-color: #006a6e;
 $default-size: 1em;
 $label-font-size: math.div($default-size, 3);
 $label-font-size-redo: $default-size * 3;
@@ -91,9 +94,7 @@ $label-font-size-redo: $default-size * 3;
       .right-side {
         display: none;
       }
-    }
-
-    @else {
+    } @else {
       clip: rect(auto, auto, auto, auto);
 
       .right-side {
@@ -110,9 +111,7 @@ $label-font-size-redo: $default-size * 3;
     @if $progress <=50 {
       background: $bg-color;
       transform: rotate(math.div((100 - (50 - $progress)), 100) * 360deg * -1);
-    }
-
-    @else {
+    } @else {
       background: $color;
       transform: rotate(math.div((100 - $progress), 100) * 360deg);
     }
@@ -126,7 +125,6 @@ $label-font-size-redo: $default-size * 3;
     line-height: 130%;
     /* identical to box height, or 47px */
 
-
     color: #323747;
   }
 
@@ -135,7 +133,6 @@ $label-font-size-redo: $default-size * 3;
     font-size: 1.25em;
     line-height: 186%;
     /* or 37px */
-
 
     color: #323747;
   }
@@ -172,11 +169,10 @@ $label-font-size-redo: $default-size * 3;
       line-height: 182%;
       /* or 29px */
 
-
-      color: #8C8E96;
+      color: #8c8e96;
     }
 
-    +.diff-item {
+    + .diff-item {
       margin-top: 3em;
     }
   }
@@ -216,12 +212,12 @@ $label-font-size-redo: $default-size * 3;
   .label {
     border-radius: 50%;
     bottom: math.div($label-font-size-redo, 10);
-    color: #A7C1C1;
+    color: #a7c1c1;
     cursor: default;
     display: block;
     font-size: $label-font-size;
     left: math.div($label-font-size-redo, 10);
-    line-height: $label-font-size-redo * .70;
+    line-height: $label-font-size-redo * 0.7;
     position: absolute;
     right: math.div($label-font-size-redo, 10);
     text-align: center;
@@ -229,7 +225,7 @@ $label-font-size-redo: $default-size * 3;
 
     .smaller {
       color: #bdc3c7;
-      font-size: .45em;
+      font-size: 0.45em;
       padding-bottom: 20px;
       vertical-align: super;
     }

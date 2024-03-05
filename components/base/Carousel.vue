@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { MarkdownParsedContent } from '@nuxt/content/dist/runtime/types';
+import type { MarkdownParsedContent } from "@nuxt/content/types";
 
 const spaceBetween = 10;
 
@@ -9,40 +9,43 @@ interface Review {
   authorSubtitle: string;
 }
 
-const { data } = await useAsyncData('reviews', () => queryContent<Review>('reviews').find())
+const { data } = await useAsyncData("reviews", () =>
+  queryContent<Review>("reviews").find()
+);
 
 const getInitials = (name: string) => {
-  const words = name.split(' ');
+  const words = name.split(" ");
 
   let initials = [];
 
   for (let word of words) {
-    initials.push(word.charAt(0).toUpperCase())
+    initials.push(word.charAt(0).toUpperCase());
   }
 
-  return initials.join('');
-}
+  return initials.join("");
+};
 
 const pagination = ref({
-  clickable: true
-})
+  clickable: true,
+});
 
 onMounted(() => {
   pagination.value = {
-    clickable: true
-  }
-
-})
-
+    clickable: true,
+  };
+});
 </script>
-  
+
 <template>
-  <swiper-container :slides-per-view="1" :space-between="spaceBetween" :pagination="pagination">
+  <swiper-container
+    :slides-per-view="1"
+    :space-between="spaceBetween"
+    :pagination="pagination"
+  >
     <swiper-slide v-for="(item, index) in data">
       <div class="slider">
         <div class="slider__content">
           <img src="/imgs/bg/review-card-bg.svg" />
-
 
           <div>
             <ContentRenderer :value="item || {}" />
@@ -63,7 +66,6 @@ onMounted(() => {
     </swiper-slide>
   </swiper-container>
 </template>
-
 
 <style scoped lang="scss">
 swiper-container {
@@ -88,7 +90,6 @@ swiper-container {
     // background-repeat: no-repeat;
     border-radius: 1em;
 
-
     font-weight: 500;
     font-size: 1.25em;
     line-height: 134%;
@@ -112,7 +113,7 @@ swiper-container {
       height: 100%;
     }
 
-    >div {
+    > div {
       position: inherit;
       z-index: 1;
     }
@@ -153,7 +154,6 @@ swiper-container {
       font-size: 1.25em;
       line-height: 134%;
       /* identical to box height, or 27px */
-
 
       color: var(--main-black-color);
     }

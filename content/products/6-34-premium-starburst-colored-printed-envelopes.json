@@ -1,1 +1,48 @@
-{"id":418,"title":"#6 3/4 Starburst Endoc Envelopes","productSlug":"6-34-premium-starburst-colored-printed-envelopes","categorySlug":"regular-envelope-2","categorySlugs":["regular-envelopes"],"attributes":[{"label":"Sealing Type","value":"Moistenable Glue"},{"label":"Size","value":"#6 3/4"},{"label":"Type","value":"Regular"},{"label":"Color","value":"Starburst colors"},{"label":"Printed/Blank","value":"Custom printed"},{"label":"SKU","value":"6007-16"},{"label":"Width","value":"6 1/2"},{"label":"Height","value":"3 5/8"}],"pictures":[{"url":"https://www.businessenvelopes.com/images/thumbs/0001496_6-34-starburst-endoc-envelopes_500.jpeg"},{"url":"https://www.businessenvelopes.com/images/thumbs/0001497_6-34-starburst-endoc-envelopes_500.jpeg"},{"url":"https://www.businessenvelopes.com/images/thumbs/0001498_6-34-starburst-endoc-envelopes_500.jpeg"},{"url":"https://www.businessenvelopes.com/images/thumbs/0001499_6-34-starburst-endoc-envelopes_500.jpeg"}]}
+{
+  "id": 418,
+  "title": "#6 3/4 Starburst Endoc Envelopes",
+  "productSlug": "6-34-premium-starburst-colored-printed-envelopes",
+  "categorySlug": "regular-envelope-2",
+  "categorySlugs": [
+    "regular-envelopes"
+  ],
+  "attributes": [
+    {
+      "label": "Sealing Type",
+      "value": "Moistenable Glue"
+    },
+    {
+      "label": "Size",
+      "value": "#6 3/4"
+    },
+    {
+      "label": "Type",
+      "value": "Regular"
+    },
+    {
+      "label": "Color",
+      "value": "Starburst colors"
+    },
+    {
+      "label": "Printed/Blank",
+      "value": "Custom printed"
+    },
+    {
+      "label": "SKU",
+      "value": "6007-16"
+    },
+    {
+      "label": "Width",
+      "value": "6 1/2"
+    },
+    {
+      "label": "Height",
+      "value": "3 5/8"
+    }
+  ],
+  "pictures": [
+    {
+      "url": "/imgs/products/regular-envelopes/418.png"
+    }
+  ]
+}

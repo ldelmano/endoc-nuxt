@@ -1,1 +1,52 @@
-{"id":326,"title":"9 x 12 Brown Booklet Endoc Envelopes","productSlug":"9x12-brown-booklet-printed-envelopes","categorySlug":"regular-envelope-2","categorySlugs":["regular-envelopes"],"attributes":[{"label":"Color","value":"Brown Kraft"},{"label":"Printed/Blank","value":"Custom printed"},{"label":"Size","value":"9 x 12"},{"label":"Sealing Type","value":"Moistenable Glue"},{"label":"Booklet Type","value":"Standard Booklet"},{"label":"Paper Weight","value":"28lb"},{"label":"SKU","value":"9103"},{"label":"Height","value":"9"},{"label":"Width","value":"12"}],"pictures":[{"url":"https://www.businessenvelopes.com/images/thumbs/0002620_9-x-12-brown-booklet-endoc-envelopes_500.jpeg"},{"url":"https://www.businessenvelopes.com/images/thumbs/0002621_9-x-12-brown-booklet-endoc-envelopes_500.jpeg"},{"url":"https://www.businessenvelopes.com/images/thumbs/0002622_9-x-12-brown-booklet-endoc-envelopes_500.jpeg"},{"url":"https://www.businessenvelopes.com/images/thumbs/0002623_9-x-12-brown-booklet-endoc-envelopes_500.jpeg"},{"url":"https://www.businessenvelopes.com/images/thumbs/0002631_9-x-12-brown-booklet-endoc-envelopes_500.jpeg"}]}
+{
+  "id": 326,
+  "title": "9 x 12 Brown Booklet Endoc Envelopes",
+  "productSlug": "9x12-brown-booklet-printed-envelopes",
+  "categorySlug": "regular-envelope-2",
+  "categorySlugs": [
+    "regular-envelopes"
+  ],
+  "attributes": [
+    {
+      "label": "Color",
+      "value": "Brown Kraft"
+    },
+    {
+      "label": "Printed/Blank",
+      "value": "Custom printed"
+    },
+    {
+      "label": "Size",
+      "value": "9 x 12"
+    },
+    {
+      "label": "Sealing Type",
+      "value": "Moistenable Glue"
+    },
+    {
+      "label": "Booklet Type",
+      "value": "Standard Booklet"
+    },
+    {
+      "label": "Paper Weight",
+      "value": "28lb"
+    },
+    {
+      "label": "SKU",
+      "value": "9103"
+    },
+    {
+      "label": "Height",
+      "value": "9"
+    },
+    {
+      "label": "Width",
+      "value": "12"
+    }
+  ],
+  "pictures": [
+    {
+      "url": "/imgs/products/regular-envelopes/326.png"
+    }
+  ]
+}

@@ -1,18 +1,20 @@
 <script setup lang="ts">
-import { Category } from '~~/models';
+import type { Category } from "@/models";
 
 const hoverableElement = ref();
 const isHovered = useElementHover(hoverableElement);
 
 const categories = ref<Category[]>([]);
-const { data } = await useAsyncData('categories', () => queryContent<Category>('categories').find());
+const { data } = await useAsyncData("categories", () =>
+  queryContent<Category>("categories").find()
+);
 
 const route = useRoute();
 
 onMounted(() => {
   if (!data.value) return;
-  categories.value = data.value
-})
+  categories.value = data.value;
+});
 </script>
 
 <template>
@@ -38,8 +40,6 @@ onMounted(() => {
     </div>
   </div>
 </template>
-
-
 
 <style scoped lang="scss">
 .menu {
@@ -77,7 +77,7 @@ onMounted(() => {
       position: absolute;
       top: 0;
       padding: 0.65em;
-      background: #FFFFFF;
+      background: #ffffff;
       box-shadow: 0px 6px 28px rgba(50, 55, 71, 0.12);
       border-radius: 1.25em;
     }
@@ -97,13 +97,12 @@ onMounted(() => {
       font-weight: 500;
       letter-spacing: 0.02em;
 
-
       a {
         color: var(--main-black-color);
       }
     }
 
-    &-item+&-item {
+    &-item + &-item {
       margin-top: 0.75em;
     }
   }
@@ -111,11 +110,9 @@ onMounted(() => {
   &__our-products-btn {
     margin-bottom: 1.5em;
     padding: 1em 1.25em;
-    background: #F6F6F6;
+    background: #f6f6f6;
     border-radius: 0.75em;
     color: var(--dark-green-color);
-
-
   }
 }
 </style>

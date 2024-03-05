@@ -1,1 +1,54 @@
-{"id":308,"title":"#9 White Tinted Peel & Seal Endoc Envelopes","productSlug":"9-white-tinted-peel-seal-printed-envelopes","categorySlug":"regular-envelopes-1","categorySlugs":["regular-envelopes","self-seal-envelopes","security-tinted-envelopes"],"attributes":[{"label":"Color","value":"White"},{"label":"Type","value":"Regular"},{"label":"Printed/Blank","value":"Custom printed"},{"label":"Size","value":"#9"},{"label":"Sealing Type","value":"Self Seal"},{"label":"Paper Weight","value":"24lb"},{"label":"SKU","value":"9003"},{"label":"Height","value":"3 7/8"},{"label":"Width","value":"8 7/8"}],"pictures":[{"url":"https://www.businessenvelopes.com/images/thumbs/0001706_9-white-tinted-peel-seal-endoc-envelopes_500.jpeg"},{"url":"https://www.businessenvelopes.com/images/thumbs/0001707_9-white-tinted-peel-seal-endoc-envelopes_500.jpeg"},{"url":"https://www.businessenvelopes.com/images/thumbs/0001704_9-white-tinted-peel-seal-endoc-envelopes_500.jpeg"},{"url":"https://www.businessenvelopes.com/images/thumbs/0001705_9-white-tinted-peel-seal-endoc-envelopes_500.jpeg"},{"url":"https://www.businessenvelopes.com/images/thumbs/0001708_9-white-tinted-peel-seal-endoc-envelopes_500.jpeg"},{"url":"https://www.businessenvelopes.com/images/thumbs/0001709_9-white-tinted-peel-seal-endoc-envelopes_500.jpeg"},{"url":"https://www.businessenvelopes.com/images/thumbs/0001710_9-white-tinted-peel-seal-endoc-envelopes_500.jpeg"}]}
+{
+  "id": 308,
+  "title": "#9 White Tinted Peel & Seal Endoc Envelopes",
+  "productSlug": "9-white-tinted-peel-seal-printed-envelopes",
+  "categorySlug": "regular-envelopes-1",
+  "categorySlugs": [
+    "regular-envelopes",
+    "self-seal-envelopes",
+    "security-tinted-envelopes"
+  ],
+  "attributes": [
+    {
+      "label": "Color",
+      "value": "White"
+    },
+    {
+      "label": "Type",
+      "value": "Regular"
+    },
+    {
+      "label": "Printed/Blank",
+      "value": "Custom printed"
+    },
+    {
+      "label": "Size",
+      "value": "#9"
+    },
+    {
+      "label": "Sealing Type",
+      "value": "Self Seal"
+    },
+    {
+      "label": "Paper Weight",
+      "value": "24lb"
+    },
+    {
+      "label": "SKU",
+      "value": "9003"
+    },
+    {
+      "label": "Height",
+      "value": "3 7/8"
+    },
+    {
+      "label": "Width",
+      "value": "8 7/8"
+    }
+  ],
+  "pictures": [
+    {
+      "url": "/imgs/products/regular-envelopes/308.png"
+    }
+  ]
+}

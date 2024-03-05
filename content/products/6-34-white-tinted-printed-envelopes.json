@@ -1,1 +1,49 @@
-{"id":265,"title":"#6 3/4 White Tinted Endoc Envelopes","productSlug":"6-34-white-tinted-printed-envelopes","categorySlug":"regular-envelopes-1","categorySlugs":["regular-envelopes","security-tinted-envelopes"],"attributes":[{"label":"Color","value":"White"},{"label":"Printed/Blank","value":"Custom printed"},{"label":"Size","value":"#6 3/4"},{"label":"Sealing Type","value":"Moistenable Glue"},{"label":"Paper Weight","value":"24lb"},{"label":"SKU","value":"6002"},{"label":"Width","value":"6 1/2"},{"label":"Height","value":"3 5/8"}],"pictures":[{"url":"https://www.businessenvelopes.com/images/thumbs/0001474_6-34-white-tinted-endoc-envelopes_500.jpeg"},{"url":"https://www.businessenvelopes.com/images/thumbs/0001475_6-34-white-tinted-endoc-envelopes_500.jpeg"},{"url":"https://www.businessenvelopes.com/images/thumbs/0001472_6-34-white-tinted-endoc-envelopes_500.jpeg"},{"url":"https://www.businessenvelopes.com/images/thumbs/0001471_6-34-white-tinted-endoc-envelopes_500.jpeg"},{"url":"https://www.businessenvelopes.com/images/thumbs/0001473_6-34-white-tinted-endoc-envelopes_500.jpeg"},{"url":"https://www.businessenvelopes.com/images/thumbs/0001470_6-34-white-tinted-endoc-envelopes_500.jpeg"}]}
+{
+  "id": 265,
+  "title": "#6 3/4 White Tinted Endoc Envelopes",
+  "productSlug": "6-34-white-tinted-printed-envelopes",
+  "categorySlug": "regular-envelopes-1",
+  "categorySlugs": [
+    "regular-envelopes",
+    "security-tinted-envelopes"
+  ],
+  "attributes": [
+    {
+      "label": "Color",
+      "value": "White"
+    },
+    {
+      "label": "Printed/Blank",
+      "value": "Custom printed"
+    },
+    {
+      "label": "Size",
+      "value": "#6 3/4"
+    },
+    {
+      "label": "Sealing Type",
+      "value": "Moistenable Glue"
+    },
+    {
+      "label": "Paper Weight",
+      "value": "24lb"
+    },
+    {
+      "label": "SKU",
+      "value": "6002"
+    },
+    {
+      "label": "Width",
+      "value": "6 1/2"
+    },
+    {
+      "label": "Height",
+      "value": "3 5/8"
+    }
+  ],
+  "pictures": [
+    {
+      "url": "/imgs/products/regular-envelopes/265.png"
+    }
+  ]
+}

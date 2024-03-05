@@ -1,1 +1,48 @@
-{"id":148,"title":"6 x 9 - 14lb. Tyvek Open End Self Seal Blank Endoc Envelopes","productSlug":"6x9-14-tyvek-open-end-catalog-kwik-tak-envelopes","categorySlug":"tyvek-envelopes-2","categorySlugs":["tyvek-envelopes"],"attributes":[{"label":"Color","value":"White"},{"label":"Printed/Blank","value":"Blank"},{"label":"Size","value":"6 x 9"},{"label":"Sealing Type","value":"Self Seal"},{"label":"Booklet Type","value":"Open End"},{"label":"SKU","value":"6942"},{"label":"Height","value":"6"},{"label":"Width","value":"9"}],"pictures":[{"url":"https://www.businessenvelopes.com/images/thumbs/0001639_6-x-9-14lb-tyvek-open-end-self-seal-blank-endoc-envelopes_500.jpeg"},{"url":"https://www.businessenvelopes.com/images/thumbs/0001638_6-x-9-14lb-tyvek-open-end-self-seal-blank-endoc-envelopes_500.jpeg"},{"url":"https://www.businessenvelopes.com/images/thumbs/0001637_6-x-9-14lb-tyvek-open-end-self-seal-blank-endoc-envelopes_500.jpeg"},{"url":"https://www.businessenvelopes.com/images/thumbs/0001640_6-x-9-14lb-tyvek-open-end-self-seal-blank-endoc-envelopes_500.jpeg"},{"url":"https://www.businessenvelopes.com/images/thumbs/0001641_6-x-9-14lb-tyvek-open-end-self-seal-blank-endoc-envelopes_500.jpeg"}]}
+{
+  "id": 148,
+  "title": "6 x 9 - 14lb. Tyvek Open End Self Seal Blank Endoc Envelopes",
+  "productSlug": "6x9-14-tyvek-open-end-catalog-kwik-tak-envelopes",
+  "categorySlug": "tyvek-envelopes-2",
+  "categorySlugs": [
+    "tyvek-envelopes"
+  ],
+  "attributes": [
+    {
+      "label": "Color",
+      "value": "White"
+    },
+    {
+      "label": "Printed/Blank",
+      "value": "Blank"
+    },
+    {
+      "label": "Size",
+      "value": "6 x 9"
+    },
+    {
+      "label": "Sealing Type",
+      "value": "Self Seal"
+    },
+    {
+      "label": "Booklet Type",
+      "value": "Open End"
+    },
+    {
+      "label": "SKU",
+      "value": "6942"
+    },
+    {
+      "label": "Height",
+      "value": "6"
+    },
+    {
+      "label": "Width",
+      "value": "9"
+    }
+  ],
+  "pictures": [
+    {
+      "url": "/imgs/products/tyvek-envelopes/148.png"
+    }
+  ]
+}

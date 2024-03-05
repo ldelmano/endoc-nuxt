@@ -1,24 +1,23 @@
 <script setup lang="ts">
-import { Category } from '@/models';
+import type { Category } from "@/models";
 
 useHead({
-  title: 'Endoc - Categories'
-})
+  title: "Endoc - Categories",
+});
 
 const categories = ref<Category[]>([]);
-const { data } = await useAsyncData('categories', () => queryContent<Category>('categories').find());
-
+const { data } = await useAsyncData("categories", () =>
+  queryContent<Category>("categories").find()
+);
 
 onMounted(() => {
   if (!data.value) return;
-  categories.value = data.value
-})
-
+  categories.value = data.value;
+});
 </script>
 
 <template>
   <div class="container px-3">
-
     <BaseBreadcrumb :items="[{ label: 'our products', to: '/categories' }]" />
 
     <section class="grid category my-5">
@@ -69,7 +68,7 @@ onMounted(() => {
     justify-content: center;
     width: 80px;
     border-radius: 20px;
-    background-image: url('@/assets/imgs/category-card-action-bg.png');
+    background-image: url("@/assets/imgs/category-card-action-bg.png");
     background-size: cover;
 
     i {
@@ -78,7 +77,6 @@ onMounted(() => {
     }
   }
 }
-
 
 .fade-enter-active,
 .fade-leave-active {
@@ -89,4 +87,4 @@ onMounted(() => {
 .fade-leave-to {
   opacity: 0;
 }
-</style>  
+</style>

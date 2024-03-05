@@ -1,1 +1,52 @@
-{"id":302,"title":"6 x 9 White open end Endoc Envelopes","productSlug":"6x9-white-open-end-printed-envelopes","categorySlug":"regular-envelope-2","categorySlugs":["regular-envelopes"],"attributes":[{"label":"Color","value":"White"},{"label":"Printed/Blank","value":"Custom printed"},{"label":"Size","value":"6 x 9"},{"label":"Sealing Type","value":"Moistenable Glue"},{"label":"Booklet Type","value":"Open End"},{"label":"Paper Weight","value":"24lb"},{"label":"SKU","value":"6940"},{"label":"Height","value":"6"},{"label":"Width","value":"9"}],"pictures":[{"url":"https://www.businessenvelopes.com/images/thumbs/0001620_6-x-9-white-open-end-endoc-envelopes_500.jpeg"},{"url":"https://www.businessenvelopes.com/images/thumbs/0001621_6-x-9-white-open-end-endoc-envelopes_500.jpeg"},{"url":"https://www.businessenvelopes.com/images/thumbs/0001618_6-x-9-white-open-end-endoc-envelopes_500.jpeg"},{"url":"https://www.businessenvelopes.com/images/thumbs/0001619_6-x-9-white-open-end-endoc-envelopes_500.jpeg"},{"url":"https://www.businessenvelopes.com/images/thumbs/0001622_6-x-9-white-open-end-endoc-envelopes_500.jpeg"},{"url":"https://www.businessenvelopes.com/images/thumbs/0001617_6-x-9-white-open-end-endoc-envelopes_500.jpeg"}]}
+{
+  "id": 302,
+  "title": "6 x 9 White open end Endoc Envelopes",
+  "productSlug": "6x9-white-open-end-printed-envelopes",
+  "categorySlug": "regular-envelope-2",
+  "categorySlugs": [
+    "regular-envelopes"
+  ],
+  "attributes": [
+    {
+      "label": "Color",
+      "value": "White"
+    },
+    {
+      "label": "Printed/Blank",
+      "value": "Custom printed"
+    },
+    {
+      "label": "Size",
+      "value": "6 x 9"
+    },
+    {
+      "label": "Sealing Type",
+      "value": "Moistenable Glue"
+    },
+    {
+      "label": "Booklet Type",
+      "value": "Open End"
+    },
+    {
+      "label": "Paper Weight",
+      "value": "24lb"
+    },
+    {
+      "label": "SKU",
+      "value": "6940"
+    },
+    {
+      "label": "Height",
+      "value": "6"
+    },
+    {
+      "label": "Width",
+      "value": "9"
+    }
+  ],
+  "pictures": [
+    {
+      "url": "/imgs/products/302.png"
+    }
+  ]
+}

@@ -1,1 +1,53 @@
-{"id":402,"title":"10 x 13 White Booklet Peel & Seal Endoc Envelopes","productSlug":"10x13-white-booklet-peel-seal-28-lb-printed-envelopes","categorySlug":"regular-envelopes-1","categorySlugs":["regular-envelopes","self-seal-envelopes"],"attributes":[{"label":"Color","value":"White"},{"label":"Printed/Blank","value":"Custom printed"},{"label":"Size","value":"10 x 13"},{"label":"Sealing Type","value":"Self Seal"},{"label":"Booklet Type","value":"Standard Booklet"},{"label":"Paper Weight","value":"28lb"},{"label":"SKU","value":"1303"},{"label":"Height","value":"10"},{"label":"Width","value":"13"}],"pictures":[{"url":"https://www.businessenvelopes.com/images/thumbs/0001377_10-x-13-white-booklet-peel-seal-endoc-envelopes_500.jpeg"},{"url":"https://www.businessenvelopes.com/images/thumbs/0001379_10-x-13-white-booklet-peel-seal-endoc-envelopes_500.jpeg"},{"url":"https://www.businessenvelopes.com/images/thumbs/0001378_10-x-13-white-booklet-peel-seal-endoc-envelopes_500.jpeg"},{"url":"https://www.businessenvelopes.com/images/thumbs/0001376_10-x-13-white-booklet-peel-seal-endoc-envelopes_500.jpeg"},{"url":"https://www.businessenvelopes.com/images/thumbs/0001375_10-x-13-white-booklet-peel-seal-endoc-envelopes_500.jpeg"},{"url":"https://www.businessenvelopes.com/images/thumbs/0001374_10-x-13-white-booklet-peel-seal-endoc-envelopes_500.jpeg"}]}
+{
+  "id": 402,
+  "title": "10 x 13 White Booklet Peel & Seal Endoc Envelopes",
+  "productSlug": "10x13-white-booklet-peel-seal-28-lb-printed-envelopes",
+  "categorySlug": "regular-envelopes-1",
+  "categorySlugs": [
+    "regular-envelopes",
+    "self-seal-envelopes"
+  ],
+  "attributes": [
+    {
+      "label": "Color",
+      "value": "White"
+    },
+    {
+      "label": "Printed/Blank",
+      "value": "Custom printed"
+    },
+    {
+      "label": "Size",
+      "value": "10 x 13"
+    },
+    {
+      "label": "Sealing Type",
+      "value": "Self Seal"
+    },
+    {
+      "label": "Booklet Type",
+      "value": "Standard Booklet"
+    },
+    {
+      "label": "Paper Weight",
+      "value": "28lb"
+    },
+    {
+      "label": "SKU",
+      "value": "1303"
+    },
+    {
+      "label": "Height",
+      "value": "10"
+    },
+    {
+      "label": "Width",
+      "value": "13"
+    }
+  ],
+  "pictures": [
+    {
+      "url": "/imgs/products/regular-envelopes/402.png"
+    }
+  ]
+}

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { BaseFileContent } from '@/models';
+import type { BaseFileContent } from "@/models";
 
 interface BecomeSellerContent extends BaseFileContent {
   title: string;
@@ -7,7 +7,9 @@ interface BecomeSellerContent extends BaseFileContent {
 }
 
 const { data } = await useAsyncData("home-become-seller", () =>
-  queryContent<BecomeSellerContent>('home').where({ _id: { $contains: 'become-seller' } }).findOne()
+  queryContent<BecomeSellerContent>("home")
+    .where({ _id: { $contains: "become-seller" } })
+    .findOne()
 );
 
 // onMounted(() => {
@@ -15,11 +17,11 @@ const { data } = await useAsyncData("home-become-seller", () =>
 // })
 
 const goToContactSection = () => {
-  document.getElementById('contact-form')?.scrollIntoView({
-    behavior: 'smooth',
-    block: "start"
-  })
-}
+  document.getElementById("contact-form")?.scrollIntoView({
+    behavior: "smooth",
+    block: "start",
+  });
+};
 </script>
 
 <template>
@@ -35,7 +37,6 @@ const goToContactSection = () => {
           <div class="become-seller__text-body">
             <LazyContentRenderer :value="data || {}" />
           </div>
-
 
           <BaseButton label="contact us" @click="goToContactSection" />
         </div>
@@ -70,7 +71,7 @@ const goToContactSection = () => {
 <style lang="scss">
 .become-seller {
   margin-top: 13em;
-  background-image: url('~/assets/imgs/home-become-seller-bg.svg');
+  background-image: url("~/assets/imgs/home-become-seller-bg.svg");
   background-size: cover;
   background-repeat: no-repeat;
 
@@ -100,7 +101,7 @@ const goToContactSection = () => {
     flex: 1;
     padding: 1.5em;
     border-radius: 1.875em;
-    background: #C8DF3C;
+    background: #c8df3c;
 
     @media (min-width: 768px) {
       padding: 3em;
@@ -121,7 +122,6 @@ const goToContactSection = () => {
     font-size: 2.25em;
     line-height: 130%;
     /* identical to box height, or 47px */
-
 
     color: #323747;
   }
@@ -146,6 +146,5 @@ const goToContactSection = () => {
       }
     }
   }
-
 }
 </style>

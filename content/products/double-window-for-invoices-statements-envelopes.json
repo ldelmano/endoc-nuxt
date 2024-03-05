@@ -1,1 +1,50 @@
-{"id":262,"title":"#10 Double Window Envelopes","productSlug":"double-window-for-invoices-statements-envelopes","categorySlug":"window-envelopes","categorySlugs":["window-envelopes","security-tinted-envelopes","double-window-envelopes"],"attributes":[{"label":"Type","value":"Double Window"},{"label":"Color","value":"White"},{"label":"Size","value":"#10"},{"label":"Sealing Type","value":"Moistenable Glue"},{"label":"Paper Weight","value":"24lb"},{"label":"SKU","value":"8004"},{"label":"Height","value":"4 1/8"},{"label":"Width","value":"9 1/2"}],"pictures":[{"url":"https://www.businessenvelopes.com/images/thumbs/0001676_10-double-window-envelopes_500.jpeg"},{"url":"https://www.businessenvelopes.com/images/thumbs/0002594_10-double-window-envelopes_500.jpeg"},{"url":"https://www.businessenvelopes.com/images/thumbs/0001678_10-double-window-envelopes_500.jpeg"},{"url":"https://www.businessenvelopes.com/images/thumbs/0001677_10-double-window-envelopes_500.jpeg"},{"url":"https://www.businessenvelopes.com/images/thumbs/0001675_10-double-window-envelopes_500.jpeg"}]}
+{
+  "id": 262,
+  "title": "#10 Double Window Envelopes",
+  "productSlug": "double-window-for-invoices-statements-envelopes",
+  "categorySlug": "window-envelopes",
+  "categorySlugs": [
+    "window-envelopes",
+    "security-tinted-envelopes",
+    "double-window-envelopes"
+  ],
+  "attributes": [
+    {
+      "label": "Type",
+      "value": "Double Window"
+    },
+    {
+      "label": "Color",
+      "value": "White"
+    },
+    {
+      "label": "Size",
+      "value": "#10"
+    },
+    {
+      "label": "Sealing Type",
+      "value": "Moistenable Glue"
+    },
+    {
+      "label": "Paper Weight",
+      "value": "24lb"
+    },
+    {
+      "label": "SKU",
+      "value": "8004"
+    },
+    {
+      "label": "Height",
+      "value": "4 1/8"
+    },
+    {
+      "label": "Width",
+      "value": "9 1/2"
+    }
+  ],
+  "pictures": [
+    {
+      "url": "/imgs/products/double-window-envelopes/262.png"
+    }
+  ]
+}

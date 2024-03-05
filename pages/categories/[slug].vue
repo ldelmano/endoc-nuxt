@@ -1,11 +1,20 @@
 <script setup lang="ts">
-import { Category, Product } from '@/models';
+import type { Category, Product } from "@/models";
 
 const route = useRoute();
 
-const currentCategory = await useAsyncData(`category-${route.params.slug}`, () => queryContent('categories').where({ slug: route.params.slug }).findOne());
+const currentCategory = await useAsyncData(
+  `category-${route.params.slug}`,
+  () => queryContent("categories").where({ slug: route.params.slug }).findOne()
+);
 
-const productsQuery = await useAsyncData<Product[]>(`products-${route.params.slug}`, () => queryContent('products').where({ categorySlugs: { $contains: route.params.slug } }).find());
+const productsQuery = await useAsyncData<Product[]>(
+  `products-${route.params.slug}`,
+  () =>
+    queryContent("products")
+      .where({ categorySlugs: { $contains: route.params.slug } })
+      .find()
+);
 
 const products = ref<Product[]>([]);
 
@@ -17,38 +26,56 @@ const handleProductDetails = (item: Product) => {
   modalContent.value = item;
 
   showModal.value = true;
-}
+};
 
 const handleCloseModal = () => {
   showModal.value = false;
   modalContent.value = null;
-}
+};
 
 useHead({
-  title: `Endoc - ${category.value.title}`
-})
+  title: `Endoc - ${category.value.title}`,
+});
 
 onMounted(() => {
   products.value = productsQuery.data.value || [];
-})
+});
 </script>
 
 <template>
   <div class="container px-3">
     <BaseBreadcrumb
-      :items="[{ label: 'our products', to: '/categories' }, { label: category.title || 'Category', to: category._path || '/' }]" />
+      :items="[
+        { label: 'our products', to: '/categories' },
+        { label: category.title || 'Category', to: category._path || '/' },
+      ]"
+    />
 
     <section class="grid category-page my-5">
       <article class="col-12 md:col-6 xl:col-4">
         <h1 class="mb-3 md:mb-5">{{ category.title }}</h1>
 
-        <BaseButton label="back to all categories" icon="arrow-left" icon-on-left variant="secondary" to="/categories" />
+        <BaseButton
+          label="back to all categories"
+          icon="arrow-left"
+          icon-on-left
+          variant="secondary"
+          to="/categories"
+        />
       </article>
-      <article class="col-12 md:col-6 xl:col-4 product cursor-pointer" @click="() => handleProductDetails(product)"
-        v-for="product in products">
+      <article
+        class="col-12 md:col-6 xl:col-4 product cursor-pointer"
+        @click="() => handleProductDetails(product)"
+        v-for="product in products"
+      >
         <div class="product__card">
           <div class="product__img">
-            <img :src="product.thumbnail || (product.pictures ? product.pictures[0].url : '')" />
+            <img
+              :src="
+                product.thumbnail ||
+                (product.pictures ? product.pictures[0].url : '')
+              "
+            />
           </div>
 
           <div class="product__info">
@@ -57,8 +84,13 @@ onMounted(() => {
             <p v-if="product.description">{{ product.description }}</p>
           </div>
 
-          <BaseButton label="details" icon="arrow-right" link variant="secondary"
-            @click="() => handleProductDetails(product)" />
+          <BaseButton
+            label="details"
+            icon="arrow-right"
+            link
+            variant="secondary"
+            @click="() => handleProductDetails(product)"
+          />
         </div>
       </article>
     </section>
@@ -66,7 +98,12 @@ onMounted(() => {
     <BaseModal v-show="showModal" @close-modal="handleCloseModal">
       <template #content>
         <div class="modal-content" v-if="modalContent">
-          <img :src="modalContent.thumbnail || (modalContent.pictures ? modalContent.pictures[0].url : '')" />
+          <img
+            :src="
+              modalContent.thumbnail ||
+              (modalContent.pictures ? modalContent.pictures[0].url : '')
+            "
+          />
 
           <div class="product-info">
             <h3 class="product-info__name">{{ modalContent.title }}</h3>
@@ -82,7 +119,6 @@ onMounted(() => {
         </div>
       </template>
     </BaseModal>
-
   </div>
 </template>
 
@@ -149,7 +185,7 @@ h1 {
 
       text-align: center;
 
-      color: #8C8E96;
+      color: #8c8e96;
     }
   }
 }
@@ -196,14 +232,14 @@ h1 {
       font-weight: 400;
       font-size: 0.8125em;
       line-height: 134%;
-      color: #8C8E96;
+      color: #8c8e96;
     }
 
     &__attributes {
       margin: 1.875em 0;
       list-style: none;
       padding: 1em;
-      background: #F6F6F6;
+      background: #f6f6f6;
       border-radius: 1.875em;
 
       @media screen and (min-width: 768px) {
@@ -220,13 +256,13 @@ h1 {
         }
       }
 
-      li+li::before {
-        content: '';
+      li + li::before {
+        content: "";
         position: absolute;
         display: flex;
         width: 100%;
         height: 1px;
-        background: #E0E2EB;
+        background: #e0e2eb;
         transform: translateY(-1em);
       }
     }
@@ -248,9 +284,7 @@ h1 {
       line-height: 182%;
       text-align: right;
 
-
       color: #323747;
-
     }
   }
 }

@@ -1,1 +1,53 @@
-{"id":300,"title":"6 x 9 White Open End Peel & Seal Endoc Envelopes","productSlug":"6x9-white-open-end-peel-seal-28lb-printed-envelopes","categorySlug":"regular-envelopes-1","categorySlugs":["regular-envelopes","self-seal-envelopes"],"attributes":[{"label":"Color","value":"White"},{"label":"Printed/Blank","value":"Custom printed"},{"label":"Size","value":"6 x 9"},{"label":"Sealing Type","value":"Self Seal"},{"label":"Booklet Type","value":"Open End"},{"label":"Paper Weight","value":"28lb"},{"label":"SKU","value":"6938"},{"label":"Height","value":"6"},{"label":"Width","value":"9"}],"pictures":[{"url":"https://www.businessenvelopes.com/images/thumbs/0001593_6-x-9-white-open-end-peel-seal-endoc-envelopes_500.jpeg"},{"url":"https://www.businessenvelopes.com/images/thumbs/0001594_6-x-9-white-open-end-peel-seal-endoc-envelopes_500.jpeg"},{"url":"https://www.businessenvelopes.com/images/thumbs/0001590_6-x-9-white-open-end-peel-seal-endoc-envelopes_500.jpeg"},{"url":"https://www.businessenvelopes.com/images/thumbs/0001592_6-x-9-white-open-end-peel-seal-endoc-envelopes_500.jpeg"},{"url":"https://www.businessenvelopes.com/images/thumbs/0001591_6-x-9-white-open-end-peel-seal-endoc-envelopes_500.jpeg"},{"url":"https://www.businessenvelopes.com/images/thumbs/0001589_6-x-9-white-open-end-peel-seal-endoc-envelopes_500.jpeg"},{"url":"https://www.businessenvelopes.com/images/thumbs/0001588_6-x-9-white-open-end-peel-seal-endoc-envelopes_500.jpeg"}]}
+{
+  "id": 300,
+  "title": "6 x 9 White Open End Peel & Seal Endoc Envelopes",
+  "productSlug": "6x9-white-open-end-peel-seal-28lb-printed-envelopes",
+  "categorySlug": "regular-envelopes-1",
+  "categorySlugs": [
+    "regular-envelopes",
+    "self-seal-envelopes"
+  ],
+  "attributes": [
+    {
+      "label": "Color",
+      "value": "White"
+    },
+    {
+      "label": "Printed/Blank",
+      "value": "Custom printed"
+    },
+    {
+      "label": "Size",
+      "value": "6 x 9"
+    },
+    {
+      "label": "Sealing Type",
+      "value": "Self Seal"
+    },
+    {
+      "label": "Booklet Type",
+      "value": "Open End"
+    },
+    {
+      "label": "Paper Weight",
+      "value": "28lb"
+    },
+    {
+      "label": "SKU",
+      "value": "6938"
+    },
+    {
+      "label": "Height",
+      "value": "6"
+    },
+    {
+      "label": "Width",
+      "value": "9"
+    }
+  ],
+  "pictures": [
+    {
+      "url": "/imgs/products/regular-envelopes/300.png"
+    }
+  ]
+}

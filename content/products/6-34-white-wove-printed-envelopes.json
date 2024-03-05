@@ -1,1 +1,52 @@
-{"id":264,"title":"#6 3/4 White Endoc Envelopes","productSlug":"6-34-white-wove-printed-envelopes","categorySlug":"regular-envelopes-1","categorySlugs":["regular-envelopes"],"attributes":[{"label":"Color","value":"White"},{"label":"Type","value":"Regular"},{"label":"Printed/Blank","value":"Custom printed"},{"label":"Size","value":"#6 3/4"},{"label":"Sealing Type","value":"Moistenable Glue"},{"label":"Paper Weight","value":"24lb"},{"label":"SKU","value":"6001"},{"label":"Width","value":"6 1/2"},{"label":"Height","value":"3 5/8"}],"pictures":[{"url":"https://www.businessenvelopes.com/images/thumbs/0001463_6-34-white-endoc-envelopes_500.jpeg"},{"url":"https://www.businessenvelopes.com/images/thumbs/0001464_6-34-white-endoc-envelopes_500.jpeg"},{"url":"https://www.businessenvelopes.com/images/thumbs/0001461_6-34-white-endoc-envelopes_500.jpeg"},{"url":"https://www.businessenvelopes.com/images/thumbs/0001462_6-34-white-endoc-envelopes_500.jpeg"},{"url":"https://www.businessenvelopes.com/images/thumbs/0001465_6-34-white-endoc-envelopes_500.jpeg"},{"url":"https://www.businessenvelopes.com/images/thumbs/0001460_6-34-white-endoc-envelopes_500.jpeg"}]}
+{
+  "id": 264,
+  "title": "#6 3/4 White Endoc Envelopes",
+  "productSlug": "6-34-white-wove-printed-envelopes",
+  "categorySlug": "regular-envelopes-1",
+  "categorySlugs": [
+    "regular-envelopes"
+  ],
+  "attributes": [
+    {
+      "label": "Color",
+      "value": "White"
+    },
+    {
+      "label": "Type",
+      "value": "Regular"
+    },
+    {
+      "label": "Printed/Blank",
+      "value": "Custom printed"
+    },
+    {
+      "label": "Size",
+      "value": "#6 3/4"
+    },
+    {
+      "label": "Sealing Type",
+      "value": "Moistenable Glue"
+    },
+    {
+      "label": "Paper Weight",
+      "value": "24lb"
+    },
+    {
+      "label": "SKU",
+      "value": "6001"
+    },
+    {
+      "label": "Width",
+      "value": "6 1/2"
+    },
+    {
+      "label": "Height",
+      "value": "3 5/8"
+    }
+  ],
+  "pictures": [
+    {
+      "url": "/imgs/products/regular-envelopes/264.png"
+    }
+  ]
+}

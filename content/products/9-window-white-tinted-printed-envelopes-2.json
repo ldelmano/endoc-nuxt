@@ -1,1 +1,53 @@
-{"id":456,"title":"#9  White Window Tinted  Laser Safe  Endoc Envelopes","productSlug":"9-window-white-tinted-printed-envelopes-2","categorySlug":"security-tinted-2","categorySlugs":["security-tinted-envelopes","window-envelopes"],"attributes":[{"label":"Type","value":"Windows"},{"label":"Color","value":"White"},{"label":"Printed/Blank","value":"Custom printed"},{"label":"Size","value":"#9"},{"label":"Sealing Type","value":"Moistenable Glue"},{"label":"Paper Weight","value":"24lb"},{"label":"SKU","value":"1200"},{"label":"Height","value":"3 7/8"},{"label":"Width","value":"8 7/8"}],"pictures":[{"url":"https://www.businessenvelopes.com/images/thumbs/0001340_9-white-window-tinted-laser-safe-endoc-envelopes_500.jpeg"},{"url":"https://www.businessenvelopes.com/images/thumbs/0001342_9-white-window-tinted-laser-safe-endoc-envelopes_500.jpeg"},{"url":"https://www.businessenvelopes.com/images/thumbs/0001341_9-white-window-tinted-laser-safe-endoc-envelopes_500.jpeg"},{"url":"https://www.businessenvelopes.com/images/thumbs/0001339_9-white-window-tinted-laser-safe-endoc-envelopes_500.jpeg"},{"url":"https://www.businessenvelopes.com/images/thumbs/0001338_9-white-window-tinted-laser-safe-endoc-envelopes_500.jpeg"}]}
+{
+  "id": 456,
+  "title": "#9  White Window Tinted  Laser Safe  Endoc Envelopes",
+  "productSlug": "9-window-white-tinted-printed-envelopes-2",
+  "categorySlug": "security-tinted-2",
+  "categorySlugs": [
+    "security-tinted-envelopes",
+    "window-envelopes"
+  ],
+  "attributes": [
+    {
+      "label": "Type",
+      "value": "Windows"
+    },
+    {
+      "label": "Color",
+      "value": "White"
+    },
+    {
+      "label": "Printed/Blank",
+      "value": "Custom printed"
+    },
+    {
+      "label": "Size",
+      "value": "#9"
+    },
+    {
+      "label": "Sealing Type",
+      "value": "Moistenable Glue"
+    },
+    {
+      "label": "Paper Weight",
+      "value": "24lb"
+    },
+    {
+      "label": "SKU",
+      "value": "1200"
+    },
+    {
+      "label": "Height",
+      "value": "3 7/8"
+    },
+    {
+      "label": "Width",
+      "value": "8 7/8"
+    }
+  ],
+  "pictures": [
+    {
+      "url": "/imgs/products/window-envelopes/456.png"
+    }
+  ]
+}

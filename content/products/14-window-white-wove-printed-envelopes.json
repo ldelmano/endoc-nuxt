@@ -1,1 +1,53 @@
-{"id":398,"title":"#14 White Window Endoc Envelopes","productSlug":"14-window-white-wove-printed-envelopes","categorySlug":"window-envelopes-2","categorySlugs":["window-envelopes","regular-envelopes"],"attributes":[{"label":"Type","value":"Windows"},{"label":"Color","value":"White"},{"label":"Printed/Blank","value":"Custom printed"},{"label":"Size","value":"#14"},{"label":"Sealing Type","value":"Moistenable Glue"},{"label":"Paper Weight","value":"24lb"},{"label":"SKU","value":"1402"},{"label":"Height","value":"5"},{"label":"Width","value":"11 1/2"}],"pictures":[{"url":"https://www.businessenvelopes.com/images/thumbs/0001151_14-white-window-endoc-envelopes_500.jpeg"},{"url":"https://www.businessenvelopes.com/images/thumbs/0002516_14-white-window-endoc-envelopes_500.jpeg"},{"url":"https://www.businessenvelopes.com/images/thumbs/0001152_14-white-window-endoc-envelopes_500.jpeg"},{"url":"https://www.businessenvelopes.com/images/thumbs/0001153_14-white-window-endoc-envelopes_500.jpeg"},{"url":"https://www.businessenvelopes.com/images/thumbs/0001154_14-white-window-endoc-envelopes_500.jpeg"},{"url":"https://www.businessenvelopes.com/images/thumbs/0001155_14-white-window-endoc-envelopes_500.jpeg"}]}
+{
+  "id": 398,
+  "title": "#14 White Window Endoc Envelopes",
+  "productSlug": "14-window-white-wove-printed-envelopes",
+  "categorySlug": "window-envelopes-2",
+  "categorySlugs": [
+    "window-envelopes",
+    "regular-envelopes"
+  ],
+  "attributes": [
+    {
+      "label": "Type",
+      "value": "Windows"
+    },
+    {
+      "label": "Color",
+      "value": "White"
+    },
+    {
+      "label": "Printed/Blank",
+      "value": "Custom printed"
+    },
+    {
+      "label": "Size",
+      "value": "#14"
+    },
+    {
+      "label": "Sealing Type",
+      "value": "Moistenable Glue"
+    },
+    {
+      "label": "Paper Weight",
+      "value": "24lb"
+    },
+    {
+      "label": "SKU",
+      "value": "1402"
+    },
+    {
+      "label": "Height",
+      "value": "5"
+    },
+    {
+      "label": "Width",
+      "value": "11 1/2"
+    }
+  ],
+  "pictures": [
+    {
+      "url": "/imgs/products/window-envelopes/398.png"
+    }
+  ]
+}

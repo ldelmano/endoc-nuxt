@@ -1,1 +1,58 @@
-{"id":373,"title":"#10 White Window Tinted Self Sealing  Laser Safe Endoc Envelopes","productSlug":"10-window-white-tinted-peel-seal-printed-envelopes","categorySlug":"security-tinted-2","categorySlugs":["security-tinted-envelopes","self-seal-envelopes","window-envelopes"],"attributes":[{"label":"Sealing Type","value":"Flip & Stick"},{"label":"Security","value":"Security Tinted"},{"label":"Color","value":"White"},{"label":"Type","value":"Windows"},{"label":"Printed/Blank","value":"Custom printed"},{"label":"Size","value":"#10"},{"label":"Paper Weight","value":"24lb"},{"label":"SKU","value":"1023"},{"label":"Height","value":"4 1/8"},{"label":"Width","value":"9 1/2"}],"pictures":[{"url":"https://www.businessenvelopes.com/images/thumbs/0001307_10-white-window-tinted-self-sealing-laser-safe-endoc-envelopes_500.jpeg"},{"url":"https://www.businessenvelopes.com/images/thumbs/0001301_10-white-window-tinted-self-sealing-laser-safe-endoc-envelopes_500.jpeg"},{"url":"https://www.businessenvelopes.com/images/thumbs/0001306_10-white-window-tinted-self-sealing-laser-safe-endoc-envelopes_500.jpeg"},{"url":"https://www.businessenvelopes.com/images/thumbs/0001304_10-white-window-tinted-self-sealing-laser-safe-endoc-envelopes_500.jpeg"},{"url":"https://www.businessenvelopes.com/images/thumbs/0001305_10-white-window-tinted-self-sealing-laser-safe-endoc-envelopes_500.jpeg"},{"url":"https://www.businessenvelopes.com/images/thumbs/0001303_10-white-window-tinted-self-sealing-laser-safe-endoc-envelopes_500.jpeg"},{"url":"https://www.businessenvelopes.com/images/thumbs/0001302_10-white-window-tinted-self-sealing-laser-safe-endoc-envelopes_500.jpeg"}]}
+{
+  "id": 373,
+  "title": "#10 White Window Tinted Self Sealing  Laser Safe Endoc Envelopes",
+  "productSlug": "10-window-white-tinted-peel-seal-printed-envelopes",
+  "categorySlug": "security-tinted-2",
+  "categorySlugs": [
+    "security-tinted-envelopes",
+    "self-seal-envelopes",
+    "window-envelopes"
+  ],
+  "attributes": [
+    {
+      "label": "Sealing Type",
+      "value": "Flip & Stick"
+    },
+    {
+      "label": "Security",
+      "value": "Security Tinted"
+    },
+    {
+      "label": "Color",
+      "value": "White"
+    },
+    {
+      "label": "Type",
+      "value": "Windows"
+    },
+    {
+      "label": "Printed/Blank",
+      "value": "Custom printed"
+    },
+    {
+      "label": "Size",
+      "value": "#10"
+    },
+    {
+      "label": "Paper Weight",
+      "value": "24lb"
+    },
+    {
+      "label": "SKU",
+      "value": "1023"
+    },
+    {
+      "label": "Height",
+      "value": "4 1/8"
+    },
+    {
+      "label": "Width",
+      "value": "9 1/2"
+    }
+  ],
+  "pictures": [
+    {
+      "url": "/imgs/products/window-envelopes/373.png"
+    }
+  ]
+}

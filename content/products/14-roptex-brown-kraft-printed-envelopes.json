@@ -1,1 +1,48 @@
-{"id":399,"title":"#14 Brown Endoc Envelopes","productSlug":"14-roptex-brown-kraft-printed-envelopes","categorySlug":"regular-envelope-2","categorySlugs":["regular-envelopes"],"attributes":[{"label":"Color","value":"Brown Kraft"},{"label":"Printed/Blank","value":"Custom printed"},{"label":"Size","value":"#14"},{"label":"Sealing Type","value":"Moistenable Glue"},{"label":"Paper Weight","value":"24lb"},{"label":"SKU","value":"1403"},{"label":"Height","value":"5"},{"label":"Width","value":"11 1/2"}],"pictures":[{"url":"https://www.businessenvelopes.com/images/thumbs/0001146_14-brown-endoc-envelopes_500.jpeg"},{"url":"https://www.businessenvelopes.com/images/thumbs/0002514_14-brown-endoc-envelopes_500.jpeg"},{"url":"https://www.businessenvelopes.com/images/thumbs/0001147_14-brown-endoc-envelopes_500.jpeg"},{"url":"https://www.businessenvelopes.com/images/thumbs/0001148_14-brown-endoc-envelopes_500.jpeg"},{"url":"https://www.businessenvelopes.com/images/thumbs/0001149_14-brown-endoc-envelopes_500.jpeg"},{"url":"https://www.businessenvelopes.com/images/thumbs/0001150_14-brown-endoc-envelopes_500.jpeg"}]}
+{
+  "id": 399,
+  "title": "#14 Brown Endoc Envelopes",
+  "productSlug": "14-roptex-brown-kraft-printed-envelopes",
+  "categorySlug": "regular-envelope-2",
+  "categorySlugs": [
+    "regular-envelopes"
+  ],
+  "attributes": [
+    {
+      "label": "Color",
+      "value": "Brown Kraft"
+    },
+    {
+      "label": "Printed/Blank",
+      "value": "Custom printed"
+    },
+    {
+      "label": "Size",
+      "value": "#14"
+    },
+    {
+      "label": "Sealing Type",
+      "value": "Moistenable Glue"
+    },
+    {
+      "label": "Paper Weight",
+      "value": "24lb"
+    },
+    {
+      "label": "SKU",
+      "value": "1403"
+    },
+    {
+      "label": "Height",
+      "value": "5"
+    },
+    {
+      "label": "Width",
+      "value": "11 1/2"
+    }
+  ],
+  "pictures": [
+    {
+      "url": "/imgs/products/regular-envelopes/399.png"
+    }
+  ]
+}

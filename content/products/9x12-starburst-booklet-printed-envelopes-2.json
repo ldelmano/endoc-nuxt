@@ -1,1 +1,52 @@
-{"id":427,"title":"9 x 12 Starburst Booklet Endoc Envelopes","productSlug":"9x12-starburst-booklet-printed-envelopes-2","categorySlug":"regular-envelope-2","categorySlugs":["regular-envelopes"],"attributes":[{"label":"Booklet Type","value":"Standard Booklet"},{"label":"Sealing Type","value":"Moistenable Glue"},{"label":"Size","value":"9 x 12"},{"label":"Type","value":"Regular"},{"label":"Color","value":"Starburst colors"},{"label":"Printed/Blank","value":"Custom printed"},{"label":"SKU","value":"9115-24"},{"label":"Height","value":"9"},{"label":"Width","value":"12"}],"pictures":[{"url":"https://www.businessenvelopes.com/images/thumbs/0002668_9-x-12-starburst-booklet-endoc-envelopes_500.jpeg"},{"url":"https://www.businessenvelopes.com/images/thumbs/0002669_9-x-12-starburst-booklet-endoc-envelopes_500.jpeg"},{"url":"https://www.businessenvelopes.com/images/thumbs/0002670_9-x-12-starburst-booklet-endoc-envelopes_500.jpeg"},{"url":"https://www.businessenvelopes.com/images/thumbs/0002671_9-x-12-starburst-booklet-endoc-envelopes_500.jpeg"},{"url":"https://www.businessenvelopes.com/images/thumbs/0002672_9-x-12-starburst-booklet-endoc-envelopes_500.jpeg"}]}
+{
+  "id": 427,
+  "title": "9 x 12 Starburst Booklet Endoc Envelopes",
+  "productSlug": "9x12-starburst-booklet-printed-envelopes-2",
+  "categorySlug": "regular-envelope-2",
+  "categorySlugs": [
+    "regular-envelopes"
+  ],
+  "attributes": [
+    {
+      "label": "Booklet Type",
+      "value": "Standard Booklet"
+    },
+    {
+      "label": "Sealing Type",
+      "value": "Moistenable Glue"
+    },
+    {
+      "label": "Size",
+      "value": "9 x 12"
+    },
+    {
+      "label": "Type",
+      "value": "Regular"
+    },
+    {
+      "label": "Color",
+      "value": "Starburst colors"
+    },
+    {
+      "label": "Printed/Blank",
+      "value": "Custom printed"
+    },
+    {
+      "label": "SKU",
+      "value": "9115-24"
+    },
+    {
+      "label": "Height",
+      "value": "9"
+    },
+    {
+      "label": "Width",
+      "value": "12"
+    }
+  ],
+  "pictures": [
+    {
+      "url": "/imgs/products/regular-envelopes/427.png"
+    }
+  ]
+}

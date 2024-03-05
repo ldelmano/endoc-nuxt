@@ -1,1 +1,49 @@
-{"id":284,"title":"6 X 9 White Booklet Peel & Seal Endoc Envelopes","productSlug":"6x9-white-booklet-peel-seal-28lb-printed-envelopes","categorySlug":"regular-envelopes-1","categorySlugs":["regular-envelopes","self-seal-envelopes"],"attributes":[{"label":"Color","value":"White"},{"label":"Size","value":"6 x 9"},{"label":"Sealing Type","value":"Self Seal"},{"label":"Booklet Type","value":"Standard Booklet"},{"label":"Paper Weight","value":"28lb"},{"label":"SKU","value":"6922"},{"label":"Height","value":"6"},{"label":"Width","value":"9"}],"pictures":[{"url":"https://www.businessenvelopes.com/images/thumbs/0001535_6-x-9-white-booklet-peel-seal-endoc-envelopes_500.jpeg"},{"url":"https://www.businessenvelopes.com/images/thumbs/0001537_6-x-9-white-booklet-peel-seal-endoc-envelopes_500.jpeg"},{"url":"https://www.businessenvelopes.com/images/thumbs/0001539_6-x-9-white-booklet-peel-seal-endoc-envelopes_500.jpeg"},{"url":"https://www.businessenvelopes.com/images/thumbs/0001541_6-x-9-white-booklet-peel-seal-endoc-envelopes_500.jpeg"}]}
+{
+  "id": 284,
+  "title": "6 X 9 White Booklet Peel & Seal Endoc Envelopes",
+  "productSlug": "6x9-white-booklet-peel-seal-28lb-printed-envelopes",
+  "categorySlug": "regular-envelopes-1",
+  "categorySlugs": [
+    "regular-envelopes",
+    "self-seal-envelopes"
+  ],
+  "attributes": [
+    {
+      "label": "Color",
+      "value": "White"
+    },
+    {
+      "label": "Size",
+      "value": "6 x 9"
+    },
+    {
+      "label": "Sealing Type",
+      "value": "Self Seal"
+    },
+    {
+      "label": "Booklet Type",
+      "value": "Standard Booklet"
+    },
+    {
+      "label": "Paper Weight",
+      "value": "28lb"
+    },
+    {
+      "label": "SKU",
+      "value": "6922"
+    },
+    {
+      "label": "Height",
+      "value": "6"
+    },
+    {
+      "label": "Width",
+      "value": "9"
+    }
+  ],
+  "pictures": [
+    {
+      "url": "/imgs/products/regular-envelopes/284.png"
+    }
+  ]
+}

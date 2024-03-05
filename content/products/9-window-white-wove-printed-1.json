@@ -1,1 +1,53 @@
-{"id":454,"title":"#9  White Window Endoc Envelopes","productSlug":"9-window-white-wove-printed-1","categorySlug":"regular-envelope-2","categorySlugs":["window-envelopes","regular-envelopes"],"attributes":[{"label":"Type","value":"Windows"},{"label":"Color","value":"White"},{"label":"Printed/Blank","value":"Custom printed"},{"label":"Size","value":"#9"},{"label":"Sealing Type","value":"Moistenable Glue"},{"label":"Paper Weight","value":"24lb"},{"label":"SKU","value":"9019"},{"label":"Height","value":"3 7/8"},{"label":"Width","value":"8 7/8"}],"pictures":[{"url":"https://www.businessenvelopes.com/images/thumbs/0002511_9-white-window-endoc-envelopes_500.jpeg"},{"url":"https://www.businessenvelopes.com/images/thumbs/0002513_9-white-window-endoc-envelopes_500.jpeg"},{"url":"https://www.businessenvelopes.com/images/thumbs/0000946_9-white-window-endoc-envelopes_500.jpeg"},{"url":"https://www.businessenvelopes.com/images/thumbs/0000948_9-white-window-endoc-envelopes_500.jpeg"},{"url":"https://www.businessenvelopes.com/images/thumbs/0000950_9-white-window-endoc-envelopes_500.jpeg"}]}
+{
+  "id": 454,
+  "title": "#9  White Window Endoc Envelopes",
+  "productSlug": "9-window-white-wove-printed-1",
+  "categorySlug": "regular-envelope-2",
+  "categorySlugs": [
+    "window-envelopes",
+    "regular-envelopes"
+  ],
+  "attributes": [
+    {
+      "label": "Type",
+      "value": "Windows"
+    },
+    {
+      "label": "Color",
+      "value": "White"
+    },
+    {
+      "label": "Printed/Blank",
+      "value": "Custom printed"
+    },
+    {
+      "label": "Size",
+      "value": "#9"
+    },
+    {
+      "label": "Sealing Type",
+      "value": "Moistenable Glue"
+    },
+    {
+      "label": "Paper Weight",
+      "value": "24lb"
+    },
+    {
+      "label": "SKU",
+      "value": "9019"
+    },
+    {
+      "label": "Height",
+      "value": "3 7/8"
+    },
+    {
+      "label": "Width",
+      "value": "8 7/8"
+    }
+  ],
+  "pictures": [
+    {
+      "url": "/imgs/products/window-envelopes/454.png"
+    }
+  ]
+}

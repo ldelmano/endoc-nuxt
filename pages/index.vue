@@ -1,39 +1,46 @@
 <script setup lang="ts">
-import { Category } from '@/models';
+import type { Category } from "@/models";
 
-definePageMeta({ layout: "home", });
+definePageMeta({ layout: "home" });
 
 useHead({
-  title: 'Endoc - Business and home envelopes'
-})
+  title: "Endoc - Business and home envelopes",
+});
 
-const { data } = await useAsyncData('categories', () => queryContent('categories').find());
+const { data } = await useAsyncData("categories", () =>
+  queryContent("categories").find()
+);
 
-const categories = ref<Category[]>([])
+const categories = ref<Category[]>([]);
 
-const visibleCategories = computed(() => categories.value.filter(category => category.showOnHome).slice(0, 6))
+const visibleCategories = computed(() =>
+  categories.value.filter((category) => category.showOnHome).slice(0, 6)
+);
 
 onMounted(() => {
   if (!data.value) return;
-  categories.value = data.value
-})
+  categories.value = data.value;
+});
 
 const goToContactSection = () => {
-  document.getElementById('contact-form')?.scrollIntoView({
-    behavior: 'smooth',
-    block: "start"
-  })
-}
+  document.getElementById("contact-form")?.scrollIntoView({
+    behavior: "smooth",
+    block: "start",
+  });
+};
 </script>
-
 
 <template>
   <div class="absolute-content">
     <section class="home-top-banner">
       <div class="flex md:justify-content-between container mb-5">
         <div class="home-top-banner__cta md:flex-1">
-          <span class="endoc-title"><strong>Endoc</strong><small>TM</small></span>
-          <span class="endoc-subtitle mt-2 mb-4">Your #1 supplier for home home & business envelopes.</span>
+          <span class="endoc-title"
+            ><strong>Endoc</strong><small>TM</small></span
+          >
+          <span class="endoc-subtitle mt-2 mb-4"
+            >Your #1 supplier for home home & business envelopes.</span
+          >
         </div>
 
         <div class="home-top-banner__envelopes md:flex-1">
@@ -47,13 +54,18 @@ const goToContactSection = () => {
         <BaseMessage>
           <template #content>
             <div>
-              <strong>How</strong> you send is just as important as <strong>what</strong> you send. Reach out to us today
-              to make the right impression.
+              <strong>How</strong> you send is just as important as
+              <strong>what</strong> you send. Reach out to us today to make the
+              right impression.
             </div>
 
             <div class="mt-5 flex">
               <BaseButton label="Buy Endoc" @click="goToContactSection" />
-              <BaseButton class="ml-3" label="Sell Endoc" @click="goToContactSection" />
+              <BaseButton
+                class="ml-3"
+                label="Sell Endoc"
+                @click="goToContactSection"
+              />
             </div>
           </template>
         </BaseMessage>
@@ -62,14 +74,23 @@ const goToContactSection = () => {
 
     <section class="our-products">
       <div class="container">
-        <div class="flex flex-column md:flex-row justify-content-between align-items-center">
+        <div
+          class="flex flex-column md:flex-row justify-content-between align-items-center"
+        >
           <h2 class="text-h2">Our Products</h2>
 
-          <BaseButton label="explore all products" to="/categories" variant="secondary"></BaseButton>
+          <BaseButton
+            label="explore all products"
+            to="/categories"
+            variant="secondary"
+          ></BaseButton>
         </div>
 
         <ul class="our-products__list grid">
-          <li v-for="(category, index) in visibleCategories" class="our-products__item col-12 md:col-6 xl:col-4">
+          <li
+            v-for="(category, index) in visibleCategories"
+            class="our-products__item col-12 md:col-6 xl:col-4"
+          >
             <NuxtLink :to="category._path">
               <img class="card-bg" :src="`/imgs/bg/card-bg-${index + 1}.png`" />
               <img class="product-img" :src="category.icon" />
@@ -81,7 +102,6 @@ const goToContactSection = () => {
           </li>
         </ul>
       </div>
-
     </section>
 
     <PagesHomeBusinessDifferentials />
@@ -108,7 +128,6 @@ const goToContactSection = () => {
     opacity: 1;
   }
 }
-
 
 @keyframes slide-envelope-1 {
   0% {
@@ -146,7 +165,7 @@ const goToContactSection = () => {
   left: 0;
   width: 100%;
 
-  >*:first-child {
+  > *:first-child {
     position: relative;
     padding: 15em 1em 3em;
 
@@ -169,7 +188,7 @@ const goToContactSection = () => {
   z-index: 0;
   overflow-x: hidden;
 
-  background-image: url('~/assets/imgs/home-top-banner-bg.svg');
+  background-image: url("~/assets/imgs/home-top-banner-bg.svg");
   background-size: cover;
 
   animation: fade-in 1s ease-in-out;
@@ -202,7 +221,7 @@ const goToContactSection = () => {
       letter-spacing: 0.11em;
       text-transform: uppercase;
 
-      color: #006A6E;
+      color: #006a6e;
 
       strong {
         font-size: 5em;
@@ -221,7 +240,7 @@ const goToContactSection = () => {
     .endoc-subtitle {
       font-weight: 500;
       font-size: 1.25em;
-      color: #006A6E;
+      color: #006a6e;
     }
   }
 
