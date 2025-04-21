@@ -1,8 +1,7 @@
 backend:
-  name: azure
-  repo: checkomatic/Checkomatic - Nop Commerce/EndocWebsite
-  tenant_id: 038e04fb-c5f5-4211-9056-a2014829e129
-  app_id: 001180bf-fcab-4ce0-aacc-3d6aa297e391
+  name: github
+  repo: checkomatic-com/Endoc
+  branch: main
 media_folder: "public/imgs/uploads"
 public_folder: "/imgs/uploads"
 collections:
