@@ -1,0 +1,1 @@
+import{e as o,u as a,c as s,a as t,o as n}from"./CDpPrpjJ.js";const l={class:"container"},_=o({__name:"become-a-seller",setup(r){return a({title:"Endoc | Become a Seller"}),(c,e)=>(n(),s("div",l,e[0]||(e[0]=[t("h1",null,"Become a seller",-1)])))}});export{_ as default};
