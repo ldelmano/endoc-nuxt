@@ -1,5 +1,5 @@
 <template>
-  <div class="message">
+  <div :class="['message', { row: direction === 'row' }]">
     <div class="message__content">
       <div class="message__content-text">
         <slot name="content"></slot>
@@ -12,6 +12,12 @@
   </div>
 </template>
 
+<script setup lang="ts">
+const props = defineProps<{
+  direction?: "row" | "column";
+}>();
+</script>
+
 <style scoped lang="scss">
 .message {
   display: flex;
@@ -22,7 +28,6 @@
   background-color: #006a6e;
 
   @media (min-width: 768px) {
-    flex-direction: row;
     padding: 5em;
   }
 
@@ -31,7 +36,7 @@
     margin: 0 0 1.5em 0;
     font-weight: 500;
     font-size: 1.5em;
-    color: #FFFFFF;
+    color: #ffffff;
 
     @media (min-width: 768px) {
       margin: 0 1em 0 0;
@@ -43,11 +48,15 @@
     }
   }
 
+  &.row {
+    @media (min-width: 768px) {
+      flex-direction: row;
+    }
+  }
 
   &__action {
     display: flex;
     justify-content: flex-end;
-
   }
 }
 </style>

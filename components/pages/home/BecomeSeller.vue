@@ -71,7 +71,7 @@ const goToContactSection = () => {
 <style lang="scss">
 .become-seller {
   margin-top: 13em;
-  background-image: url("~/assets/imgs/home-become-seller-bg.svg");
+  background-image: url("~/assets/imgs/home-become-seller-bg.png");
   background-size: cover;
   background-repeat: no-repeat;
 
@@ -101,7 +101,7 @@ const goToContactSection = () => {
     flex: 1;
     padding: 1.5em;
     border-radius: 1.875em;
-    background: #c8df3c;
+    background: #ffdd00;
 
     @media (min-width: 768px) {
       padding: 3em;

@@ -8,23 +8,46 @@ const props = defineProps<{
   icon?: string;
   iconOnLeft?: boolean;
   loading?: boolean;
-}>()
-
-const emit = defineEmits<{
-  (e: 'click'): void;
 }>();
 
-const variantState = computed(() => props.variant ? `btn--${props.variant}` : `btn--primary`);
+const emit = defineEmits<{
+  (e: "click"): void;
+}>();
+
+const variantState = computed(() =>
+  props.variant ? `btn--${props.variant}` : `btn--primary`
+);
 </script>
 
 <template>
-  <NuxtLink v-if="to" :class="['btn', variantState, link && 'btn--link', iconOnLeft && 'btn--icon-left']" :to="to">
+  <NuxtLink
+    v-if="to"
+    :class="[
+      'btn',
+      variantState,
+      link && 'btn--link',
+      iconOnLeft && 'btn--icon-left',
+      props.class,
+    ]"
+    :to="to"
+  >
     {{ label }}
 
     <i v-if="icon" :class="`icon-${icon} ${iconOnLeft ? 'mr-2' : 'ml-2'}`"></i>
   </NuxtLink>
-  <button v-else @click.stop="emit('click')" type="button" :disabled="props.loading"
-    :class="['btn', link && 'btn--link', variantState, iconOnLeft && 'btn--icon-left', props.class]">
+  <button
+    v-else
+    @click.stop="emit('click')"
+    type="button"
+    :disabled="props.loading"
+    :class="[
+      'btn',
+      link && 'btn--link',
+      variantState,
+      iconOnLeft && 'btn--icon-left',
+      props.class,
+    ]"
+  >
     <span>{{ label }}</span>
 
     <i v-if="icon" :class="`icon-${icon} ${iconOnLeft ? 'mr-2' : 'ml-2'}`"></i>
@@ -74,7 +97,7 @@ const variantState = computed(() => props.variant ? `btn--${props.variant}` : `b
     letter-spacing: 2%;
     font-size: 1.25rem;
     font-weight: 600;
-
+    color: #ffffff;
 
     &.btn--primary {
       color: #ffffff;

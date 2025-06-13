@@ -1,11 +1,11 @@
 <script setup lang="ts">
 const values = reactive({
-  name: '',
-  email: '',
-  phone: '',
-  company: '',
-  message: ''
-})
+  name: "",
+  email: "",
+  phone: "",
+  company: "",
+  message: "",
+});
 
 const loading = ref(false);
 const formSent = ref(false);
@@ -19,14 +19,17 @@ const submit = async () => {
     Email: values.email,
     Phone: values.phone,
     CompanyName: values.company,
-    Message: values.message
-  }
+    Message: values.message,
+  };
 
   try {
-    const response = await fetch(`${import.meta.env.VITE_API_BASE_URL}/contact-us`, {
-      method: 'POST',
-      body: JSON.stringify(form)
-    })
+    const response = await fetch(
+      `${import.meta.env.VITE_API_BASE_URL}/contact-us`,
+      {
+        method: "POST",
+        body: JSON.stringify(form),
+      }
+    );
 
     const data = await response.json();
 
@@ -35,16 +38,16 @@ const submit = async () => {
 
       console.log(data);
     } else {
-      alert('Something went wrong. Please try again later.')
+      alert("Something went wrong. Please try again later.");
     }
   } catch (error) {
-    alert('Something went wrong. Please try again later.')
+    alert("Something went wrong. Please try again later.");
   } finally {
     loading.value = false;
   }
-}
+};
 </script>
-    
+
 <template>
   <footer>
     <div class="container flex flex-column xl:flex-row footer-content">
@@ -52,31 +55,65 @@ const submit = async () => {
         <template v-if="!formSent">
           <h2 class="contact-form__title">Contact us</h2>
 
-          <p class="contact-form__description">Drop us a line and we'll get back to you with a quote!</p>
+          <p class="contact-form__description">
+            Drop us a line and we'll get back to you with a quote!
+          </p>
 
           <form>
             <div class="grid">
               <div class="col-12 md:col-6">
-                <BaseTextField class="mb-3" v-model="values.name" required placeholder="Name" />
+                <BaseTextField
+                  class="mb-3"
+                  v-model="values.name"
+                  required
+                  placeholder="Name"
+                />
 
-                <BaseTextField class="mb-3" v-model="values.email" required placeholder="Email" type="email" />
+                <BaseTextField
+                  class="mb-3"
+                  v-model="values.email"
+                  required
+                  placeholder="Email"
+                  type="email"
+                />
 
-                <BaseTextField v-model="values.phone" required placeholder="Phone" />
+                <BaseTextField
+                  v-model="values.phone"
+                  required
+                  placeholder="Phone"
+                />
               </div>
 
               <div class="col-12 md:col-6 flex flex-column">
-                <BaseTextField class="mb-3" v-model="values.company" required placeholder="Company Name" />
+                <BaseTextField
+                  class="mb-3"
+                  v-model="values.company"
+                  required
+                  placeholder="Company Name"
+                />
 
-                <BaseTextField class="flex-1" textarea v-model="values.message" required placeholder="Message" />
+                <BaseTextField
+                  class="flex-1"
+                  textarea
+                  v-model="values.message"
+                  required
+                  placeholder="Message"
+                />
               </div>
             </div>
 
             <div class="grid mt-5">
               <div class="col-12 md:col-6">
-                <BaseButton class="w-full justify-content-center" label="send message" @click="submit"
-                  :loading="loading" />
+                <BaseButton
+                  class="w-full justify-content-center"
+                  label="send message"
+                  @click="submit"
+                  :loading="loading"
+                />
               </div>
-              <div class="col-12 md:col-6 flex align-items-center justify-content-center">
+              <div
+                class="col-12 md:col-6 flex align-items-center justify-content-center"
+              >
                 <div class="legend">
                   <span class="legend__dot"></span>
                 </div>
@@ -88,7 +125,10 @@ const submit = async () => {
 
         <div v-else>
           <h2 class="contact-form__title">Thank you!</h2>
-          <p>Our top-notch customer service staff will respond within the next 24 hours.</p>
+          <p>
+            Our top-notch customer service staff will respond within the next 24
+            hours.
+          </p>
         </div>
       </div>
 
@@ -138,7 +178,6 @@ const submit = async () => {
   </footer>
 </template>
 
-
 <style scoped lang="scss">
 footer {
   margin-top: 20em;
@@ -149,20 +188,19 @@ footer {
   margin-top: 3em;
   font-weight: 400;
   font-size: 0.875em;
-  color: #8C8E96;
+  color: #8c8e96;
 
   &__divider {
     height: 1px;
     width: 100%;
 
-    background-color: #E0E2EB;
+    background-color: #e0e2eb;
   }
 
   a {
     text-decoration: none;
-    color: #8C8E96;
+    color: #8c8e96;
   }
-
 }
 
 .contact-form {
@@ -170,7 +208,7 @@ footer {
   margin-top: -10em;
   padding: 2em;
   border-radius: 1.875em;
-  background-image: url('~/assets/imgs/contact-form-bg.png');
+  background-image: url("~/assets/imgs/contact-form-bg.png");
   background-repeat: no-repeat;
   background-size: cover;
 
@@ -210,7 +248,7 @@ footer {
       width: 8px;
       height: 8px;
       border-radius: 50%;
-      background: #F17C5C;
+      background: #f17c5c;
     }
 
     &-value {
@@ -242,7 +280,7 @@ footer {
   &__field-header {
     font-weight: 500;
     font-size: 1.2em;
-    color: #FFFFFF;
+    color: #ffffff;
     opacity: 0.5;
   }
 
@@ -250,15 +288,14 @@ footer {
     font-weight: 500;
     font-size: 1.75em;
 
-    color: #FFFFFF;
-
+    color: #ffffff;
   }
 
   .business-hours {
     margin-bottom: 0.5em;
     font-weight: 400;
     font-size: 1em;
-    color: #FFFFFF;
+    color: #ffffff;
 
     &__day {
       opacity: 0.5;

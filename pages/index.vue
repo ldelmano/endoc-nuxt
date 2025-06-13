@@ -51,22 +51,21 @@ const goToContactSection = () => {
       </div>
 
       <div class="container">
-        <BaseMessage>
+        <BaseMessage direction="row">
           <template #content>
             <div>
-              <strong>How</strong> you send is just as important as
-              <strong>what</strong> you send. Reach out to us today to make the
-              right impression.
+              Envelop your brand in quality and style because envelopes are the
+              window to your brand's soul.
             </div>
+          </template>
 
-            <div class="mt-5 flex">
-              <BaseButton label="Buy Endoc" @click="goToContactSection" />
-              <BaseButton
-                class="ml-3"
-                label="Sell Endoc"
-                @click="goToContactSection"
-              />
-            </div>
+          <template #action>
+            <BaseButton
+              label="explore more"
+              to="/categories"
+              variant="link"
+              icon="arrow-right"
+            ></BaseButton>
           </template>
         </BaseMessage>
       </div>
@@ -101,6 +100,41 @@ const goToContactSection = () => {
             </NuxtLink>
           </li>
         </ul>
+      </div>
+    </section>
+
+    <section class="buy-blocks">
+      <div class="container">
+        <div class="buy-blocks__row">
+          <div class="buy-blocks__item">
+            <h3 class="text-h3">
+              Retail Orders on <img src="/imgs/amazon.png" />
+            </h3>
+            <p class="buy-blocks__item-text">
+              Convenient online shopping with fast delivery.
+            </p>
+            <BaseButton
+              class="buy-blocks__button"
+              label="buy on amazon"
+              to="https://www.amazon.com/s?k=endoc"
+              variant="secondary"
+              target="_blank"
+            />
+          </div>
+          <div class="buy-blocks__item">
+            <h3 class="text-h3">Large Orders via <img src="/imgs/be.svg" /></h3>
+            <p class="buy-blocks__item-text">
+              Optimized for businesses and bulk buyers.
+            </p>
+            <BaseButton
+              class="buy-blocks__button btn-white"
+              label="buy on business envelopes"
+              to="https://www.businessenvelopes.com/endoc"
+              variant="secondary"
+              target="_blank"
+            />
+          </div>
+        </div>
       </div>
     </section>
 
@@ -188,7 +222,7 @@ const goToContactSection = () => {
   z-index: 0;
   overflow-x: hidden;
 
-  background-image: url("~/assets/imgs/home-top-banner-bg.svg");
+  background-image: url("~/assets/imgs/home-top-banner-bg.png");
   background-size: cover;
 
   animation: fade-in 1s ease-in-out;
@@ -346,6 +380,96 @@ const goToContactSection = () => {
         color: #323747;
       }
     }
+  }
+}
+
+.buy-blocks {
+  margin: 6em auto;
+}
+
+.buy-blocks__row {
+  display: flex;
+  width: 100%;
+}
+
+.buy-blocks__item {
+  flex: 1 1 0;
+  min-width: 0;
+  min-height: 320px;
+  border-radius: 30px;
+  padding: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  background-size: cover;
+  background-position: right bottom;
+  background-repeat: no-repeat;
+  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.04);
+  position: relative;
+  overflow: hidden;
+
+  .btn-white {
+    color: #ffffff !important;
+    border-color: #ffffff !important;
+  }
+}
+
+.buy-blocks__item:first-child {
+  background-image: url("/imgs/bg/buy-block-amazon.png");
+
+  h3 {
+    align-items: end;
+  }
+}
+
+.buy-blocks__item:last-child {
+  background-image: url("/imgs/bg/buy-block-be.png");
+
+  h3,
+  .buy-blocks__item-text {
+    color: #ffffff;
+  }
+}
+
+.buy-blocks__item h3 {
+  font-size: 1.6em;
+  font-weight: 500;
+  margin-bottom: 1em;
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  color: #222;
+}
+
+.buy-blocks__item img {
+  height: 28px;
+  vertical-align: middle;
+}
+
+.buy-blocks__item-text {
+  font-size: 1.1em;
+  color: #222;
+  margin-bottom: 4em;
+}
+
+.buy-blocks__button {
+  align-self: flex-start;
+  padding: 0.7em 2em;
+  border-radius: 999px;
+  border: 1.5px solid #222;
+  background: transparent;
+  color: #222;
+  font-weight: 600;
+  font-size: 1em;
+  transition: background 0.2s, color 0.2s, border 0.2s;
+  box-shadow: none;
+}
+
+@media (max-width: 900px) {
+  .buy-blocks__row {
+    flex-direction: column;
+    gap: 1.5em;
   }
 }
 

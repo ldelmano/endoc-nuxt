@@ -98,19 +98,57 @@ onMounted(() => {
     <BaseModal v-show="showModal" @close-modal="handleCloseModal">
       <template #content>
         <div class="modal-content" v-if="modalContent">
-          <img
-            :src="
-              modalContent.thumbnail ||
-              (modalContent.pictures ? modalContent.pictures[0].url : '')
-            "
-          />
+          <div>
+            <img
+              :src="
+                modalContent.thumbnail ||
+                (modalContent.pictures ? modalContent.pictures[0].url : '')
+              "
+            />
+
+            <div class="buy-links">
+              <a class="buy-link">
+                <div class="buy-link__content">
+                  <div class="buy-link__content-title">
+                    <span>Buy on</span>
+                    <img src="/imgs/amazon.png" alt="amazon" />
+                  </div>
+
+                  <span class="buy-link__content-description">
+                    For retail orders.
+                  </span>
+                </div>
+
+                <i class="icon-arrow-right"></i>
+              </a>
+
+              <hr class="buy-links__separator" />
+
+              <a class="buy-link">
+                <div class="buy-link__content">
+                  <div
+                    class="buy-link__content-title buy-link__content-title--be"
+                  >
+                    <span>Buy on</span>
+                    <img src="/imgs/be-primary.png" alt="be" />
+                  </div>
+
+                  <span class="buy-link__content-description">
+                    For businesses and bulk buyers.
+                  </span>
+                </div>
+
+                <i class="icon-arrow-right"></i>
+              </a>
+            </div>
+          </div>
 
           <div class="product-info">
             <h3 class="product-info__name">{{ modalContent.title }}</h3>
             <p class="product-info__id">Item #: {{ modalContent.id }}</p>
 
             <ul class="product-info__attributes">
-              <li v-for="(item, index) in modalContent?.attributes">
+              <li v-for="(item, _) in modalContent?.attributes">
                 <span class="product-info__attr-name">{{ item.label }}</span>
                 <span class="product-info__attr-value">{{ item.value }}</span>
               </li>
@@ -286,6 +324,63 @@ h1 {
 
       color: #323747;
     }
+  }
+
+  .buy-links {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    margin-top: 1.5em;
+  }
+
+  .buy-links__separator {
+    width: 100%;
+    height: 1px;
+    color: #c3c4cc;
+  }
+
+  .buy-link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    i {
+      font-size: 1.5em;
+    }
+  }
+
+  .buy-link__content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+  }
+
+  .buy-link__content-title {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5em;
+    font-weight: 400;
+    font-size: 1.25em;
+    line-height: 134%;
+
+    color: #323747;
+
+    &.buy-link__content-title--be {
+      align-items: center;
+    }
+
+    img {
+      height: 2rem;
+      width: auto;
+    }
+  }
+
+  .buy-link__content-description {
+    font-weight: 400;
+    font-size: 0.8125em;
+    line-height: 134%;
+
+    color: #7a7d87;
   }
 }
 </style>

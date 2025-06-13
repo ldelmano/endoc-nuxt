@@ -1,10 +1,10 @@
 :root {
-  --swiper-theme-color: #006A6E;
+  --swiper-theme-color: #006a6e;
   --swiper-pagination-top: calc(100% - 1.2em);
-  --lime-color: #C8DF3C;
+  --lime-color: #ffdd00;
   --main-black-color: #323747;
-  --dark-green-color: #006A6E;
-  --text-grey: #8C8E96;
+  --dark-green-color: #006a6e;
+  --text-grey: #8c8e96;
 }
 
 .text-h2 {
