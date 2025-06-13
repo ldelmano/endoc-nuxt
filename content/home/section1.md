@@ -9,8 +9,7 @@ list:
   - label: Competitive pricing
     description: Highest quality at the most affordable pricing!
   - label: High quality stock
-    description:
-      Our envelopes are made with premium quality raw materials to ensure
+    description: Our envelopes are made with premium quality raw materials to ensure
       that your documents remain safe and clean during sorting and transit.
 ---
 
